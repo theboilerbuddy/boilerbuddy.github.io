@@ -1,15 +1,11 @@
 ---
----
 layout: post
-title: "GoXLR WITH WIRELESS HEADSET - Connect ANY wireless bluetooth headphones"
+title: "Reporting For Non English"
 date: 2020-01-07 09:00:00 -0500
-categories: streaming
-description: "Reporting in English for non-natives"
-coverimage: Reporting_in_English_for_non-natives.jpg
-tags: reporting english
-published: true
-posttype: blog
+categories: blog
+tags: reporting non-english soft-skills
 ---
+
 When looking at the analytics for evilsaint.com, it always surprises me just how wide an audience this website receives! As a native English speaker who dropped foreign language study at the earliest opportunity school presented, I am amazed at the number of people around the world who take time to read what I post. 
 
 I recently was involved in a panel discussing report writing and some of the associated challenges that people face; we talked at length about many topics from learning difficulties, physical handicaps, educational issues, and language comprehension. 
