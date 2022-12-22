@@ -21,7 +21,7 @@ timezone: America/Chicago
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Test Website Documentation                          # the main title
+title: EvilSaint and Miisa Test                         # the main title
 tagline: Video documentation for all your copy pasta needs!   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
@@ -94,7 +94,7 @@ theme_mode:   dark # [light|dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: https://avatars.githubusercontent.com/u/1322205?s=400&u=5b4f2219006577dc0426007fe5a02391c4899677&v=4
+avatar: https://evilsaint.com/static/images/evilsaint_shield_logo.png
 
 # boolean type, the global switch for ToC in posts.
 toc: true
