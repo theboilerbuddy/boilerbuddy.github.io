@@ -5,7 +5,7 @@ theme: jekyll-theme-chirpy
 
 # Change the following value to '/PROJECT_NAME' ONLY IF your site type is GitHub Pages Project sites
 # and doesn't have a custom domain.
-baseurl: ''
+baseurl: '/'
 
 # The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
 # If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
@@ -22,41 +22,40 @@ timezone: America/Chicago
 # ↓ --------------------------
 
 title: Test Website Documentation                          # the main title
-
 tagline: Video documentation for all your copy pasta needs!   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   Documentation for Techno Tim YouTube videos for all your copy pasta needs!
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: 'https://docs.technotim.live'
+url: 'http://theboilerbuddy.github.io'
 
 github:
-  username: timothystewart6             # change to your github username
+  username: theboilerbuddy             # change to your github username
 twitter:
-  username: technotimlive            # change to your twitter username
+  username: theboilerbuddy           # change to your twitter username
 patreon:
-  username: technotim
+  username: theboilerbuddy
 twitch:
-  username: technotim
+  username: theboilerbuddy
 instagram:
-  username: techno.tim
+  username: theboilerbuddy
 facebook:
-  username: TechnoTimLive
+  username: theboilerbuddy
 discord:
-  invitelink: akMB4HJpvF
+  invitelink: theboilerbuddy
 youtube:
-  channelid: UCOk-gHyjcWZNj3Br4oxwh0A
+  channelid: theboilerbuddy
 tiktok:
-  username: '@technotim'
+  username: '@theboilerbuddy'
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: Techno Tim
+  name: The Boiler Buddy
   # email: example@doamin.com             # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://l.technotim.live/twitter      # change to your twitter homepage
+    - https://theboilerbuddy.github.io/twitter      # change to your twitter homepage
     # - https://github.com/username       # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
@@ -111,7 +110,7 @@ comments:
     issue_term:   # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
-    repo: techno-tim/techno-tim.github.io
+    repo: theboilerbuddy/theboilerbuddy.github.io
     repo_id: MDEwOlJlcG9zaXRvcnkyNTQ3ODQ3Nzk
     category: Comments
     category_id: DIC_kwDODy-1C84CSN7z
