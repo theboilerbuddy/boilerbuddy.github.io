@@ -329,3 +329,18 @@ Download the latest from:
 Unzip the folder.
 
 Use my custom profile evilsaint.json. 
+
+
+<a href="evilsaint.json" target="_blank">Custom Profile</a>
+
+My main additions are 
+```
+{"name": "wsl.fireeye"},
+{"name": "hyperv.fireeye"},
+{"name": "markdownmonster"},
+{"name": "wsl-ubuntu-2004"},
+{"name": "wsl-archlinux"},
+{"name": "wsl-debiangnulinux"},
+{"name": "microsoft-windows-terminal"},
+{"name": "everything"},
+```
