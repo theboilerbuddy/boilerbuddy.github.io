@@ -260,3 +260,5 @@ PowerShell Core
 Install-Module -Name PSReadLine -Scope CurrentUser -Force -SkipPublisherCheck
 ```
 
+Oh My Posh Themes
+Pick a [theme for `Oh My Posh`](https://github.com/JanDeDobbeleer/oh-my-posh#themes)
