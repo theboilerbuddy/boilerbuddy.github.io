@@ -4,7 +4,7 @@ title: "PowerShell: In-Memory Injection Using CertUtil.exe"
 date: "2022-05-18"
 description: "Using PowerShell, `Invoke-CradleCrafter` and Microsoft’s Certutil.exe to craft a payload and one-liner that can be used to evade the latest version of Windows Defender (as of this writing)."
 coverimage: PowerShell_In_Memory_Injection_Using_CertUtil_exe.jpg
-tags: certutil, powershell
+tags: certutil powershell
 published: true
 posttype: article
 categories: tutorial

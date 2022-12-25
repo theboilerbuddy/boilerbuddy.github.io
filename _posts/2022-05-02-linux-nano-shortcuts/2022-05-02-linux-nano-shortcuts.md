@@ -4,7 +4,7 @@ title: "Linux: Nano Shortcuts"
 date: "2022-05-02"
 description: "GNU nano is an easy to use command line text editor for Unix and Linux operating systems. It includes all the basic functionality you would want in a text editor. It offers syntax highlighting, multiple buffer spaces, search and replace with regular expression support, spellchecking, UTF-8 encoding, and more. While it doesn't have the same keybinding library as that of `vi` it does have a number of time-saving shortcuts that if you learn can significantly speed up your workflow."
 coverimage: Linux_Nano_Shortcuts.jpg
-tags: linux, nano
+tags: linux nano
 published: true
 posttype: article
 categories: tutorial

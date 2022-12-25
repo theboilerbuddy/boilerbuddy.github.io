@@ -4,7 +4,7 @@ title: 'Vulnerabilities in SSL & TLS :- Heartbleed'
 date: '2022-01-06'
 description: 'In this article, we look at CVE Number CVE-2014-0160 or what is commonly referred to as the Heartbleed vulnerability; a buffer overflow in the Heartbeat extension of OpenSSL. A malicious client could send a specially crafted packet to disclose a limited portion of the server or computers memory per request from a connected client or server. The disclosed portions of memory could include sensitive information, such as private keys, names, usernames, passwords and/or any other data on the system.'
 coverimage: Heartbleed.jpg
-tags: heartbleed, openssl, ssl, tls
+tags: heartbleed openssl, ssl, tls
 published: true
 posttype: article
 categories: article

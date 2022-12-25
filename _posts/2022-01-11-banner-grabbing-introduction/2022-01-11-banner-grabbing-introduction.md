@@ -4,7 +4,7 @@ title: "Banner Grabbing Introduction"
 date: "2022-01-11"
 description: "In this tutorial we will look at banner grabbing using various software. Banner grabbing is a reconnaissance technique that retrieves software banner information by querying services running on an open port. This banner can typically contain important information about the service; potentially, we can find information such as the name and version of the software. If we can successfully identify the software, we can check for known vulnerabilities."
 coverimage: Banner_Grabbing_Introduction.jpg
-tags: banner-grabbing, enumeration
+tags: banner-grabbing enumeration
 published: true
 posttype: article
 categories: tutorial

@@ -4,7 +4,7 @@ title: "Automating Vultr Setup with Vultr API V1"
 date: "2020-04-20"
 description: "vultr, automation"
 coverimage: Automating_Vultr_Setup_with_Vultr_API_V2_revise.jpg
-tags: vultr, automation
+tags: vultr automation
 published: true
 posttype: article
 categories: tutorial

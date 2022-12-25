@@ -4,7 +4,7 @@ title: 'Vulnerabilities in SSL & TLS :- POODLE'
 date: '2022-01-18'
 description: 'In this article, we will look at CVE-2014-3566, also known as the Padding Oracle On Downgraded Legacy (POODLE) vulnerability, which results from support for SSL version 3.0. This attack requires a person-in-the-middle context to force the use of SSL v3.0, which contains an Oracle attack.'
 coverimage: poodle.jpg
-tags: poodle, ssl, tls
+tags: poodle ssl, tls
 published: true
 posttype: article
 categories: article

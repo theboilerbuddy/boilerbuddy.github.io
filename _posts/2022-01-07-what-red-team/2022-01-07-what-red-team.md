@@ -4,7 +4,7 @@ title: 'What is a Red Team?'
 date: '2022-01-07'
 description: 'The term Red Teaming is frequently used in the realm of cyber security. Its meaning has evolved over time due to a variety of factors, including vendors misusing the term in marketing. As a foundation for the course content, I will make an effort to provide an accurate definition of red teams - what they are, what they do, and why they do it.'
 coverimage: What_is_a_Red_Team.jpg
-tags: penetration-testing, red-teaming
+tags: penetration-testing red-teaming
 published: true
 posttype: article
 categories: article

@@ -4,7 +4,7 @@ title: 'IP Sec - Introduction'
 date: '2022-01-03'
 description: 'This is a two part article that will go over the fundamentals of IPSec. We will start with a background of IPSec, and take a look at configuring an IPSec tunnel. Then we will run the pentest tool ike-scan against our configured IPSec tunnel and collect and analyse traffic in wireshark.'
 coverimage: IP_Sec_-_Introduction.jpg
-tags: ike, isakmp
+tags: ike isakmp
 published: true
 posttype: article
 categories: article

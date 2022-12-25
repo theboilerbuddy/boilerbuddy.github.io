@@ -4,7 +4,7 @@ title: "Using Steampipe on AWS"
 date: "2022-02-15"
 description: "Steampipe is a tool that lets us gather information from AWS (or other sources) and lets us interact with that data the same way we would a relational database via SQL style queries."
 coverimage: Using_Steampipe_on_AWS.jpg
-tags: steampipe, aws
+tags: steampipe aws
 published: true
 posttype: article
 categories: tutorial

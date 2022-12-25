@@ -4,7 +4,7 @@ title: "Deleting the Recovery Partition"
 date: "2021-06-17"
 description: "Ever expanded the size of a disk to find a recovery partition taking up some of your continuous space?"
 coverimage: Deleting_the_Recovery_Partition.jpg
-tags: windows, diskpart, admin, diskmngr
+tags: windows diskpart, admin, diskmngr
 published: true
 posttype: article
 categories: tutorial

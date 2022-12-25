@@ -4,7 +4,7 @@ title: 'Vulnerabilities in SSL & TLS :- Lucky13'
 date: '2022-01-21'
 description: 'In this article, we will look at CVE-2013-0169, also known as the Lucky 13 vulnerability, which exists within SSL and TLS. The TLS protocols 1.1 and 1.2, as well as the DTLS protocols 1.0 and 1.2, do not properly consider timing side-channel attacks when processing malformed CBC padding, allowing remote attackers to conduct plaintext-recovery.'
 coverimage: lucky13.jpg
-tags: lucky13, ssl, tls
+tags: lucky13 ssl, tls
 published: true
 posttype: article
 categories: article

@@ -4,7 +4,7 @@ title: "Covert Voice In A Video To Text"
 date: "2021-04-24"
 description: ""
 coverimage: Covert_Voice_In_A_Video_To_Text.jpg
-tags: voice, convert
+tags: voice convert
 published: true
 posttype: article
 categories: tutorial

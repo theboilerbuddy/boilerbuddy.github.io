@@ -4,7 +4,7 @@ title: 'IIS Version Header Server Lookup'
 date: '2022-06-17'
 description: 'List of IIS Web Servers, their associated operating system version releases, the corresponding launch dates and end-of-support dates. These can be useful for fingerprinting Window Servers when you find an HTTP Header Showing an ISS Version on an assessment.'
 coverimage: IIS_Version_Header_Server_Lookup.jpg
-tags: enumeration, iis
+tags: enumeration iis
 published: true
 posttype: article
 categories: article

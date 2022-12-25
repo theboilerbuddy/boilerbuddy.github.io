@@ -4,7 +4,7 @@ title: 'Linux Package Management'
 date: '2022-05-04'
 description: 'A package manager is a tool that allows users to install, remove, upgrade, configure and manage software packages on an operating system. The package manager can be a graphical application like a software centre or a command-line tool like apt-get or pacman. This article looks at installing packages on Linux using various package management systems.'
 coverimage: Linux_Package_Management.jpg
-tags: apt, dpkg, yum
+tags: apt dpkg, yum
 published: true
 posttype: article
 categories: article

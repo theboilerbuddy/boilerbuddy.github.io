@@ -4,7 +4,7 @@ title: 'RTF Template Injection'
 date: '2022-02-09'
 description: 'In this example, we will demonstrate how to use the “template” control word to cause an RTF file to pop up the calculator app when opened.  “Hold on... I can use the Start menu to do that. Why should I care?”, you may wonder. The simple answer is that this technique can be easily modified to spread malicious macros using otherwise benign looking RTF files.'
 coverimage: RTF_Template_Injection.jpg
-tags: exploit-development, rtf
+tags: exploit-development rtf
 published: true
 posttype: article
 categories: article

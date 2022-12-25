@@ -4,7 +4,7 @@ title: "Docker Django Application"
 date: "2021-04-15"
 description: ""
 coverimage: Docker_Django_Application_revised.jpg
-tags: docker, django
+tags: docker django
 published: true
 posttype: article
 categories: tutorial

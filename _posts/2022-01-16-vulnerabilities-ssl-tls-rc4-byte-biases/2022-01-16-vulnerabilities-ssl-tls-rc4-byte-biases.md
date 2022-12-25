@@ -4,7 +4,7 @@ title: 'Vulnerabilities in SSL & TLS :- RC4 Byte Biases'
 date: '2022-01-16'
 description: 'In this article, we will look into CVE-2013-2566, also known as RC4 Byte Biases. The RC4 algorithm, which is used in the TLS and SSL protocols, has many single-byte biases, making it easier for remote attackers to carry plaintext-recovery attacks by statistically analysing ciphertext in a large number of sessions that use the same plaintext.'
 coverimage: RC4_Byte_Biases.jpg
-tags: rc4-byte-biases, ssl
+tags: rc4-byte-biases ssl
 published: true
 posttype: article
 categories: article

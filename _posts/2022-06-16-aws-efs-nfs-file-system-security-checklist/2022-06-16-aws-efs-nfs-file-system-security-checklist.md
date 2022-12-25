@@ -4,7 +4,7 @@ title: 'AWS EFS NFS file system Security Checklist'
 date: '2022-06-16'
 description: 'AWS EFS (NFS file system); Quick Security Hardening Guide - This acts as a Quick Checklist to configuring your AWS EFS securely. This is Amazon’s implementation of the network file system or NFS protocol for Amazon’s cloud customers.'
 coverimage: 
-tags: aws, cloud
+tags: aws cloud
 published: true
 posttype: article
 categories: article

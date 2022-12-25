@@ -4,7 +4,7 @@ title: 'Find Interesting Files'
 date: '2022-06-29'
 description: 'A significant part of our job when searching around a target system is to look for interesting files.  Whether we have a need to look for SSH keys, Bash History files or database backups the commands typically all follow the same syntax. This article will look at using basic Linux commands to find and discover files.'
 coverimage: https://evilsaint.com/media/articles/images/finding-interesting-files/cover_image/Finding_Interesting_Files.jpg
-tags: enumeration, linux
+tags: enumeration linux
 published: true
 posttype: article
 categories: article

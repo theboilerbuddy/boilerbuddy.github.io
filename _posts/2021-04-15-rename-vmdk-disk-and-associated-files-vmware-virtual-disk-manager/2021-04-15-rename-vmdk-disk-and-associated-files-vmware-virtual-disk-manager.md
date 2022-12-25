@@ -4,7 +4,7 @@ title: "Rename a VMDK disk and associated files with VMware Virtual Disk Manager
 date: "2021-04-15"
 description: ""
 coverimage: Rename_a_VMDK_disk_NXkvZv4.jpg
-tags: vmdk, vmware, windows
+tags: vmdk vmware, windows
 published: true
 posttype: article
 categories: tutorial

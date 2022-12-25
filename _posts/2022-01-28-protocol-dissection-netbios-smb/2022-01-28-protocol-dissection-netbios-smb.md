@@ -4,7 +4,7 @@ title: 'Protocol Dissection :- NetBIOS & SMB'
 date: '2022-01-28'
 description: 'This article examines the two protocols NetBIOS and SMB. SMB ran on top of the NetBIOS protocol in early versions of Windows, but eventually moved to its own dedicated TCP port. While NetBIOS is the older protocol, understanding both is nearly essential for understanding Windows network communications. The SMB protocol enables networked computers applications and services to communicate via Inter Process Communication (IPC) and to share files.'
 coverimage: Protocol_DissectionNet_Bios__SMB.jpg
-tags: netbios, smb
+tags: netbios smb
 published: true
 posttype: article
 categories: article

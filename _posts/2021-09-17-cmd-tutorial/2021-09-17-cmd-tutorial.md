@@ -4,7 +4,7 @@ title: "CMD Tutorial"
 date: "2021-09-17"
 description: ""
 coverimage: cmd_tutorial.jpg
-tags: cmd, windows
+tags: cmd windows
 published: true
 posttype: article
 categories: tutorial
