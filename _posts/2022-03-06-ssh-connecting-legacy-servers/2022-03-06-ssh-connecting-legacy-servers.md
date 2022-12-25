@@ -28,8 +28,6 @@ Use the `-vv` for verbose.
 nmap --script ssh2-enum-algos -sV -p <port> <host>
 
 
-
-
 ```
 sudo apt install libssl1.0-dev
 wget -c https://mirror.ox.ac.uk/pub/OpenBSD/OpenSSH/portable/openssh-6.0p1.tar.gz
@@ -41,9 +39,7 @@ make
 make install 
 ```
 <img src="/static/c38f2220-e15a-46c4-a306-9bd78f59f012.png">
-![]()
 
 
 /etc/ssh/ssh_config.d/kali-wide-compat.conf
 <img src="/static/77ebcb2a-7c9d-46a4-bdc2-492183739299.png">
-![]()

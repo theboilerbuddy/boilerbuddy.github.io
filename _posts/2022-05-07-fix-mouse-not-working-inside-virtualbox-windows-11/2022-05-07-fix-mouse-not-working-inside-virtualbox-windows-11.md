@@ -22,12 +22,12 @@ These later versions have been improved by Oracle to minimise compatibility issu
 `Help` > `About VirtualBox...`
 <img src="/static/8ff29026-eb9d-4044-b6ab-bd89052f590f.png">
 
-![]()
+
 
 The version is displayed here. If you are running a version older than 6.1.28, consider upgrading it.
 <img src="/static/63677c92-6c55-4458-bfe0-629b9da2fb7c.png">
 
-![]()
+
 
 <h5 class="step">Step 2 - Change your Pointing Device settings</h5>
 
@@ -38,12 +38,12 @@ On VirtualBox manager, click one machine at a time. Navigate to:
  `Machine` > `Settings`.
 <img src="/static/65c7a514-4057-4dc6-8b12-18c7c3f4a6f4.png">
 
-![]()
+
 
 Under the `System` tab, change `Pointing Device` from `PS/2 Mouse` to `USB Tablet`. Click `OK` to save the changes.
 <img src="/static/80917044-71b0-49a0-b45a-12a2b014e699.png">
 
-![]()
+
 
 <h5 class="step">Step 3 - Verify the fix</h5>
 
@@ -56,7 +56,7 @@ If the fix has been successful, congratulations! Let us know in the comments bel
 This is a mouse that connects to a PS/2 port:
 <img src="/static/25ebb32f-2632-4ced-851d-bebe9ed89656.png">
 
-![]()
+
 
 Even though the other option, "USB Tablet", has the word "tablet" in it - it does not mean that it will only work on tablets. 
 
@@ -67,4 +67,3 @@ The default virtual pointing devices for older guests is the traditional PS/2 mo
 ```
 <img src="/static/5157faa7-03ef-4249-a625-4f889c318415.png">
 
-![]()
