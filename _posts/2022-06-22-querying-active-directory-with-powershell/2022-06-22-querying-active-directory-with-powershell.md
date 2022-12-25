@@ -48,7 +48,7 @@ $user
 Example of Active Directory Module
 
 - Requires AD Web Services (ADWS) running on targeted DC (TCP 9389)
-    - (Side Note) PowerShell Remoting uses TCP 5985 (HTTP) or TCP 5986 (HTTPS)
+  - (Side Note) PowerShell Remoting uses TCP 5985 (HTTP) or TCP 5986 (HTTPS)
 - SOAP XML messages over HTTP translated on DC
 
 ```
@@ -222,7 +222,7 @@ Example:
 [System.DirectoryServices.ActiveDirectory.Domain]::GetCOMPUTERDomain().Forest
 ```
 
-### Get the local computer’s site information:
+### Get the local computer’s site information
 
 ```
 $LocalSiteInfo = [System.DirectoryServices.ActiveDirectory.ActiveDirectorySite]::GetComputerSite()
@@ -369,7 +369,7 @@ PowerShell logs the obfuscated code as well as the dynamically generated code th
 
 ### Constrained PowerShell
 
-Automatically enables PowerShell constrained mode when AppLocker policy is set to â€œAllowâ€. This limits PowerShell code execution to only core capability. The offensive PowerShell tools typically used by attackers leverage advanced PowerShell functionality disabled in Constrained Mode.
+Automatically enables PowerShell constrained mode when AppLocker policy is set to "Allow". This limits PowerShell code execution to only core capability. The offensive PowerShell tools typically used by attackers leverage advanced PowerShell functionality disabled in Constrained Mode.
 
 ### Windows 10 - Antimalware Integration
 
