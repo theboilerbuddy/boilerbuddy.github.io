@@ -60,6 +60,7 @@ test() {
     --disable-external \
     --check-html \
     --allow_hash_href \
+    --log-level :debug \
     "$SITE_DIR"
 }
 
