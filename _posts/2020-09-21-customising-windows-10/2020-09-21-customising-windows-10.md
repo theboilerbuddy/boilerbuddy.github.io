@@ -330,7 +330,9 @@ Unzip the folder.
 
 Use my custom profile evilsaint.json. 
 
-<a href="evilsaint.json">Custom Profile</a>
+[Custom Profile]({{site.url}}/assets/evilsaint.json)
+[Windows 10]({{site.url}}/posts/customising-windows-10/Customising_Windows_10.jpg)
+
 
 My main additions are 
 ```
