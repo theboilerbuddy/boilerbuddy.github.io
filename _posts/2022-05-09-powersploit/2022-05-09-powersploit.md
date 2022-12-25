@@ -2,7 +2,7 @@
 layout: post
 title: 'PowerSploit'
 date: '2022-05-09'
-description: 'Powersploits tagline was 'PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment.'. While the library is no longer supported, it still lives up to its name as a good selection of modules we can use on our pentests.'
+description: 'Powersploits tagline was PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. While the library is no longer supported, it still lives up to its name as a good selection of modules we can use on our pentests.'
 coverimage: PowerSploit.jpg
 tags: powershell, powersploit
 published: true
