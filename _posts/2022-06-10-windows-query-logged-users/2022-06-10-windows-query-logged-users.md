@@ -7,7 +7,7 @@ coverimage: Windows_Query_Logged_On_Users.jpg
 tags: wmic
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 
 # Query Logged On Users

@@ -7,7 +7,7 @@ coverimage: throw.jpg
 tags: 
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 Sam database
  local Windows credentials are stored in the security account manager or Sam database as password hashes using the nclm hashing format which is based on the MD for algorithm we can reuse acquired nclm hashes to authenticate to a different machine as long as the hash is tied to a user account and password registered on that machine although it's rare to find matching local credentials between disparate machines the built-in default named administrator account is installed on all windows based machines this account has been disabled on desktop editions since Windows Vista but it is enabled on servers by default

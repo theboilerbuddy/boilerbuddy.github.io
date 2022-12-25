@@ -7,7 +7,7 @@ coverimage: Sweet32.jpg
 tags: ssl, sweet32, tls
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 ## Main Points
 

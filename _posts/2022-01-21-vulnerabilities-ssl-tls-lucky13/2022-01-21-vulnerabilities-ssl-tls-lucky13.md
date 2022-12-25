@@ -7,7 +7,7 @@ coverimage: lucky13.jpg
 tags: lucky13, ssl, tls
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 ## Main Points
 

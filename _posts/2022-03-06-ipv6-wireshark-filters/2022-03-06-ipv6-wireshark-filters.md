@@ -7,7 +7,7 @@ coverimage: IPv6_Wireshark_Filters.jpg
 tags: ipv6
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 # IPv6 WireShark Filters
 

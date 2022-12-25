@@ -6,7 +6,7 @@ description: 'This article serves as an introduction and quick reference to NetB
 coverimage: Understand_NetBIOS_Names_in_Minutes.jpg
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 
 NetBIOS names made easy. This article serves as a simplified introduction to NetBIOS names and suffixes; consider this if you are running late for exam prep or having to debug output from your terminal.

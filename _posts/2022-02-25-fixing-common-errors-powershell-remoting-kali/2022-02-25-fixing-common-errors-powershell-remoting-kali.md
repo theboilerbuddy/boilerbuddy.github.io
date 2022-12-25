@@ -7,7 +7,7 @@ coverimage: Fixing_Common_Errors_PowerShell_Remoting_From_Kali.jpg
 tags: error-message, kali-linux, powershell
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 
 Assuming you have powershell installed on Kali. 

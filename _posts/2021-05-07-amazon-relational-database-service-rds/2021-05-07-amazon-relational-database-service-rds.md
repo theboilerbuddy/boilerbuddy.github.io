@@ -7,5 +7,5 @@ coverimage: Amazon_Relational_Database_Service.jpg
 tags: 
 published: true
 posttype: article
-categories: blog
+categories: article
 ---

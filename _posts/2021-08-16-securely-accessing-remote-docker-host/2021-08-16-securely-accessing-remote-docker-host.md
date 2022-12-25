@@ -7,7 +7,7 @@ coverimage: Securely_Accessing_Remote_Docker_Host_HjjWMVv.jpg
 tags: docker
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 Docker is running out box without the socket set
 ```

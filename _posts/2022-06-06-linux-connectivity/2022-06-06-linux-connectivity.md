@@ -7,7 +7,7 @@ coverimage: Linux_Connectivity.jpg
 tags: networking
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 # Linux Connectivity
 

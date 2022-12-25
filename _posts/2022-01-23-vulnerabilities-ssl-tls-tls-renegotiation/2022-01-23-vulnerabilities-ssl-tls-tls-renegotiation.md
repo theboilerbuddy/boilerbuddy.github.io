@@ -7,7 +7,7 @@ coverimage: TLS_renegotiation.jpg
 tags: insecure-tls-renegotiation, ssl, tls
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 ## Main Points
 

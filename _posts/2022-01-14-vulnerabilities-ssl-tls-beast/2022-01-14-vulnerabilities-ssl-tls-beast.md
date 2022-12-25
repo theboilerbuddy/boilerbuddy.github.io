@@ -7,7 +7,7 @@ coverimage: beast.jpg
 tags: beast, ssl, tls
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 ## Main Points 
 

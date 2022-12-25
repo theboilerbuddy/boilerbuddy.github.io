@@ -7,7 +7,7 @@ coverimage:
 tags: aws, cloud
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 
 # AWS EFS (NFS file system); Quick Security Hardening Guide

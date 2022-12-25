@@ -7,7 +7,7 @@ coverimage: Vulnerabilities_in_SSL__TLS__Manually_Testing.jpg
 tags: ssl, tls
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 # OpenSSL For Testing
 

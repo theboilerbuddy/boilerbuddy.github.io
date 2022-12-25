@@ -7,7 +7,7 @@ coverimage: SQLi_Tools.jpg
 tags: sql-injection
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 
 # SQLi Tools

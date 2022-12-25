@@ -7,7 +7,7 @@ coverimage: Windows_Registry.jpg
 tags: registry
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 
 # Registry

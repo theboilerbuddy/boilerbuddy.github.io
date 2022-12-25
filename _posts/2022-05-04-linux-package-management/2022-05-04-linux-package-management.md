@@ -7,7 +7,7 @@ coverimage: Linux_Package_Management.jpg
 tags: apt, dpkg, yum
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 # Linux Package Management
 

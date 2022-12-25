@@ -7,7 +7,7 @@ coverimage: Firefox_Browser_Forensics.jpg
 tags: browser
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 # Firefox: History
 

@@ -7,7 +7,7 @@ coverimage: Setting_PowerShell_Terminal_Options.jpg
 tags: powershell
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 
 # Set PowerShell Terminal Options

@@ -7,7 +7,7 @@ coverimage: Exploring_VNC_Servers_And_Clients.jpg
 tags: vnc
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 # VNC Servers & Clients
 

@@ -7,7 +7,7 @@ coverimage: Auditing_Cisco_Network_Devices.jpg
 tags: 
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 
 # Administrative Line Login With No Password

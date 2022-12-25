@@ -7,7 +7,7 @@ coverimage: Protocol_DissectionNet_Bios__SMB.jpg
 tags: netbios, smb
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 ##What is NetBIOS?
 

@@ -7,7 +7,7 @@ coverimage: Beginner_Guide_To_APT_Command.jpg
 tags: apt, aptidude
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 Little history of how apt works?
 

@@ -7,7 +7,7 @@ coverimage: Working_With_SMB.jpg
 tags: hydra, mount, nmblookup
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 ## Working with SMB
 

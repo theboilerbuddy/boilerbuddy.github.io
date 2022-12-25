@@ -7,7 +7,7 @@ coverimage: Linux_Privilege_Escalation_Commands.jpg
 tags: enumeration, linux, priv-esc
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 
 # Linux Enumeration

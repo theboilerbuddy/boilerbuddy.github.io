@@ -7,7 +7,7 @@ coverimage: PowerSploit.jpg
 tags: powershell, powersploit
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 # Powersploit
 

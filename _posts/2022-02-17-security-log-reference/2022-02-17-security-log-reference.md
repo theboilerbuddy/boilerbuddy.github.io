@@ -7,7 +7,7 @@ coverimage: Security_Log_Reference.jpg
 tags: security-logs, windows
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 This article serves as a quick reference for Windows Security Log event IDs.
 

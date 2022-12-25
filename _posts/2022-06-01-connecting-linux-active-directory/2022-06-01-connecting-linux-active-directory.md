@@ -7,7 +7,7 @@ coverimage: Connecting_Linux_To_Active_Directory.jpg
 tags: active-direction, linux
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 # Connecting Linux To Active Directory
 

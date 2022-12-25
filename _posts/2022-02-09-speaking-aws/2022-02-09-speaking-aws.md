@@ -7,7 +7,7 @@ coverimage: Speaking_AWS.jpg
 tags: aws, cloud, s3-buckets, scoutsuite
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 # Introduction To Terminology
 

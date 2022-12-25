@@ -7,7 +7,7 @@ coverimage: poodle_over_tls.jpg
 tags: poodle-over-tls, ssl, tls
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 ## Main Points
 

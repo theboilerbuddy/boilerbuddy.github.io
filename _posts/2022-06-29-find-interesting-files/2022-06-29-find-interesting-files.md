@@ -7,7 +7,7 @@ coverimage: https://evilsaint.com/media/articles/images/finding-interesting-file
 tags: enumeration, linux
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 
 # Finding Interesting Files

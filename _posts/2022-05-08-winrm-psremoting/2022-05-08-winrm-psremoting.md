@@ -7,7 +7,7 @@ coverimage: WinRM_PSRemoting.jpg
 tags: powershell, winrm
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 
 # WinRM  PSRemoting

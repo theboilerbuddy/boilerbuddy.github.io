@@ -7,5 +7,5 @@ coverimage: Penetrat_ReportRepeat.jpg
 tags: 
 published: true
 posttype: article
-categories: blog
+categories: article
 ---

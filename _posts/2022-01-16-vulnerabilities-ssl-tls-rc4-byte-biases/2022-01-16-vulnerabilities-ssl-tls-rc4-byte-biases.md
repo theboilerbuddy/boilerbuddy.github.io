@@ -7,7 +7,7 @@ coverimage: RC4_Byte_Biases.jpg
 tags: rc4-byte-biases, ssl
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 ## Main Points
 

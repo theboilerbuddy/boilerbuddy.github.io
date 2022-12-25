@@ -7,7 +7,7 @@ coverimage: Creating_SMB_Servers.jpg
 tags: smb
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 # SMB
 

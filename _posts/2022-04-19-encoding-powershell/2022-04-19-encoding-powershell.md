@@ -7,7 +7,7 @@ coverimage: Encoding_PowerShell.jpg
 tags: encoding, powershell
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 # Encoding Powershell
 

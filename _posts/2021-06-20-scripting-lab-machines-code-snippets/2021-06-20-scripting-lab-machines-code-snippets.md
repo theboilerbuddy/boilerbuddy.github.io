@@ -7,7 +7,7 @@ coverimage: Scripting_Lab_Machines_Code_Snippets.jpg
 tags: 
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 When creating home lab machines you may have a common set of needs that you wish to apply to each one. 
 

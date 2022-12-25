@@ -7,7 +7,7 @@ coverimage: breach.jpg
 tags: breach, ssl, tls
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 ## Main Points 
 

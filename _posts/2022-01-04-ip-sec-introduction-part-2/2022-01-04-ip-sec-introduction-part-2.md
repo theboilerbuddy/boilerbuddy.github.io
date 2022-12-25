@@ -7,7 +7,7 @@ coverimage: IP_Sec_-_Introduction_part2.jpg
 tags: ike, isakmp
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 Let us go over a summary of the points we covered in the introduction.
 

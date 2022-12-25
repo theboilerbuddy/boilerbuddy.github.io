@@ -7,7 +7,7 @@ coverimage: A_Perfect_Box_In_The_Cloud.jpg
 tags: vultr
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 
 ## Vultr

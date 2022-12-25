@@ -7,7 +7,7 @@ coverimage: Secure_Shell_SSH_intro.jpg
 tags: linux, ssh
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 
 ###What is SSH?

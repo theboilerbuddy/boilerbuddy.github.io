@@ -7,7 +7,7 @@ coverimage: Auditing_Juniper_Network_Devices.jpg
 tags: auditing, console-connection, juniper
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 
 ## Lack of Console Connection Timeout

@@ -7,5 +7,5 @@ coverimage: advanced_phishing.jpg
 tags: red-teaming
 published: true
 posttype: article
-categories: blog
+categories: article
 ---

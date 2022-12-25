@@ -7,7 +7,7 @@ coverimage: IP_Sec_-_Introduction.jpg
 tags: ike, isakmp
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 <figure class="figure text-center col-xs-12 col-sm-12 col-lg-12"><img src="/static/8b11686c-7367-4f73-9278-6d8b142cf1f5.png" class="figure-img img-fluid border border-1 border-dark" alt=" "><figcaption class="figure-caption text-center fw-normal">IPSec Overview</figcaption></figure>
 

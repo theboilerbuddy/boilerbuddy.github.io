@@ -7,7 +7,7 @@ coverimage: IIS_Version_Header_Server_Lookup.jpg
 tags: enumeration, iis
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 
 

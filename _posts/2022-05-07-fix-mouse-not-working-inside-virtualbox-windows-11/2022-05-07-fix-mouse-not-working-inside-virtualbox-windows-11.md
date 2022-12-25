@@ -7,7 +7,7 @@ coverimage:
 tags: virutalbox, vms, windows
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 # The problem
 

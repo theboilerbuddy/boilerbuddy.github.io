@@ -7,7 +7,7 @@ coverimage: overview.jpg
 tags: ssl, tls
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 Since January 6th, we have been looking at individual SSL/TLS vulnerabilities. This article will provide an overview of the series and provide background information on SSL/TLS for those who are unfamiliar with the subject. 
 

@@ -7,7 +7,7 @@ coverimage: Cracking_SSH_Private_Key_Passphrase.jpg
 tags: ssh
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 
 ```

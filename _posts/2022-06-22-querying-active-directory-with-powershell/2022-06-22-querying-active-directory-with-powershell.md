@@ -7,7 +7,7 @@ coverimage: https://evilsaint.com/media/articles/images/querying-active-director
 tags: active-directory, enumeration, powershell
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 # Active Directory Querying With PowerShell
 

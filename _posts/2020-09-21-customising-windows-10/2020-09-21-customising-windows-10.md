@@ -7,7 +7,7 @@ coverimage: Customising_Windows_10.jpg
 tags: customising-windows, vms, vmware, windows
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 
 This guide is going to take you through a number of components to get your machine ready for subsequent parts of this guide. 

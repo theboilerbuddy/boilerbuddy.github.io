@@ -7,7 +7,7 @@ coverimage: FFmpeg_Cheat_Sheet.jpg
 tags: cheat-sheet, ffmpeg, mp3, wav, wma
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 # Installing FFMpeg
 

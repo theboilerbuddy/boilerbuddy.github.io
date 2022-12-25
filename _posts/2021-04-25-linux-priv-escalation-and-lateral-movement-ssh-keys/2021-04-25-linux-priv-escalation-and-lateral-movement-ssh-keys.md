@@ -7,7 +7,7 @@ coverimage: Linux_Pr_4rKfyBa.jpg
 tags: 
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 * This article will be split up into two parts. In the first part we will look at the SSH service, its native files and commands and good practices around using it. 
 * The second part we will look at abusing many configurations. 

@@ -7,7 +7,7 @@ coverimage: Heartbleed.jpg
 tags: heartbleed, openssl, ssl, tls
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 ## Main Points
 

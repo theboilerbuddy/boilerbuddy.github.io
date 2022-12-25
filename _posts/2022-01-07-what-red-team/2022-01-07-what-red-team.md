@@ -7,7 +7,7 @@ coverimage: What_is_a_Red_Team.jpg
 tags: penetration-testing, red-teaming
 published: true
 posttype: article
-categories: blog
+categories: article
 ---
 
 #### What is red teaming?
