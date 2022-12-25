@@ -4,7 +4,7 @@ title: "Simple Network Management Protocol (SNMP) :- Introduction"
 date: "2021-01-19"
 description: ""
 coverimage: Simple_Network_Management_Protocol_SNMP_intro.jpg
-tags: snmp snmpwalk, community-string
+tags: snmp snmpwalk community-string
 published: true
 posttype: article
 categories: tutorial

@@ -4,7 +4,7 @@ title: "Learn MSSQL and PostgreSQL with Docker"
 date: "2022-02-01"
 description: "In this tutorial, we use Docker to spin up database containers for us to practice our enumeration skills. At the end of this tutorial you will have run MSSQL Server 2019 from Microsoft and PostgreSQL inside docker container and enumerated them with `sqlcmd` and `psql` commands."
 coverimage: Learn_MSSQL_and_PostgreSQL_with_Docker.jpg
-tags: database docker, mssql, postgresql, psql, sqlcmd
+tags: database docker mssql postgresql psql sqlcmd
 published: true
 posttype: article
 categories: tutorial

@@ -4,7 +4,7 @@ title: 'Vulnerabilities in SSL & TLS :- TLS  Renegotiation'
 date: '2022-01-23'
 description: 'In this article, we will look at the TLS Renegotiation Vulnerability in the SSL and TLS protocols. This is a plaintext injection attack into previously sent packets. TLS and SSL 3.0 do not correctly associate renegotiation handshakes with existing connections. This allows a person-in-the-middle positioned attacker to insert data into a HTTPS session.'
 coverimage: TLS_renegotiation.jpg
-tags: insecure-tls-renegotiation ssl, tls
+tags: insecure-tls-renegotiation ssl tls
 published: true
 posttype: article
 categories: article

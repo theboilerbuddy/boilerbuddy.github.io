@@ -4,7 +4,7 @@ title: 'Vulnerabilities in SSL & TLS :- POODLE over TLS'
 date: '2022-01-20'
 description: 'In this article, we will look at CVE-2014-8730, also known as the Padding Oracle On Downgraded Legacy Over Transport Layer Security (POODLE over TLS) vulnerability. The vulnerability is caused by a TLS server failing to verify the block cipher padding when used with a cipher suite utilising a block cipher, such as AES and DES. Due to the lack of padding checking, encrypted TLS traffic can be decrypted.'
 coverimage: poodle_over_tls.jpg
-tags: poodle-over-tls ssl, tls
+tags: poodle-over-tls ssl tls
 published: true
 posttype: article
 categories: article

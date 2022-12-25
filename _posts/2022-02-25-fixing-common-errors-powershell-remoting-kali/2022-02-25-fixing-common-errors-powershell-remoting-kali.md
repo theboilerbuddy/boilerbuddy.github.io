@@ -4,7 +4,7 @@ title: 'Fixing Common Errors PowerShell Remoting From Kali'
 date: '2022-02-25'
 description: 'In this article, I will briefly explain how to fix common issues when trying to PowerShell Remote From Kalil.'
 coverimage: Fixing_Common_Errors_PowerShell_Remoting_From_Kali.jpg
-tags: error-message kali-linux, powershell
+tags: error-message kali-linux powershell
 published: true
 posttype: article
 categories: article

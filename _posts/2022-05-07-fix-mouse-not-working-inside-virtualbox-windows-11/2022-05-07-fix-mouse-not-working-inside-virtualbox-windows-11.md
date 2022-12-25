@@ -4,7 +4,7 @@ title: 'How to Fix: Virtualbox on Windows 11 Mouse Not Working Inside VM'
 date: '2022-05-07'
 description: 'This article demonstrates how to fix a mouse that doesnt work inside VirtualBox VM on a computer with Windows 11.'
 coverimage: 
-tags: virutalbox vms, windows
+tags: virutalbox vms windows
 published: true
 posttype: article
 categories: article

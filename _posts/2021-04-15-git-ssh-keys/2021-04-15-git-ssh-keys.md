@@ -4,7 +4,7 @@ title: 'Git with SSH Keys'
 date: '2021-04-15'
 description: 'When working with Git via command line, the easiest way to authenticate is with x.509 keys. This article will show you how to set them up.'
 coverimage: Git_with_SSH_Key_m80IUmA.jpg
-tags: git github, github-desktop, source-tree, ssh-keys, x509
+tags: git github github-desktop source-tree ssh-keys x509
 published: true
 posttype: article
 categories: article

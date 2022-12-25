@@ -4,7 +4,7 @@ title: 'Vulnerabilities in SSL & TLS :- Sweet32'
 date: '2022-01-07'
 description: 'In this article, we will look at CVE Numbers CVE-2016–2183 and CVE-2016–6329, also known as the Sweet32 attack. The attack which involves collecting SSL traffic using legacy block ciphers via a person-in-the-middle context and subjecting it to a collision attack.'
 coverimage: Sweet32.jpg
-tags: ssl sweet32, tls
+tags: ssl sweet32 tls
 published: true
 posttype: article
 categories: article

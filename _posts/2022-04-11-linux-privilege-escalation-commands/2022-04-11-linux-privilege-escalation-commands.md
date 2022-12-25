@@ -4,7 +4,7 @@ title: 'Linux Privilege Escalation Commands'
 date: '2022-04-11'
 description: 'To exploit systems, attackers utilise a technique known as enumeration to find flaws that could lead to privilege escalation. Privilege Escalation is where a user can get elevated access to resources that should typically be unavailable by exploiting a bug, design flaw, or configuration issue. The attacker can utilise the newly acquired access to steal sensitive information, run administrative commands, or deploy malware. This article looks at enumeration for privilege escalation of Linux.'
 coverimage: Linux_Privilege_Escalation_Commands.jpg
-tags: enumeration linux, priv-esc
+tags: enumeration linux priv-esc
 published: true
 posttype: article
 categories: article

@@ -4,7 +4,7 @@ title: 'Web Security Headers'
 date: '2022-01-02'
 description: 'Web application security headers can make a big difference in reducing the attack surface of a clients application. Knowing the differences is an essential part of a consultants repertoire.'
 coverimage: Web_Security_Headers.jpg
-tags: browsers content-security-policy, csp, hsts, security-headers, strict-transport-security, x-content-type-options, x-frame-options
+tags: browsers content-security-policy csp hsts security-headers strict-transport-security x-content-type-options x-frame-options
 published: true
 posttype: article
 categories: article

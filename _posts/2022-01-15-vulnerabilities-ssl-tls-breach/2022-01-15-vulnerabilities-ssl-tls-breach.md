@@ -4,7 +4,7 @@ title: 'Vulnerabilities in SSL & TLS :- BREACH'
 date: '2022-01-15'
 description: 'In this article we look at CVE Number CVE-2013-3587 or what is commonly referred as the BREACH attack. The HTTPS protocol can encrypt compressed data without properly obfuscating the length of the unencrypted data, which makes it easier for man-in-the-middle (MitM) attackers to obtain plaintext secret values by observing length differences during a series of guesses in which a string in an HTTP request URL potentially matches an unknown string in an HTTP response body.'
 coverimage: breach.jpg
-tags: breach ssl, tls
+tags: breach ssl tls
 published: true
 posttype: article
 categories: article
