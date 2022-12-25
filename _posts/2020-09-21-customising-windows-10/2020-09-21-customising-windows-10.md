@@ -262,3 +262,70 @@ Install-Module -Name PSReadLine -Scope CurrentUser -Force -SkipPublisherCheck
 
 Oh My Posh Themes
 Pick a [theme for `Oh My Posh`](https://github.com/JanDeDobbeleer/oh-my-posh#themes)
+```
+Import-Module posh-git
+Import-Module oh-my-posh
+Set-Theme Paradox
+```
+
+### Customise your Kali
+
+Install Powerline
+```
+sudo apt install golang-go
+go get -u github.com/justjanne/powerline-go
+```
+
+Install Hyper for Windows
+https://releases.hyper.is/download/win
+
+<figure class="figure text-center col-xs-12 col-sm-12 col-lg-12">
+<img src="/static/03e3cc64-862a-4dd2-9b5a-460007938604.png" class="img-fluid" alt="Install Hyper For Windows">
+<figcaption class="figure-caption text-center fw-normal text-dark">Install Hyper For Windows.</figcaption>
+</figure>
+
+With the Hypershell open, enter the following commands
+
+<figure class="figure text-center col-xs-12 col-sm-12 col-lg-12">
+<img src="/static/ad210a8d-8793-4ffc-b538-7e36b1e2d0a4.png" class="img-fluid" alt="Open HyperShell">
+<figcaption class="figure-caption text-center fw-normal text-dark">Open HyperShell.</figcaption>
+</figure>
+
+**settings.json**
+
+The settings.json file as the name suggests contains settings for the terminal application. A few of the important settings like what should be your default profile, color scheme, key bindings, etc can be found here.
+
+To open the default.json file hold the alt key while opening the settings.json file as mentioned above.
+
+**defaults.json**
+
+The defaults.json file contains all the default configuration values for the terminal. This file can be used for reference, as it is an auto-generated file and contains all complete default configuration of the terminal application.
+
+## Install Chocolatey
+
+From an elevated PowerShell Prompt
+```
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+```
+
+Confirm the installation of Chocolatey
+
+<figure class="figure text-center col-xs-12 col-sm-12 col-lg-12">
+<img src="/static/47315b04-6d39-4fb7-b421-83d9e7f2b346.png" class="img-fluid" alt="Confirm the installation of Chocolatey">
+<figcaption class="figure-caption text-center fw-normal text-dark">Confirm the installation of Chocolatey.</figcaption>
+</figure>
+
+Let us install some packages
+
+```
+choco install wsl-kalilinux
+```
+
+## FireEye Commando-vm
+
+Download the latest from:
+[https://github.com/fireeye/commando-vm](https://github.com/fireeye/commando-vm)
+
+Unzip the folder.
+
+Use my custom profile evilsaint.json. 
