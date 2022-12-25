@@ -2,7 +2,7 @@
 layout: post
 title: 'Securely Accessing Remote Docker Host'
 date: '2021-08-16'
-description: 'The Docker TCP socket by default doesn't support any authentication. and, if the Docker socket is exposed on an external interface, anyone can connect to it and issue docker commands. This can even lead to host takeover if the Docker daemon is running as root.'
+description: 'The Docker TCP socket by default doesnt support any authentication. and, if the Docker socket is exposed on an external interface, anyone can connect to it and issue docker commands. This can even lead to host takeover if the Docker daemon is running as root.'
 coverimage: Securely_Accessing_Remote_Docker_Host_HjjWMVv.jpg
 tags: docker
 published: true

@@ -2,7 +2,7 @@
 layout: post
 title: 'WSL2 Error - 'System has not been booted with systemd as init system (PID 1). Can't operate.''
 date: '2022-02-25'
-description: 'This article demonstrates how to fix the error 'System has not been booted with systemd as init system (PID 1). Can't operate. Failed to connect to bus: Host is down' when using WSL version 2.'
+description: 'This article demonstrates how to fix the error System has not been booted with systemd as init system (PID 1). Cant operate. Failed to connect to bus: Host is down when using WSL version 2.'
 coverimage: WSL2_Error_System_has_not_been_booted_with_systemd_as_init_system.jpg
 tags: error-message, linux, windows, wsl2
 published: true
