@@ -330,6 +330,7 @@ Unzip the folder.
 
 Use my custom profile evilsaint.json. 
 
+<a href="evilsaint.json">Custom Profile</a>
 
 My main additions are 
 ```
