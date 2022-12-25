@@ -9,6 +9,7 @@ published: true
 posttype: article
 categories: tutorial
 ---
+
 ```
 API Endpoint: https://api.vultr.com/
 API Key: Available in Members Area
@@ -185,7 +186,6 @@ Example Parameter
 <figcaption class="figure-caption text-center fw-normal text-dark">List Of All Plans.</figcaption>
 </figure>
 
-
 ### Operating System
 
 #### /v1/os/list
@@ -232,12 +232,10 @@ Example Parameter
 
 #### List of All Operating Systems
 
-
 <figure class="figure text-center col-xs-12 col-sm-12 col-lg-12">
 <img src="/static/bd1d2d1a-1014-41c6-902a-e1ac6b8c6572.png" class="img-fluid" alt="List of all Operating Systems">
 <figcaption class="figure-caption text-center fw-normal text-dark">List of all Operating Systems.</figcaption>
 </figure>
-
 
 ### Application
 
@@ -287,16 +285,15 @@ Example Parameter
 
 #### Full List of Apps
 
-
 <figure class="figure text-center col-xs-12 col-sm-12 col-lg-12">
 <img src="/static/b08d3fce-7228-40af-9a4c-3dbdbeeb9003.png" class="img-fluid" alt="Full List Of Apps">
 <figcaption class="figure-caption text-center fw-normal text-dark">Full List Of Apps.</figcaption>
 </figure>
 
-
 ### The process in creating the docker container, finding the app id, the dc number, and creating it
 
 Example Command
+
 ```
 curl -H "API-Key: YOURKEY" https://api.vultr.com/v1/server/create --data "DCID=8" --data "VPSPLANID=201" --data "OSID=270" --data "APPID=17" --data "label=Docker-Server"
 ```
@@ -309,7 +306,7 @@ curl -H "API-Key: YOURKEY" https://api.vultr.com/v1/server/create --data "DCID=8
 --data "label=docker-test" = "label=Docker-Server" (server label)
 ```
 
-### Destroy (delete) a virtual machine. All data will be permanently lost, and the IP address will be released. There is no going back from this call.
+### Destroy (delete) a virtual machine. All data will be permanently lost, and the IP address will be released. There is no going back from this call
 
 Example Request:
 
@@ -391,11 +388,11 @@ Required Access: GET
 ```
 
 ```
-{% highlight PowerShell %}
 curl -H 'API-Key: YOURKEY' https://api.vultr.com/v1/server/list
 ```
 
 Example Response:
+
 ```
 {
     "576965": {
@@ -457,7 +454,7 @@ Example:
 curl -H 'API-Key: YOURKEY' https://api.vultr.com/v1/server/upgrade_plan --data 'SUBID=39960375' --data 'VPSPLANID=29'
 ```
 
-### Saving a snapshot of your machine.
+### Saving a snapshot of your machine
 
 Create a snapshot from an existing virtual machine. The virtual machine does not need to be stopped.
 
@@ -474,6 +471,7 @@ curl -H 'API-Key: YOURKEY' https://api.vultr.com/v1/snapshot/create --data 'SUBI
 ```
 
 Example Response:
+
 ```
 {
     "SNAPSHOTID": "544e52f31c706",
@@ -490,7 +488,6 @@ This tutorial explains the basics of getting started with Docker. I assume that 
 Docker creates virtual containers. Docker's container system is very efficient because it works with commits. This saves space, and allows you to see changes to the container. For example, if you install Apache in a container, you can create a commit with the name "Installed Apache" so you know exactly what happened.
 
 The first thing we'll do is pull from a repository. Say that you want to install Ubuntu in a container, you can pull Ubuntu from the repository:
-
 
 ```
 docker pull ubuntu
