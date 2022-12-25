@@ -331,8 +331,6 @@ Unzip the folder.
 Use my custom profile evilsaint.json. 
 
 
-<a href="evilsaint.json" target="_blank">Custom Profile</a>
-
 My main additions are 
 ```
 {"name": "wsl.fireeye"},
@@ -344,3 +342,85 @@ My main additions are
 {"name": "microsoft-windows-terminal"},
 {"name": "everything"},
 ```
+
+I like to remove
+```
+{"name": "burp.free.fireeye"},
+```
+
+```
+cinst install <package>
+```
+
+```
+cup all
+```
+
+## Customising WSL
+
+### Kali Machine
+
+```
+sudo apt-get update
+sudo apt-get dist-upgrade
+sudo apt-get clean
+sudo apt-get --yes --force-yes install kali-desktop-xfce xorg xrdp
+sed -i 's/port=3389/port=3390/g' /etc/xrdp/xrdp.ini
+sudo apt install kali-win-kex
+sudo apt install kali-linux-large
+```
+
+Run Win-KeX
+
+* Windows mode
+* seamless mode
+
+## Moving Around 
+
+```
+start WT 'new-tab "PowerShell" ; split-pane -p "KaliGeneral" ; split-pane -H -p "KaliC2" | set-focus -n wsl.exe
+```
+
+```
+mkdir C:\Users\consultant\AppData\Local\KaliC2
+wsl --import KaliC2 C:\Users\consultant\AppData\Local\KaliC2 .\kali-base.tar --version 1
+mkdir C:\Users\consultant\AppData\Local\KaliGeneral
+wsl --import KaliGeneral C:\Users\consultant\AppData\Local\KaliGeneral .\kali-base.tar --version 2
+```
+
+<figure class="figure text-center col-xs-12 col-sm-12 col-lg-12">
+<img src="/static/d65ee216-1714-45cf-b4ac-8bc5587beba9.png" class="img-fluid" alt="Windows Terminal Help">
+<figcaption class="figure-caption text-center fw-normal text-dark">Windows Terminal Help.</figcaption>
+</figure>
+
+<figure class="figure text-center col-xs-12 col-sm-12 col-lg-12">
+<img src="/static/41873b36-7aac-435e-8b51-1a6a566f0a31.png" class="img-fluid" alt="Windows Terminal Help - Split Pane">
+<figcaption class="figure-caption text-center fw-normal text-dark">Windows Terminal Help - Split Pane.</figcaption>
+</figure>
+
+<figure class="figure text-center col-xs-12 col-sm-12 col-lg-12">
+<img src="/static/21ca4b80-a019-4029-b4ea-41fa193bef73.png" class="img-fluid" alt="Windows Terminal Help - New Tab">
+<figcaption class="figure-caption text-center fw-normal text-dark">Windows Terminal Help - New Tab.</figcaption>
+</figure>
+
+<figure class="figure text-center col-xs-12 col-sm-12 col-lg-12">
+<img src="/static/1b6288b6-c34f-4939-b680-c11726d58814.png" class="img-fluid" alt="Windows Terminal Help - Focus Tab">
+<figcaption class="figure-caption text-center fw-normal text-dark">Windows Terminal Help - Focus Tab.</figcaption>
+</figure>
+
+<figure class="figure text-center col-xs-12 col-sm-12 col-lg-12">
+<img src="/static/06677c06-0359-4f30-b953-8fb6cfd31724.png" class="img-fluid" alt="Two Versions Of Kali">
+<figcaption class="figure-caption text-center fw-normal text-dark">Two Versions Of Kali.</figcaption>
+</figure>
+
+## Customise Toys
+
+* Groupy
+* Taskbar X
+* T Clock
+* Power Toys
+* Everything
+* Rocket / Launcher
+* wox
+* sharex
+* ditto
