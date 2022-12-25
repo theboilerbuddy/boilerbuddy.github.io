@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 'Encoding PowerShell'
 date: '2022-04-19'
 description: 'The use of the `-EncodedCommand` PowerShell parameter is typically used by Administrators to run complex scripts without having to worry about escaping characters. However, it is commonly used by adversaries to hide their code.  While it also offers obfuscation, remember base64 encoding can be decoded, so this is only real protection against shoulder surfers or people not in possession of decoding software.'
@@ -6,6 +7,7 @@ coverimage: Encoding_PowerShell.jpg
 tags: encoding, powershell
 published: true
 posttype: article
+categories: blog
 ---
 # Encoding Powershell
 

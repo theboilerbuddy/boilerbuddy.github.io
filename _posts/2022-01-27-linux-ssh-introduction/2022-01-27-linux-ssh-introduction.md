@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 'Linux Security :- Secure Shell (SSH) Introduction'
 date: '2022-01-27'
 description: 'This article serves as an introduction to the Secure Shell (SSH) protocol for Linux users. When you need to connect to Linux servers remotely, SSH is the most commonly used method. SSH provides a text interface by spawning a remote shell. All commands entered in your local terminal are sent to the remote server and executed there.'
@@ -6,6 +7,7 @@ coverimage: Secure_Shell_SSH_intro.jpg
 tags: linux, ssh
 published: true
 posttype: article
+categories: blog
 ---
 
 ###What is SSH?

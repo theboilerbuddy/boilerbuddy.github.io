@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 'Vulnerabilities in SSL & TLS :- BEAST'
 date: '2022-01-14'
 description: 'In this article, we will look at CVE Number CVE-2011-3389, also known as BEAST. BEAST, or Browser Exploit Against SSL/TLS, is a largely theoretical attack that requires a person-in-the-middle to eavesdrop on a connection and downgrade encryption support to (vulnerable) TLS 1.0. This allows attackers to decrypt the traffic and listen in on conversations.'
@@ -6,6 +7,7 @@ coverimage: beast.jpg
 tags: beast, ssl, tls
 published: true
 posttype: article
+categories: blog
 ---
 ## Main Points 
 

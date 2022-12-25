@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 'IPv6 Wireshark Filters'
 date: '2022-03-06'
 description: 'List of IPv6 Wireshark Filters'
@@ -6,6 +7,7 @@ coverimage: IPv6_Wireshark_Filters.jpg
 tags: ipv6
 published: true
 posttype: article
+categories: blog
 ---
 # IPv6 WireShark Filters
 

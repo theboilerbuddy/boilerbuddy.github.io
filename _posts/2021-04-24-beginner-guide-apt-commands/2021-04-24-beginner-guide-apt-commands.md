@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 'Beginner Guide To APT Commands'
 date: '2021-04-24'
 description: ''
@@ -6,6 +7,7 @@ coverimage: Beginner_Guide_To_APT_Command.jpg
 tags: apt, aptidude
 published: true
 posttype: article
+categories: blog
 ---
 Little history of how apt works?
 

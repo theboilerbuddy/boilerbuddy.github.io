@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 'Vulnerabilities in SSL & TLS :- FREAK'
 date: '2022-01-09'
 description: 'In this article, we will look at CVE-2015-0204, also known as the FREAK attack. This attack makes use of a person-in-the-middle position to allow end clients to communicate using RSA Export Keys, which were a form of weak strength RSA encryption keys capped at 512 bits. The US government imposed this in the 1990s to prevent the encryption from being used against them. The idea was to give protection from a modest system but not prevent the NSA from decrypting it.'
@@ -6,6 +7,7 @@ coverimage: freak.jpg
 tags: freak, ssl, tls
 published: true
 posttype: article
+categories: blog
 ---
 ## Main Points 
 

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 'Cloud Hacking :- Serverless Function Injection'
 date: '2022-02-16'
 description: 'In this example, we will demonstrate how to exfiltrate secrets through command injection against a serverless function. Serverless functions listen for events or triggers to be run. It is possible to inject data to these events, leading to injection vulnerabilities in serverless functions.'
@@ -6,6 +7,7 @@ coverimage: Cloud_Hacking_Serverless_Function_Injection.jpg
 tags: cloud, how-to, serverless-functions
 published: true
 posttype: article
+categories: blog
 ---
 In this example, we will demonstrate how to exfiltrate secrets through command injection against a serverless function. Serverless functions listen for events or triggers to be run. It is possible to inject data to these events, leading to injection vulnerabilities in serverless functions.
 

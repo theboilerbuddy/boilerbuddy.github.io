@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 'WSL2 - Installing Metasploit Framework with Kali Linux'
 date: '2022-02-25'
 description: 'This article demonstrates how to install the Metasploit Framework with Kali Linux on WSL2.'
@@ -6,6 +7,7 @@ coverimage: WSL2_Installing_Metasploit_Framework_with_Kali_Linux.jpg
 tags: kali-linux, wsl2
 published: true
 posttype: article
+categories: blog
 ---
 
 This article demonstrates how to install the Metasploit Framework with Kali Linux on WSL version 2. When installing Kali Linux for WSL2 using Microsoft Store, its file size is minimised by including the bare essentials by default.

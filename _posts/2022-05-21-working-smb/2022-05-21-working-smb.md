@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 'Working With SMB'
 date: '2022-05-21'
 description: 'A look at interacting with SMB Shares using the Windows Command line and using various tools available within Kali Linux.'
@@ -6,6 +7,7 @@ coverimage: Working_With_SMB.jpg
 tags: hydra, mount, nmblookup
 published: true
 posttype: article
+categories: blog
 ---
 ## Working with SMB
 

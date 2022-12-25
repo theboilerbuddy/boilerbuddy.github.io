@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 'Connecting Linux To Active Directory'
 date: '2022-06-01'
 description: 'There are several benefits to connecting a Linux OS to Active Directory instead of leaving it as a stand alone. Because of this, you do sometimes see this configuration on client engagements and it is useful to test out how a Linux box shows up in your enumeration tools. This article details how you can connect both Debian and Centos based systems to Active Directory for setting up a home lab.'
@@ -6,6 +7,7 @@ coverimage: Connecting_Linux_To_Active_Directory.jpg
 tags: active-direction, linux
 published: true
 posttype: article
+categories: blog
 ---
 # Connecting Linux To Active Directory
 

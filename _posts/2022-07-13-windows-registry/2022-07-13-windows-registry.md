@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 'Windows Registry'
 date: '2022-07-13'
 description: 'The Registry has been a part of Windows since Windows 3.1. Simply put, it's a database that stores Windows and programme settings. Some of those settings are quite complex and aren't meant for humans to alter or comprehend; others are simple and can be safely tweaked.'
@@ -6,6 +7,7 @@ coverimage: Windows_Registry.jpg
 tags: registry
 published: true
 posttype: article
+categories: blog
 ---
 
 # Registry

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 'Querying Active Directory With PowerShell'
 date: '2022-06-22'
 description: 'Active Directory lies at the heart of most organisations' networks. PowerShell is a versatile Scripting Language that Windows natively support. We can leverage PowerShell to enumerate Active Directory for various pieces of information crucial to our penetration tests.'
@@ -6,6 +7,7 @@ coverimage: https://evilsaint.com/media/articles/images/querying-active-director
 tags: active-directory, enumeration, powershell
 published: true
 posttype: article
+categories: blog
 ---
 # Active Directory Querying With PowerShell
 

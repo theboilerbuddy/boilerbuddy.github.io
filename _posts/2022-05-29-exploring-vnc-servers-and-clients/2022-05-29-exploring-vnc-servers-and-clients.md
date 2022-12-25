@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 'Exploring VNC Servers And Clients'
 date: '2022-05-29'
 description: 'This article looks at several different VNC Server technologies, and we perform a number of actions on them including installing and configuring them. We then look at interacting with them via connection with a VNC Client.'
@@ -6,6 +7,7 @@ coverimage: Exploring_VNC_Servers_And_Clients.jpg
 tags: vnc
 published: true
 posttype: article
+categories: blog
 ---
 # VNC Servers & Clients
 

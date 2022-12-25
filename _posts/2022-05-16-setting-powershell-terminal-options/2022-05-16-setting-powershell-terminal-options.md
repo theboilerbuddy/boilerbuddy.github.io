@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 'Setting PowerShell Terminal Options'
 date: '2022-05-16'
 description: 'During a pentest engagement, you often come across the need for a screenshot for the report. Using the `$host.UI` parameter inside our PowerShell terminal we can do things like set the window title, change the foreground and background colours along with adjusting the size and position. This article looks at how setting values within the `$host.UI` variable can customise our PowerShell terminal.'
@@ -6,6 +7,7 @@ coverimage: Setting_PowerShell_Terminal_Options.jpg
 tags: powershell
 published: true
 posttype: article
+categories: blog
 ---
 
 # Set PowerShell Terminal Options

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 'SQLi Tools'
 date: '2022-06-13'
 description: 'This article looks at the command syntax of two SQL Injection tools, SQLmap, and SQLninja. \n Bernardo Damele and Miroslav Stampar developed SQLmap, and it is an actively maintained and powerful command-line tool. It is available as part of the Kali distribution (SQLmap). \n SQLninja is a powerful SQL injection tool created by Icesurfer (SQLninja). Written in Perl, it is self-described as 'should run on any UNIX based platform with a Perl interpreter' (with the necessary modules installed).'
@@ -6,6 +7,7 @@ coverimage: SQLi_Tools.jpg
 tags: sql-injection
 published: true
 posttype: article
+categories: blog
 ---
 
 # SQLi Tools

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 'Vulnerabilities in SSL & TLS :- Logjam'
 date: '2022-01-10'
 description: 'In this article we will look at the SSL Logjam vulnerability. This is a person-in-the-middle attack, similar to FREAK, that exposes Export Grade cipher suites. This time, Diffie-Hellman is used instead of RSA.'
@@ -6,6 +7,7 @@ coverimage: logjam.jpg
 tags: logjam, ssl, tls
 published: true
 posttype: article
+categories: blog
 ---
 ## Main Points
 

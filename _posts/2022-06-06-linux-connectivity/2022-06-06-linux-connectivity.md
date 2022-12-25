@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 'Linux Connectivity'
 date: '2022-06-06'
 description: 'A look at various commands that can be used for configuring Linux network connectivity.'
@@ -6,6 +7,7 @@ coverimage: Linux_Connectivity.jpg
 tags: networking
 published: true
 posttype: article
+categories: blog
 ---
 # Linux Connectivity
 

@@ -1,10 +1,12 @@
 ---
+layout: post
 title: 'Understand NetBIOS Names in Minutes'
 date: '2022-02-26'
 description: 'This article serves as an introduction and quick reference to NetBIOS names'
 coverimage: Understand_NetBIOS_Names_in_Minutes.jpg
 published: true
 posttype: article
+categories: blog
 ---
 
 NetBIOS names made easy. This article serves as a simplified introduction to NetBIOS names and suffixes; consider this if you are running late for exam prep or having to debug output from your terminal.

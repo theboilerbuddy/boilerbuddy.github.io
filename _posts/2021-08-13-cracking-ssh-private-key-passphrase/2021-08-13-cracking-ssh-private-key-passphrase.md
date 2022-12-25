@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 'Cracking SSH Private Key Passphrase'
 date: '2021-08-13'
 description: ''
@@ -6,6 +7,7 @@ coverimage: Cracking_SSH_Private_Key_Passphrase.jpg
 tags: ssh
 published: true
 posttype: article
+categories: blog
 ---
 
 ```

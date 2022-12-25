@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 'Vulnerabilities in SSL & TLS :- DROWN'
 date: '2022-01-08'
 description: 'In this article we look at CVE Number CVE-2016-0800, also known as the DROWN vulnerability. Decrypting RSA with Obsolete and Weakened eNcryption (DROWN) is an attack that demonstrates that even if you do not allow SSLv2, simply supporting it can be dangerous.'
@@ -6,6 +7,7 @@ coverimage: drown.jpg
 tags: drown, ssl, tls
 published: true
 posttype: article
+categories: blog
 ---
 ## Main Points
 

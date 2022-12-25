@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 'Scripting Lab Machines: Code Snippets'
 date: '2021-06-20'
 description: 'The below is an assortment of commands I frequently use when scripting the building of Windows machines and the creation of Active Directory environments.'
@@ -6,6 +7,7 @@ coverimage: Scripting_Lab_Machines_Code_Snippets.jpg
 tags: 
 published: true
 posttype: article
+categories: blog
 ---
 When creating home lab machines you may have a common set of needs that you wish to apply to each one. 
 

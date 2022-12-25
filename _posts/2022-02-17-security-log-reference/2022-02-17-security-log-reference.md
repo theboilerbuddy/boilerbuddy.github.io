@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 'Security Log Reference'
 date: '2022-02-17'
 description: 'This article serves as a quick reference for Windows Security Log event IDs.'
@@ -6,6 +7,7 @@ coverimage: Security_Log_Reference.jpg
 tags: security-logs, windows
 published: true
 posttype: article
+categories: blog
 ---
 This article serves as a quick reference for Windows Security Log event IDs.
 

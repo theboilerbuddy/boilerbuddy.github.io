@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 'Windows Query Logged On Users'
 date: '2022-06-10'
 description: 'As a pentester, there are plenty of situations where we need to view who is logged on to a given computer remotely. Often we not only need to check who is logged on interactively at the console but also who is connected remotely via a Remote Desktop Connection. This article will discuss server non-invasive ways of doing this.'
@@ -6,6 +7,7 @@ coverimage: Windows_Query_Logged_On_Users.jpg
 tags: wmic
 published: true
 posttype: article
+categories: blog
 ---
 
 # Query Logged On Users

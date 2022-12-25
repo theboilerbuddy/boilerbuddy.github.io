@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 'Vulnerabilities in SSL & TLS :- Manually Testing'
 date: '2022-02-03'
 description: 'As OpenSSL has improved, it has become more challenging to use one binary for testing the full range of modern to legacy SSL/TLS configurations. The reason for that is following Heartbleed; the OpenSSL developers started a significant overhaul, part of which included the elimination of outmoded cryptography.'
@@ -6,6 +7,7 @@ coverimage: Vulnerabilities_in_SSL__TLS__Manually_Testing.jpg
 tags: ssl, tls
 published: true
 posttype: article
+categories: blog
 ---
 # OpenSSL For Testing
 

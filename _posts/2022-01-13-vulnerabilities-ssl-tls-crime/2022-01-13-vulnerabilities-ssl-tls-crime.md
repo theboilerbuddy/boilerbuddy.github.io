@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 'Vulnerabilities in SSL & TLS :- CRIME'
 date: '2022-01-13'
 description: 'This article will examine CVE 2012-4929, also known as the CRIME vulnerability. To obtain plaintext HTTP headers, attackers with person-in-the-middle context can compare length differences between a string in an HTTP request and an unknown string in an HTTP header.'
@@ -6,6 +7,7 @@ coverimage: crime.jpg
 tags: crime, ssl, tls
 published: true
 posttype: article
+categories: blog
 ---
 ## Main Points 
 

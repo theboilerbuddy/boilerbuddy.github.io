@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 'IP Sec - Introduction Part 2'
 date: '2022-01-04'
 description: 'In the second part of this article on IPSec we will be looking at the difference between main mode and aggressive mode and how to configure IKE in a lab environment using a Windows Server 2016 and a Windows 10 virtual machine. We then proceed to enumerate this setup with some tools bundled in Kali Linux.'
@@ -6,6 +7,7 @@ coverimage: IP_Sec_-_Introduction_part2.jpg
 tags: ike, isakmp
 published: true
 posttype: article
+categories: blog
 ---
 Let us go over a summary of the points we covered in the introduction.
 

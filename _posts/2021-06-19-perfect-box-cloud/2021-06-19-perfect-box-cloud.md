@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 'A Perfect Box In The Cloud'
 date: '2021-06-19'
 description: 'During a recent period where I had to relocate a lot of my digital estate, I found myself without a powerful core machine capable of managing multiple projects. This led me down a path in which I experienced the pros and cons of working in the cloud and in this article I will talk about my journey to find the perfect platform for me to work on'
@@ -6,6 +7,7 @@ coverimage: A_Perfect_Box_In_The_Cloud.jpg
 tags: vultr
 published: true
 posttype: article
+categories: blog
 ---
 
 ## Vultr

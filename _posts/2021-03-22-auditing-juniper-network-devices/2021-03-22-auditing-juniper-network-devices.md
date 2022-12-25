@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 'Auditing Juniper Network Devices'
 date: '2021-03-22'
 description: 'This article describes some of the querks of auditing Juniper network devices'
@@ -6,6 +7,7 @@ coverimage: Auditing_Juniper_Network_Devices.jpg
 tags: auditing, console-connection, juniper
 published: true
 posttype: article
+categories: blog
 ---
 
 ## Lack of Console Connection Timeout

@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 'FFmpeg Cheat Sheet'
 date: '2021-07-02'
 description: 'A handy cheat sheet of commands for the text line utility `ffmpeg`.'
@@ -6,6 +7,7 @@ coverimage: FFmpeg_Cheat_Sheet.jpg
 tags: cheat-sheet, ffmpeg, mp3, wav, wma
 published: true
 posttype: article
+categories: blog
 ---
 # Installing FFMpeg
 

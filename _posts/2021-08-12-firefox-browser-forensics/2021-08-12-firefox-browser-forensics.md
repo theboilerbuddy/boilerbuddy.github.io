@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 'Firefox Browser Forensics'
 date: '2021-08-12'
 description: 'A look at Firefox Browser forensics'
@@ -6,6 +7,7 @@ coverimage: Firefox_Browser_Forensics.jpg
 tags: browser
 published: true
 posttype: article
+categories: blog
 ---
 # Firefox: History
 

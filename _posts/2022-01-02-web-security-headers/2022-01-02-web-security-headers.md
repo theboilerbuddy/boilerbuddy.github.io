@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 'Web Security Headers'
 date: '2022-01-02'
 description: 'Web application security headers can make a big difference in reducing the attack surface of a clients application. Knowing the differences is an essential part of a consultants repertoire.'
@@ -6,6 +7,7 @@ coverimage: Web_Security_Headers.jpg
 tags: browsers, content-security-policy, csp, hsts, security-headers, strict-transport-security, x-content-type-options, x-frame-options
 published: true
 posttype: article
+categories: blog
 ---
 HTTP Headers are typically easy to implement and can significantly increase the security of your website and help prevent security vulnerabilities like Cross-Site Scripting, Clickjacking, Information disclosure and more. In this article, we are concerned chiefly with five security headers that can be implemented to improve the security posture of your website.
 

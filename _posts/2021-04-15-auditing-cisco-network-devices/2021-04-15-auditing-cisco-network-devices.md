@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 'Auditing Cisco Network Devices'
 date: '2021-04-15'
 description: ''
@@ -6,6 +7,7 @@ coverimage: Auditing_Cisco_Network_Devices.jpg
 tags: 
 published: true
 posttype: article
+categories: blog
 ---
 
 # Administrative Line Login With No Password

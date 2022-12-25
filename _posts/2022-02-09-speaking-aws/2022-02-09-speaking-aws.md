@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 'Speaking AWS'
 date: '2022-02-09'
 description: 'aws, cloud, s3-buckets, scoutsuite'
@@ -6,6 +7,7 @@ coverimage: Speaking_AWS.jpg
 tags: aws, cloud, s3-buckets, scoutsuite
 published: true
 posttype: article
+categories: blog
 ---
 # Introduction To Terminology
 

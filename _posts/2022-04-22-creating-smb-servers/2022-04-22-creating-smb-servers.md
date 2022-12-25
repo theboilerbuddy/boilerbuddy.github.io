@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 'Creating SMB Servers'
 date: '2022-04-22'
 description: 'This article looks at two ways of creating an SMB Server. First, we use the impacket library to spin up an SMB server from the command line and then we look at creating an SMB share manually on our Kali Linux VM setting up the SAMBA service.'
@@ -6,6 +7,7 @@ coverimage: Creating_SMB_Servers.jpg
 tags: smb
 published: true
 posttype: article
+categories: blog
 ---
 # SMB
 

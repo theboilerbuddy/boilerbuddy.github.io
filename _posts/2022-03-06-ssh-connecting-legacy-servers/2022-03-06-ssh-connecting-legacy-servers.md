@@ -1,4 +1,5 @@
 ---
+layout: post
 title: 'SSH - Connecting To Legacy Servers'
 date: '2022-03-06'
 description: ''
@@ -6,6 +7,7 @@ coverimage: SSH__Connecting_To_Legacy_Servers_nc8XLGd.jpg
 tags: 
 published: true
 posttype: article
+categories: blog
 ---
 Accept more legacy ciphers. Lowers hardening for support for older clients. 
 https://www.kali.org/docs/general-use/ssh-configuration/
