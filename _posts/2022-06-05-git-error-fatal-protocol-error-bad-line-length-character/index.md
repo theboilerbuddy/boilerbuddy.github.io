@@ -7,6 +7,7 @@ tags: git
 published: true
 posttype: blog
 ---
+
 On the weekend I ran into an problem with Git that couldnt debug
 
 ```
