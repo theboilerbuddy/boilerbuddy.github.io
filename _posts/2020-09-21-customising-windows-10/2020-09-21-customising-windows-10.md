@@ -39,3 +39,224 @@ Windows Version
 <figcaption class="figure-caption text-center fw-normal text-dark">Windows Version Information Displayed Via winver Command.</figcaption>
 </figure>
 
+## PowerShell 7
+
+Quick one-liner to install the latest version (PowerShell 7 is current at time of print) on Windows
+```
+iex "& { $(irm https://aka.ms/install-powershell.ps1) } -UseMSI"
+```
+
+Follow the Wizard to the step headed "Optional Actions" and check the selection to "Enable PowerShell remoting". I also like to select "Add 'Open here' context menus to Explorer". 
+
+<figure class="figure text-center col-xs-12 col-sm-12 col-lg-12">
+ <img src="/static/747d8148-d1a5-49f1-b37a-20a03d0726e4.png" class="img-fluid" alt="PowerShell 7 Installing Optional Actions">
+<figcaption class="figure-caption text-center fw-normal text-dark">PowerShell 7 Installing Optional Actions.</figcaption>
+</figure>
+
+Select the "Launch PowerShell" in the bottom left of the next wizard. 
+
+Now "Right Click" the PowerShell icon and select "Pin to taskbar". 
+
+<figure class="figure text-center col-xs-12 col-sm-12 col-lg-12">
+ <img src="/static/b5b9a5ef-6cab-469e-b646-cdf2e102ab88.png" class="img-fluid" alt="Right click pin to taskbar">
+<figcaption class="figure-caption text-center fw-normal text-dark">Right click pin to taskbar.</figcaption>
+</figure>
+
+Now enter `$PSVersionTable` to confirm the version of PowerShell. 
+
+
+<figure class="figure text-center col-xs-12 col-sm-12 col-lg-12">
+<img src="/static/d5102f1f-3474-4de9-b731-3c000bbff513.png" class="img-fluid" alt="PowerShell 7 Get Version Information with $PSVersionTable"><figcaption class="figure-caption text-center fw-normal text-dark">PowerShell 7 Get Version Information with $PSVersionTable.</figcaption>
+</figure>
+
+To install on Linux
+```
+wget https://aka.ms/install-powershell.sh; sudo bash install-powershell.sh; rm install-powershell.sh
+```
+
+## WSL
+
+WSL version 2 is real Linux on real Windows :)
+
+Next, we will install the Windows Subsystem for Linux and the VirtualMachinePlatform. 
+
+Dism vs Enable-WindowsOptionalFeature
+
+```
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+```
+
+```
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux -NoRestart
+Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform -NoRestart
+```
+
+<figure class="figure text-center col-xs-12 col-sm-12 col-lg-12">
+<img src="/static/f01e5588-7993-4a9a-963f-0a6f28881677.png" class="img-fluid" alt="Installing Optional Features">
+<figcaption class="figure-caption text-center fw-normal text-dark">Installing Optional Features.</figcaption>
+</figure>
+
+
+Setting version 2 of the Windows Subsystem for Linux to the default
+```
+wsl –set-default-version 2
+```
+
+If you get an error message saying 
+    
+> WSL 2 requires an update to its kernel component. For information please visit https://aka.ms/wsl2kernel
+    
+This means you need to install the MSI another component. 
+
+Go to [https://aka.ms/wsl2kernel](https://aka.ms/wsl2kernel)
+
+<figure class="figure text-center col-xs-12 col-sm-12 col-lg-12">
+<img src="/static/20b5093a-ed64-44f2-9f85-330caca77ad6.png" class="img-fluid" alt="Download the Linux Kernel Update package for WSLv2">
+<figcaption class="figure-caption text-center fw-normal text-dark">Download the Linux Kernel Update package for WSLv2.</figcaption>
+</figure>
+
+Download by clicking the link "WSL2 Linux kernel update package for x64 machines"
+
+<figure class="figure text-center col-xs-12 col-sm-12 col-lg-12">
+<img src="/static/c7684b40-9f63-46d9-aa4f-2ed48d6c4bfc.png" class="img-fluid" alt="Click the msi installer">
+<figcaption class="figure-caption text-center fw-normal text-dark">Click the msi installer.</figcaption>
+</figure>
+
+If at this point you need to restart your virtual machine. 
+```
+restart-computer -Confirm
+```
+
+List various versions of Linux 
+```
+wsl --list
+wsl -l -v
+```
+
+Listing versions we can see the difference
+
+<figure class="figure text-center col-xs-12 col-sm-12 col-lg-12">
+<img src="/static/dc8ef383-d7c5-4d2d-9be0-90afdb2b03ce.png" class="img-fluid" alt="Using the wsl --list versions command">
+<figcaption class="figure-caption text-center fw-normal text-dark">Using the wsl --list versions command.</figcaption>
+</figure>
+
+We will want to upgrade any WSL Linux machines running version 1 (Hyper-V method)
+
+Reasons to upgrade to WSLv2 [Reasons to Upgrade to WSLv2](https://docs.microsoft.com/en-gb/windows/wsl/about)
+
+```
+wsl --set-version kali-linux 2
+```
+<figure class="figure text-center col-xs-12 col-sm-12 col-lg-12">
+<img src="/static/edde105e-d633-41fc-a530-09a3eea6a75d.png" class="img-fluid" alt="Coverting Kali-Linux WSLv1 to WSLv2">
+<figcaption class="figure-caption text-center fw-normal text-dark">Coverting Kali-Linux WSLv1 to WSLv2.</figcaption>
+</figure>
+
+Run the Kali Linux Distribution
+```
+wsl -d kali-linux
+```
+
+### Debugging
+
+```
+wsl --shutdown
+dism /Online /Cleanup-Image /RestoreHealth
+```
+
+Install Code by typing `code .`
+
+<figure class="figure text-center col-xs-12 col-sm-12 col-lg-12">
+<img src="/static/c40c343c-f360-46fb-8ac9-b4b008324e35.png" class="img-fluid" alt="Installing Visual Studio Code">
+<figcaption class="figure-caption text-center fw-normal text-dark">Installing Visual Studio Code.</figcaption>
+</figure>
+
+Now type `code .` again and watch as Visual Studio opens up in the Windows Host showing files from the WSL
+
+<figure class="figure text-center col-xs-12 col-sm-12 col-lg-12">
+<img src="/static/c91f8c40-7c3e-4239-b2a2-6e2e4173bb37.png" class="img-fluid" alt="Running and Installing Visual Studio inside WSL">
+<figcaption class="figure-caption text-center fw-normal text-dark">Running and Installing Visual Studio inside WSL.</figcaption>
+</figure>
+
+
+## Docker for Windows
+
+Requirements
+
+* Windows 10 64-bit: Pro, Enterprise, or Education (Build 16299 or later).
+* Hyper-V and Containers Windows features must be enabled.
+
+> **Note** - For Windows Home Edition follow this link [https://docs.docker.com/docker-for-windows/install-windows-home/](https://docs.docker.com/docker-for-windows/install-windows-home/)
+
+1. Grab the installer [https://hub.docker.com/editions/community/docker-ce-desktop-windows/](https://hub.docker.com/editions/community/docker-ce-desktop-windows/)
+
+2. Double-click the blue "Get Docker Desktop for Windows (stable)" button to download the executable.
+
+<figure class="figure text-center col-xs-12 col-sm-12 col-lg-12">
+<img src="/static/c92e6a86-96b6-4893-a656-865c78d9f0a4.png" class="img-fluid" alt="Docker Installer">
+<figcaption class="figure-caption text-center fw-normal text-dark">Docker Installer.</figcaption>
+</figure>
+
+3. Double-Click the "Docker Desktop Installer.exe" to run the installer.
+
+4. When prompted, ensure the Enable Hyper-V Windows Features option is selected on the Configuration page.
+
+5. Follow the instructions on the installation wizard to authorize the installer and proceed with the install.
+
+> If your admin account is different to your user account, you must add the user to the docker-users group. Run Computer Management as an administrator and navigate to  Local Users and Groups > Groups > docker-users. Right-click to add the user to the group. Log out and log back in for the changes to take effect.
+
+## Terminal App
+
+The terminal app is seemingly turning out to be a boon for developers and those who have always looked at Windows machines with huge expectations. The open-source terminal app boasts a range of powerful features including multiple tabs, Unicode and UTF-8 character support, and GPU accelerated text rendering engine. It’s designed to be an all-in-one platform for Command Prompt, PowerShell, WSL and SSH so that developers can have seamless access to all the tools. Even better, this all-new command-line app also features custom themes and styles for a more personalized experience
+
+[Terminal App Releases](https://github.com/microsoft/terminal/releases/)
+
+The new Shell
+
+<figure class="figure text-center col-xs-12 col-sm-12 col-lg-12">
+<img src="/static/f62567a0-2ccb-4b42-a55c-a4e2d29a1a79.png" class="img-fluid" alt="The New Shell">
+<figcaption class="figure-caption text-center fw-normal text-dark">The New Shell.</figcaption>
+</figure>
+
+Pin terminal to the taskbar
+
+<figure class="figure text-center col-xs-12 col-sm-12 col-lg-12">
+<img src="/static/94d8933c-ec62-43c3-afb0-6300e5dc86a3.png" class="img-fluid" alt="Pin terminal to the taskbar">
+<figcaption class="figure-caption text-center fw-normal text-dark">Pin terminal to the taskbar.</figcaption>
+</figure>
+
+## Customisation
+
+### Cascadia Fonts
+
+Next, I am going to install [Microsofts Cascadia Code Font](https://github.com/microsoft/cascadia-code/releases)
+
+<figure class="figure text-center col-xs-12 col-sm-12 col-lg-12">
+<img src="/static/0223b9ef-976a-491a-bed5-c703f8b79a3f.png" class="img-fluid" alt="Pin terminal to the taskbar">
+<figcaption class="figure-caption text-center fw-normal text-dark">Pin terminal to the taskbar.</figcaption>
+</figure>
+
+Click "Install for all users"
+
+<figure class="figure text-center col-xs-12 col-sm-12 col-lg-12">
+<img src="/static/2c1826a5-6222-4c83-9f06-9999146253f0.png" class="img-fluid" alt="Install Font for all users">
+<figcaption class="figure-caption text-center fw-normal text-dark">Install Font for all users.</figcaption>
+</figure>
+
+### Git
+
+Install [Git for Windows](https://git-scm.com/download/win)
+
+Posh-Git adds Git status information to your prompt as well as tab-completion for Git commands, parameters, remotes, and branch names. Oh-My-Posh provides theme capabilities for your PowerShell prompt. PSReadline lets you customize the command line editing environment in PowerShell.
+
+```
+Install-Module posh-git -Scope CurrentUser
+Install-Module oh-my-posh -Scope CurrentUser
+```
+
+PowerShell Core
+```
+Install-Module -Name PSReadLine -Scope CurrentUser -Force -SkipPublisherCheck
+```
+
