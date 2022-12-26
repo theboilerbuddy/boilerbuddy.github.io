@@ -1,5 +1,0 @@
-User-agent: *
-
-Disallow: /norobots/
-
-Sitemap: http://theboilerbuddy.github.io/sitemap.xml

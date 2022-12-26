@@ -1,0 +1,928 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Finding Interesting Files - Evilsaint</title>
+	<link rel="shortcut icon" type="image/png" href="../../static/images/favicon.ico"/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../../static/css/bootstrap.min.css">
+	<!-- CSS only -->
+	<link href="../../static/fontawesome/css/all.css" rel="stylesheet"/>
+	<!-- <link href="/static/css/font-awesome.min.css" rel="stylesheet"/> -->
+	<link rel="stylesheet" href="../../static/css/responsive.css">
+	<link rel="stylesheet" href="../../static/menu/metismenu-3.0.5/dist/metisMenu.css">
+	<link rel="stylesheet" href="../../static/css/style.css">
+	<link rel="stylesheet" href="../../static/css/codehilite.css">
+    
+	<script src="../../static/js/jquery-3.6.0.min.js"></script>
+    
+	<meta name="keywords" content="find, head, lsof, linux find, find files, find commands, file commands"/>
+	<meta name="description" content="A significant part of our job when searching around a target system is to look for interesting files.  Whether we have a need to look for SSH keys, Bash History files or database backups the commands typically all follow the same syntax. This article will look at using basic Linux commands to find and discover files."/>
+	
+<!-- Schema.org markup for Google+ -->
+<meta itemprop="name" content="Finding Interesting Files" />
+<meta itemprop="description" content="A significant part of our job when searching around a target system is to look for interesting files.  Whether we have a need to look for SSH keys, Bash History files or database backups the commands typically all follow the same syntax. This article will look at using basic Linux commands to find and discover files." />
+
+<meta itemprop="image" content="https://evilsaint.com/media/articles/images/finding-interesting-files/cover_image/Finding_Interesting_Files.jpg" />
+
+
+
+<meta name="image" content="https://evilsaint.com/media/articles/images/finding-interesting-files/cover_image/Finding_Interesting_Files.jpg" />
+
+
+<!-- Twitter Card data -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@_EvilSaint_" />
+<meta name="twitter:title" content="Finding Interesting Files" />
+<meta name="twitter:description" content="A significant part of our job when searching around a target system is to look for interesting files.  Whether we have a need to look for SSH keys, Bash History files or database backups the commands typically all follow the same syntax. This article will look at using basic Linux commands to find and discover files." />
+<meta name="twitter:creator" content="@_EvilSaint_" />
+
+<meta name="twitter:image:src" content="https://evilsaint.com/media/articles/images/finding-interesting-files/cover_image/Finding_Interesting_Files.jpg" />
+
+
+<!-- Open Graph data -->
+<meta property="og:title" content="Finding Interesting Files" />
+<meta property="og:type" content="article" />
+<meta property="og:locale" content="en_gb" />
+<meta property="og:url" content="https://evilsaint.com/article/finding-interesting-files/" />
+<meta property="og:description" content="A significant part of our job when searching around a target system is to look for interesting files.  Whether we have a need to look for SSH keys, Bash History files or database backups the commands typically all follow the same syntax. This article will look at using basic Linux commands to find and discover files." />
+<meta property="og:site_name" content="EvilSaint" />
+<meta property="article:published_time" content="29 Jun 2022, 9:06 p.m." />
+<meta property="article:modified_time" content="29 Jun 2022, 9:06 p.m." />
+<meta property="article:section" content="Article Section" />
+<meta property="article:tag" content="Enumeration,Linux," />
+<meta property="fb:admins" content="Facebook numberic ID" />
+
+<meta name="og:image" content="https://evilsaint.com/media/articles/images/finding-interesting-files/cover_image/Finding_Interesting_Files.jpg" />
+
+
+</head>
+<body>
+<!---- MAIN CONTENT START ---->
+<div id="main" class="site-main main">
+	<div class="row mr">
+        <!---- LEFT SIDEBAR GRID START ---->
+		<div class="col-12 col-sm-3 col-md-3 col-lg-3 left-section-bg pd">
+			<!---- SIDEBAR MAIN START ---->
+            <aside class="sidebar">
+				<!---- SIDEBAR LOGO START ---->
+                <div class="logo">
+					<a href="../../index.html"><img src="../../static/images/evilsaint_shield_logo.png" alt="EvilSaint Logo" title="EvilSaint Logo"></a>
+				</div>
+                <!----  SIDEBAR LOGO END  ---->
+                <!---- SIDEBAR CONTENT START ---->
+				<div class="sidebar-content">
+					
+<!-- CATEGORY SECTION START -->
+<section id="category-section">
+    <h2 class="sidebar-heading" title="Categories">Menu<span class="line"></span></h2>
+    <div class="collapse navbar-collapse in" id="navbarSupportedContent">
+	    <nav id="side-menu"><ul class="level_1"><li class="category-listitem tier-1 no-children"><a href="../../category/article/index.html" title="Category: Article" id="category-link-121" class="category-linkitem tier-1 no-arrow " >Article</a><li class="category-listitem tier-1 no-children"><a href="../../category/blog-posts/index.html" title="Category: Blog Posts" id="category-link-137" class="category-linkitem tier-1 no-arrow " >Blog Posts</a><li class="category-listitem tier-1 has-children"><a href="../finding-interesting-files.html#" title="Category: Building Labs and Virtual Machines" id="category-link-7" class="category-linkitem tier-1 has-arrow " >Building Labs and Virtual Machines</a><ul class="level_2"><li class="category-listitem tier-2 no-children"><a href="../../category/building-labs-and-virtual-machines/hyper-v.html" title="Category: Hyper-v" id="category-link-74" class="category-linkitem tier-2 no-arrow " >Hyper-v</a><li class="category-listitem tier-2 no-children"><a href="../../category/building-labs-and-virtual-machines/vmware.html" title="Category: VMware" id="category-link-73" class="category-linkitem tier-2 no-arrow " >VMware</a></li></ul><li class="category-listitem tier-1 has-children"><a href="../finding-interesting-files.html#" title="Category: Capture The Flag" id="category-link-114" class="category-linkitem tier-1 has-arrow " >Capture The Flag</a><ul class="level_2"><li class="category-listitem tier-2 no-children"><a href="../../category/capture-the-flag/hack-the-box.html" title="Category: Hack The Box" id="category-link-116" class="category-linkitem tier-2 no-arrow " >Hack The Box</a><li class="category-listitem tier-2 no-children"><a href="../../category/capture-the-flag/vulnhub.html" title="Category: Vulnhub" id="category-link-117" class="category-linkitem tier-2 no-arrow " >Vulnhub</a></li></ul><li class="category-listitem tier-1 has-children"><a href="../finding-interesting-files.html#" title="Category: Cloud" id="category-link-6" class="category-linkitem tier-1 has-arrow " >Cloud</a><ul class="level_2"><li class="category-listitem tier-2 has-children"><a href="../finding-interesting-files.html#" title="Category: Amazon Web Services" id="category-link-41" class="category-linkitem tier-2 has-arrow " >Amazon Web Services</a><ul class="level_3"><li class="category-listitem tier-3 no-children"><a href="../../category/cloud/amazon-web-services/amazon-relational-database-service-rds.html" title="Category: Amazon Relational Database Service (RDS)" id="category-link-102" class="category-linkitem tier-3 no-arrow " >Amazon Relational Database Service (RDS)</a></li></ul><li class="category-listitem tier-2 no-children"><a href="../../category/cloud/azure.html" title="Category: Azure" id="category-link-40" class="category-linkitem tier-2 no-arrow " >Azure</a><li class="category-listitem tier-2 no-children"><a href="../../category/cloud/google-cloud-platform.html" title="Category: Google Cloud Platform" id="category-link-42" class="category-linkitem tier-2 no-arrow " >Google Cloud Platform</a><li class="category-listitem tier-2 no-children"><a href="../../category/cloud/vultr.html" title="Category: Vultr" id="category-link-111" class="category-linkitem tier-2 no-arrow " >Vultr</a></li></ul><li class="category-listitem tier-1 has-children"><a href="../finding-interesting-files.html#" title="Category: Configuration Reviews" id="category-link-4" class="category-linkitem tier-1 has-arrow " >Configuration Reviews</a><ul class="level_2"><li class="category-listitem tier-2 no-children"><a href="../../category/configuration-reviews/cisco.html" title="Category: Cisco" id="category-link-37" class="category-linkitem tier-2 no-arrow " >Cisco</a><li class="category-listitem tier-2 no-children"><a href="../../category/configuration-reviews/juniper.html" title="Category: Juniper" id="category-link-36" class="category-linkitem tier-2 no-arrow " >Juniper</a></li></ul><li class="category-listitem tier-1 has-children"><a href="../finding-interesting-files.html#" title="Category: Databases" id="category-link-76" class="category-linkitem tier-1 has-arrow " >Databases</a><ul class="level_2"><li class="category-listitem tier-2 no-children"><a href="../../category/databases/amazon-relational-database-service-rds.html" title="Category: Amazon Relational Database Service (RDS)" id="category-link-103" class="category-linkitem tier-2 no-arrow " >Amazon Relational Database Service (RDS)</a><li class="category-listitem tier-2 no-children"><a href="../../category/databases/microsoft-sql-server.html" title="Category: Microsoft SQL Server" id="category-link-101" class="category-linkitem tier-2 no-arrow " >Microsoft SQL Server</a><li class="category-listitem tier-2 no-children"><a href="../../category/databases/mongodb.html" title="Category: MongoDB" id="category-link-105" class="category-linkitem tier-2 no-arrow " >MongoDB</a><li class="category-listitem tier-2 no-children"><a href="../../category/databases/mysql.html" title="Category: MySQL" id="category-link-94" class="category-linkitem tier-2 no-arrow " >MySQL</a><li class="category-listitem tier-2 no-children"><a href="../../category/databases/oracle.html" title="Category: Oracle" id="category-link-95" class="category-linkitem tier-2 no-arrow " >Oracle</a><li class="category-listitem tier-2 no-children"><a href="../../category/databases/postgres.html" title="Category: Postgres" id="category-link-77" class="category-linkitem tier-2 no-arrow " >Postgres</a><li class="category-listitem tier-2 no-children"><a href="../../category/databases/sqlite.html" title="Category: SQLite" id="category-link-104" class="category-linkitem tier-2 no-arrow " >SQLite</a></li></ul><li class="category-listitem tier-1 has-children"><a href="../finding-interesting-files.html#" title="Category: DevOps" id="category-link-79" class="category-linkitem tier-1 has-arrow " >DevOps</a><ul class="level_2"><li class="category-listitem tier-2 no-children"><a href="../../category/devops/docker.html" title="Category: Docker" id="category-link-83" class="category-linkitem tier-2 no-arrow " >Docker</a><li class="category-listitem tier-2 no-children"><a href="../../category/devops/git.html" title="Category: Git" id="category-link-80" class="category-linkitem tier-2 no-arrow " >Git</a></li></ul><li class="category-listitem tier-1 has-children"><a href="../finding-interesting-files.html#" title="Category: Download" id="category-link-118" class="category-linkitem tier-1 has-arrow " >Download</a><ul class="level_2"><li class="category-listitem tier-2 no-children"><a href="../../category/download/cheat-sheet/index.html" title="Category: Cheat Sheet" id="category-link-119" class="category-linkitem tier-2 no-arrow " >Cheat Sheet</a><li class="category-listitem tier-2 no-children"><a href="../../category/download/wallpaper/index.html" title="Category: Wallpaper" id="category-link-120" class="category-linkitem tier-2 no-arrow " >Wallpaper</a></li></ul><li class="category-listitem tier-1 has-children"><a href="../finding-interesting-files.html#" title="Category: Error messages" id="category-link-172" class="category-linkitem tier-1 has-arrow " >Error messages</a><ul class="level_2"><li class="category-listitem tier-2 no-children"><a href="../../category/error-messages/linux.html" title="Category: Linux" id="category-link-173" class="category-linkitem tier-2 no-arrow " >Linux</a><li class="category-listitem tier-2 no-children"><a href="../../category/error-messages/windows.html" title="Category: Windows" id="category-link-174" class="category-linkitem tier-2 no-arrow " >Windows</a></li></ul><li class="category-listitem tier-1 no-children"><a href="../../category/forensics.html" title="Category: Forensics" id="category-link-125" class="category-linkitem tier-1 no-arrow " >Forensics</a><li class="category-listitem tier-1 no-children"><a href="../../category/how-s.html" title="Category: How-To's" id="category-link-171" class="category-linkitem tier-1 no-arrow " >How-To's</a><li class="category-listitem tier-1 has-children"><a href="../finding-interesting-files.html#" title="Category: Infrastructure" id="category-link-130" class="category-linkitem tier-1 has-arrow " >Infrastructure</a><ul class="level_2"><li class="category-listitem tier-2 no-children"><a href="../../category/infrastructure/vpn.html" title="Category: VPN" id="category-link-131" class="category-linkitem tier-2 no-arrow " >VPN</a></li></ul><li class="category-listitem tier-1 no-children"><a href="../../category/linux-security.html" title="Category: Linux Security" id="category-link-170" class="category-linkitem tier-1 no-arrow " >Linux Security</a><li class="category-listitem tier-1 has-children"><a href="../finding-interesting-files.html#" title="Category: Operating Systems" id="category-link-5" class="category-linkitem tier-1 has-arrow " >Operating Systems</a><ul class="level_2"><li class="category-listitem tier-2 has-children"><a href="../finding-interesting-files.html#" title="Category: Linux" id="category-link-39" class="category-linkitem tier-2 has-arrow " >Linux</a><ul class="level_3"><li class="category-listitem tier-3 no-children"><a href="../../category/operating-systems/linux/centos-based.html" title="Category: Centos-Based" id="category-link-177" class="category-linkitem tier-3 no-arrow " >Centos-Based</a><li class="category-listitem tier-3 no-children"><a href="../../category/operating-systems/linux/debian-based.html" title="Category: Debian-Based" id="category-link-112" class="category-linkitem tier-3 no-arrow " >Debian-Based</a><li class="category-listitem tier-3 no-children"><a href="../../category/operating-systems/linux/kali-linux.html" title="Category: Kali Linux" id="category-link-72" class="category-linkitem tier-3 no-arrow " >Kali Linux</a><li class="category-listitem tier-3 no-children"><a href="../../category/operating-systems/linux/parrot-os.html" title="Category: Parrot OS" id="category-link-113" class="category-linkitem tier-3 no-arrow " >Parrot OS</a></li></ul><li class="category-listitem tier-2 no-children"><a href="../../category/operating-systems/linux-generic.html" title="Category: Linux (Generic)" id="category-link-175" class="category-linkitem tier-2 no-arrow " >Linux (Generic)</a><li class="category-listitem tier-2 no-children"><a href="../../category/operating-systems/mac-os.html" title="Category: Mac OS" id="category-link-78" class="category-linkitem tier-2 no-arrow " >Mac OS</a><li class="category-listitem tier-2 has-children"><a href="../finding-interesting-files.html#" title="Category: Windows Desktop" id="category-link-38" class="category-linkitem tier-2 has-arrow " >Windows Desktop</a><ul class="level_3"><li class="category-listitem tier-3 no-children"><a href="../../category/operating-systems/windows-desktop/windows-10.html" title="Category: Windows-10" id="category-link-69" class="category-linkitem tier-3 no-arrow " >Windows-10</a></li></ul><li class="category-listitem tier-2 no-children"><a href="../../category/operating-systems/windows-generic.html" title="Category: Windows (Generic)" id="category-link-179" class="category-linkitem tier-2 no-arrow " >Windows (Generic)</a><li class="category-listitem tier-2 has-children"><a href="../finding-interesting-files.html#" title="Category: Windows Server" id="category-link-70" class="category-linkitem tier-2 has-arrow " >Windows Server</a><ul class="level_3"><li class="category-listitem tier-3 no-children"><a href="../../category/operating-systems/windows-server/windows-server-2016.html" title="Category: Windows Server 2016" id="category-link-71" class="category-linkitem tier-3 no-arrow " >Windows Server 2016</a></li></ul></li></ul><li class="category-listitem tier-1 has-children"><a href="../finding-interesting-files.html#" title="Category: Pentest Phases" id="category-link-1" class="category-linkitem tier-1 has-arrow " >Pentest Phases</a><ul class="level_2"><li class="category-listitem tier-2 no-children"><a href="../../category/pentest-phases/command-and-control.html" title="Category: Command and Control" id="category-link-13" class="category-linkitem tier-2 no-arrow " >Command and Control</a><li class="category-listitem tier-2 no-children"><a href="../../category/pentest-phases/credential-access.html" title="Category: Credential Access" id="category-link-9" class="category-linkitem tier-2 no-arrow " >Credential Access</a><li class="category-listitem tier-2 no-children"><a href="../../category/pentest-phases/defense-evasion.html" title="Category: Defense Evasion" id="category-link-19" class="category-linkitem tier-2 no-arrow " >Defense Evasion</a><li class="category-listitem tier-2 no-children"><a href="../../category/pentest-phases/discovery.html" title="Category: Discovery" id="category-link-8" class="category-linkitem tier-2 no-arrow " >Discovery</a><li class="category-listitem tier-2 no-children"><a href="../../category/pentest-phases/execution.html" title="Category: Execution" id="category-link-20" class="category-linkitem tier-2 no-arrow " >Execution</a><li class="category-listitem tier-2 no-children"><a href="../../category/pentest-phases/exfiltration.html" title="Category: Exfiltration" id="category-link-14" class="category-linkitem tier-2 no-arrow " >Exfiltration</a><li class="category-listitem tier-2 no-children"><a href="../../category/pentest-phases/impact.html" title="Category: Impact" id="category-link-16" class="category-linkitem tier-2 no-arrow " >Impact</a><li class="category-listitem tier-2 has-children"><a href="../finding-interesting-files.html#" title="Category: Initial Access" id="category-link-11" class="category-linkitem tier-2 has-arrow " >Initial Access</a><ul class="level_3"><li class="category-listitem tier-3 no-children"><a href="../../category/pentest-phases/initial-access/external-remote-services.html" title="Category: External Remote Services" id="category-link-67" class="category-linkitem tier-3 no-arrow " >External Remote Services</a><li class="category-listitem tier-3 no-children"><a href="../../category/pentest-phases/initial-access/phishing.html" title="Category: Phishing" id="category-link-66" class="category-linkitem tier-3 no-arrow " >Phishing</a></li></ul><li class="category-listitem tier-2 no-children"><a href="../../category/pentest-phases/lateral-movement.html" title="Category: Lateral Movement" id="category-link-18" class="category-linkitem tier-2 no-arrow " >Lateral Movement</a><li class="category-listitem tier-2 no-children"><a href="../../category/pentest-phases/loot-collection.html" title="Category: Loot Collection" id="category-link-17" class="category-linkitem tier-2 no-arrow " >Loot Collection</a><li class="category-listitem tier-2 no-children"><a href="../../category/pentest-phases/persistence.html" title="Category: Persistence" id="category-link-10" class="category-linkitem tier-2 no-arrow " >Persistence</a><li class="category-listitem tier-2 no-children"><a href="../../category/pentest-phases/privilege-escalation.html" title="Category: Privilege Escalation" id="category-link-15" class="category-linkitem tier-2 no-arrow " >Privilege Escalation</a><li class="category-listitem tier-2 has-children"><a href="../finding-interesting-files.html#" title="Category: Reconnaissance" id="category-link-12" class="category-linkitem tier-2 has-arrow " >Reconnaissance</a><ul class="level_3"><li class="category-listitem tier-3 no-children"><a href="../../category/pentest-phases/reconnaissance/active-scanning.html" title="Category: Active Scanning" id="category-link-65" class="category-linkitem tier-3 no-arrow " >Active Scanning</a></li></ul><li class="category-listitem tier-2 no-children"><a href="../../category/pentest-phases/resource-development.html" title="Category: Resource Development" id="category-link-21" class="category-linkitem tier-2 no-arrow " >Resource Development</a></li></ul><li class="category-listitem tier-1 has-children"><a href="../finding-interesting-files.html#" title="Category: Programming Languages" id="category-link-3" class="category-linkitem tier-1 has-arrow " >Programming Languages</a><ul class="level_2"><li class="category-listitem tier-2 no-children"><a href="../../category/programming-languages/bash-scripting.html" title="Category: Bash Scripting" id="category-link-75" class="category-linkitem tier-2 no-arrow " >Bash Scripting</a><li class="category-listitem tier-2 no-children"><a href="../../category/programming-languages/c.html" title="Category: C#" id="category-link-32" class="category-linkitem tier-2 no-arrow " >C#</a><li class="category-listitem tier-2 no-children"><a href="../../category/programming-languages/java.html" title="Category: Java" id="category-link-34" class="category-linkitem tier-2 no-arrow " >Java</a><li class="category-listitem tier-2 no-children"><a href="../../category/programming-languages/php.html" title="Category: PHP" id="category-link-68" class="category-linkitem tier-2 no-arrow " >PHP</a><li class="category-listitem tier-2 no-children"><a href="../../category/programming-languages/powershell.html" title="Category: PowerShell" id="category-link-35" class="category-linkitem tier-2 no-arrow " >PowerShell</a><li class="category-listitem tier-2 no-children"><a href="../../category/programming-languages/python.html" title="Category: Python" id="category-link-31" class="category-linkitem tier-2 no-arrow " >Python</a><li class="category-listitem tier-2 no-children"><a href="../../category/programming-languages/ruby.html" title="Category: Ruby" id="category-link-33" class="category-linkitem tier-2 no-arrow " >Ruby</a><li class="category-listitem tier-2 no-children"><a href="../../category/programming-languages/visual-basic.html" title="Category: Visual Basic" id="category-link-30" class="category-linkitem tier-2 no-arrow " >Visual Basic</a></li></ul><li class="category-listitem tier-1 has-children"><a href="../finding-interesting-files.html#" title="Category: Protocols" id="category-link-81" class="category-linkitem tier-1 has-arrow " >Protocols</a><ul class="level_2"><li class="category-listitem tier-2 no-children"><a href="../../category/protocols/domain-name-system-dns.html" title="Category: Domain Name System (DNS)" id="category-link-108" class="category-linkitem tier-2 no-arrow " >Domain Name System (DNS)</a><li class="category-listitem tier-2 no-children"><a href="../../category/protocols/dynamic-host-configuration-protocol-dhcp.html" title="Category: Dynamic Host Configuration Protocol (DHCP)" id="category-link-107" class="category-linkitem tier-2 no-arrow " >Dynamic Host Configuration Protocol (DHCP)</a><li class="category-listitem tier-2 no-children"><a href="../../category/protocols/file-transfer-protocol-ftp.html" title="Category: File Transfer Protocol (FTP)" id="category-link-110" class="category-linkitem tier-2 no-arrow " >File Transfer Protocol (FTP)</a><li class="category-listitem tier-2 no-children"><a href="../../category/protocols/internet-message-access-protocol-imap.html" title="Category: Internet message access protocol (IMAP)" id="category-link-92" class="category-linkitem tier-2 no-arrow " >Internet message access protocol (IMAP)</a><li class="category-listitem tier-2 no-children"><a href="../../category/protocols/kerberos.html" title="Category: Kerberos" id="category-link-93" class="category-linkitem tier-2 no-arrow " >Kerberos</a><li class="category-listitem tier-2 no-children"><a href="../../category/protocols/post-office-protocol-3-pop3.html" title="Category: Post Office Protocol 3 (POP3)" id="category-link-91" class="category-linkitem tier-2 no-arrow " >Post Office Protocol 3 (POP3)</a><li class="category-listitem tier-2 no-children"><a href="../../category/protocols/remote-desktop-protocol-rdp.html" title="Category: Remote Desktop Protocol (RDP)" id="category-link-87" class="category-linkitem tier-2 no-arrow " >Remote Desktop Protocol (RDP)</a><li class="category-listitem tier-2 no-children"><a href="../../category/protocols/secure-shell-ssh.html" title="Category: Secure Shell (SSH)" id="category-link-82" class="category-linkitem tier-2 no-arrow " >Secure Shell (SSH)</a><li class="category-listitem tier-2 no-children"><a href="../../category/protocols/secure-socket-layer-ssl-transport-layer-security-tls.html" title="Category: Secure Socket Layer (SSL) / Transport Layer Security (TLS)" id="category-link-126" class="category-linkitem tier-2 no-arrow " >Secure Socket Layer (SSL) / Transport Layer Security (TLS)</a><li class="category-listitem tier-2 no-children"><a href="../../category/protocols/server-message-block-smb.html" title="Category: Server Message Block (SMB)" id="category-link-134" class="category-linkitem tier-2 no-arrow " >Server Message Block (SMB)</a><li class="category-listitem tier-2 no-children"><a href="../../category/protocols/simple-mail-transfer-protocol-smtp.html" title="Category: Simple Mail Transfer Protocol (SMTP)" id="category-link-90" class="category-linkitem tier-2 no-arrow " >Simple Mail Transfer Protocol (SMTP)</a><li class="category-listitem tier-2 no-children"><a href="../../category/protocols/simple-network-management-protocol-snmp.html" title="Category: Simple Network Management Protocol (SNMP)" id="category-link-106" class="category-linkitem tier-2 no-arrow " >Simple Network Management Protocol (SNMP)</a><li class="category-listitem tier-2 no-children"><a href="../../category/protocols/trivial-file-transfer-protocol-tftp.html" title="Category: Trivial File Transfer Protocol (TFTP)" id="category-link-109" class="category-linkitem tier-2 no-arrow " >Trivial File Transfer Protocol (TFTP)</a><li class="category-listitem tier-2 no-children"><a href="../../category/protocols/virtual-network-computing-vnc.html" title="Category: Virtual Network Computing (VNC)" id="category-link-182" class="category-linkitem tier-2 no-arrow " >Virtual Network Computing (VNC)</a><li class="category-listitem tier-2 no-children"><a href="../../category/protocols/windows-management-instrumentation-wmi.html" title="Category: Windows Management Instrumentation (WMI)" id="category-link-88" class="category-linkitem tier-2 no-arrow " >Windows Management Instrumentation (WMI)</a><li class="category-listitem tier-2 no-children"><a href="../../category/protocols/windows-remote-management-winrm.html" title="Category: Windows Remote Management (WinRM)" id="category-link-89" class="category-linkitem tier-2 no-arrow " >Windows Remote Management (WinRM)</a></li></ul><li class="category-listitem tier-1 has-children"><a href="../finding-interesting-files.html#" title="Category: Red Teaming" id="category-link-135" class="category-linkitem tier-1 has-arrow " >Red Teaming</a><ul class="level_2"><li class="category-listitem tier-2 no-children"><a href="../../category/red-teaming/c2-channels.html" title="Category: C2 Channels" id="category-link-136" class="category-linkitem tier-2 no-arrow " >C2 Channels</a></li></ul><li class="category-listitem tier-1 no-children"><a href="../../category/review/index.html" title="Category: Review" id="category-link-115" class="category-linkitem tier-1 no-arrow " >Review</a><li class="category-listitem tier-1 has-children"><a href="../finding-interesting-files.html#" title="Category: Software" id="category-link-96" class="category-linkitem tier-1 has-arrow " >Software</a><ul class="level_2"><li class="category-listitem tier-2 no-children"><a href="../../category/software/citrix.html" title="Category: Citrix" id="category-link-98" class="category-linkitem tier-2 no-arrow " >Citrix</a><li class="category-listitem tier-2 has-children"><a href="../finding-interesting-files.html#" title="Category: Microsoft" id="category-link-99" class="category-linkitem tier-2 has-arrow " >Microsoft</a><ul class="level_3"><li class="category-listitem tier-3 no-children"><a href="../../category/software/microsoft/active-directory.html" title="Category: Active Directory" id="category-link-186" class="category-linkitem tier-3 no-arrow " >Active Directory</a><li class="category-listitem tier-3 no-children"><a href="../../category/software/microsoft/office-365-o365.html" title="Category: Office 365 (O365)" id="category-link-97" class="category-linkitem tier-3 no-arrow " >Office 365 (O365)</a></li></ul><li class="category-listitem tier-2 no-children"><a href="../../category/software/solarwinds.html" title="Category: SolarWinds" id="category-link-100" class="category-linkitem tier-2 no-arrow " >SolarWinds</a></li></ul><li class="category-listitem tier-1 has-children"><a href="../finding-interesting-files.html#" title="Category: Tools" id="category-link-2" class="category-linkitem tier-1 has-arrow " >Tools</a><ul class="level_2"><li class="category-listitem tier-2 has-children"><a href="../finding-interesting-files.html#" title="Category: Cracking And Brute-force" id="category-link-27" class="category-linkitem tier-2 has-arrow " >Cracking And Brute-force</a><ul class="level_3"><li class="category-listitem tier-3 no-children"><a href="../../category/tools/cracking-and-brute-force/hashcat.html" title="Category: Hashcat" id="category-link-128" class="category-linkitem tier-3 no-arrow " >Hashcat</a><li class="category-listitem tier-3 no-children"><a href="../../category/tools/cracking-and-brute-force/john-ripper.html" title="Category: John the Ripper" id="category-link-63" class="category-linkitem tier-3 no-arrow " >John the Ripper</a><li class="category-listitem tier-3 no-children"><a href="../../category/tools/cracking-and-brute-force/thc-hydra.html" title="Category: THC Hydra" id="category-link-64" class="category-linkitem tier-3 no-arrow " >THC Hydra</a></li></ul><li class="category-listitem tier-2 has-children"><a href="../finding-interesting-files.html#" title="Category: Debuggers" id="category-link-28" class="category-linkitem tier-2 has-arrow " >Debuggers</a><ul class="level_3"><li class="category-listitem tier-3 no-children"><a href="../../category/tools/debuggers/gdb.html" title="Category: GDB" id="category-link-61" class="category-linkitem tier-3 no-arrow " >GDB</a><li class="category-listitem tier-3 no-children"><a href="../../category/tools/debuggers/ida-pro.html" title="Category: IDA Pro" id="category-link-58" class="category-linkitem tier-3 no-arrow " >IDA Pro</a><li class="category-listitem tier-3 no-children"><a href="../../category/tools/debuggers/immunity-debugger.html" title="Category: Immunity Debugger" id="category-link-60" class="category-linkitem tier-3 no-arrow " >Immunity Debugger</a><li class="category-listitem tier-3 no-children"><a href="../../category/tools/debuggers/ollydbg.html" title="Category: OllyDbg" id="category-link-59" class="category-linkitem tier-3 no-arrow " >OllyDbg</a><li class="category-listitem tier-3 no-children"><a href="../../category/tools/debuggers/windbg.html" title="Category: WinDbg" id="category-link-62" class="category-linkitem tier-3 no-arrow " >WinDbg</a></li></ul><li class="category-listitem tier-2 has-children"><a href="../finding-interesting-files.html#" title="Category: Encryption" id="category-link-22" class="category-linkitem tier-2 has-arrow " >Encryption</a><ul class="level_3"><li class="category-listitem tier-3 no-children"><a href="../../category/tools/encryption/openvpn.html" title="Category: OpenVPN" id="category-link-55" class="category-linkitem tier-3 no-arrow " >OpenVPN</a><li class="category-listitem tier-3 no-children"><a href="../../category/tools/encryption/stunnel.html" title="Category: Stunnel" id="category-link-56" class="category-linkitem tier-3 no-arrow " >Stunnel</a><li class="category-listitem tier-3 no-children"><a href="../../category/tools/encryption/tor.html" title="Category: Tor" id="category-link-57" class="category-linkitem tier-3 no-arrow " >Tor</a></li></ul><li class="category-listitem tier-2 no-children"><a href="../../category/tools/GTFOBins.html" title="Category: GTFOBins" id="category-link-176" class="category-linkitem tier-2 no-arrow " >GTFOBins</a><li class="category-listitem tier-2 no-children"><a href="../../category/tools/injection.html" title="Category: Injection" id="category-link-184" class="category-linkitem tier-2 no-arrow " >Injection</a><li class="category-listitem tier-2 no-children"><a href="../../category/tools/interlace.html" title="Category: Interlace" id="category-link-123" class="category-linkitem tier-2 no-arrow " >Interlace</a><li class="category-listitem tier-2 has-children"><a href="../finding-interesting-files.html#" title="Category: Packet Crafting" id="category-link-23" class="category-linkitem tier-2 has-arrow " >Packet Crafting</a><ul class="level_3"><li class="category-listitem tier-3 no-children"><a href="../../category/tools/packet-crafting/hping.html" title="Category: Hping" id="category-link-52" class="category-linkitem tier-3 no-arrow " >Hping</a><li class="category-listitem tier-3 no-children"><a href="../../category/tools/packet-crafting/netcat.html" title="Category: Netcat" id="category-link-51" class="category-linkitem tier-3 no-arrow " >Netcat</a><li class="category-listitem tier-3 no-children"><a href="../../category/tools/packet-crafting/scapy.html" title="Category: Scapy" id="category-link-53" class="category-linkitem tier-3 no-arrow " >Scapy</a><li class="category-listitem tier-3 no-children"><a href="../../category/tools/packet-crafting/socat.html" title="Category: Socat" id="category-link-54" class="category-linkitem tier-3 no-arrow " >Socat</a></li></ul><li class="category-listitem tier-2 has-children"><a href="../finding-interesting-files.html#" title="Category: Packet Sniffing" id="category-link-29" class="category-linkitem tier-2 has-arrow " >Packet Sniffing</a><ul class="level_3"><li class="category-listitem tier-3 no-children"><a href="../../category/tools/packet-sniffing/tcpdump.html" title="Category: TCPDump" id="category-link-46" class="category-linkitem tier-3 no-arrow " >TCPDump</a><li class="category-listitem tier-3 no-children"><a href="../../category/tools/packet-sniffing/wireshark.html" title="Category: Wireshark" id="category-link-45" class="category-linkitem tier-3 no-arrow " >Wireshark</a></li></ul><li class="category-listitem tier-2 has-children"><a href="../finding-interesting-files.html#" title="Category: Port Scanners" id="category-link-24" class="category-linkitem tier-2 has-arrow " >Port Scanners</a><ul class="level_3"><li class="category-listitem tier-3 no-children"><a href="../../category/tools/port-scanners/angry-ip-scanner.html" title="Category: Angry IP Scanner" id="category-link-50" class="category-linkitem tier-3 no-arrow " >Angry IP Scanner</a><li class="category-listitem tier-3 no-children"><a href="../../category/tools/port-scanners/unicornscan.html" title="Category: Unicornscan" id="category-link-49" class="category-linkitem tier-3 no-arrow " >Unicornscan</a></li></ul><li class="category-listitem tier-2 has-children"><a href="../finding-interesting-files.html#" title="Category: Remote Connection" id="category-link-132" class="category-linkitem tier-2 has-arrow " >Remote Connection</a><ul class="level_3"><li class="category-listitem tier-3 no-children"><a href="../../category/tools/remote-connection/rdesktop.html" title="Category: rdesktop" id="category-link-133" class="category-linkitem tier-3 no-arrow " >rdesktop</a><li class="category-listitem tier-3 no-children"><a href="../../category/tools/remote-connection/virtual-network-computing-vnc.html" title="Category: Virtual Network Computing (VNC)" id="category-link-183" class="category-linkitem tier-3 no-arrow " >Virtual Network Computing (VNC)</a></li></ul><li class="category-listitem tier-2 no-children"><a href="../../category/tools/text-editors.html" title="Category: Text Editors" id="category-link-178" class="category-linkitem tier-2 no-arrow " >Text Editors</a><li class="category-listitem tier-2 has-children"><a href="../finding-interesting-files.html#" title="Category: Vulnerability Scanners" id="category-link-25" class="category-linkitem tier-2 has-arrow " >Vulnerability Scanners</a><ul class="level_3"><li class="category-listitem tier-3 no-children"><a href="../../category/tools/vulnerability-scanners/nessus.html" title="Category: Nessus" id="category-link-47" class="category-linkitem tier-3 no-arrow " >Nessus</a><li class="category-listitem tier-3 no-children"><a href="../../category/tools/vulnerability-scanners/openvas.html" title="Category: OpenVAS" id="category-link-48" class="category-linkitem tier-3 no-arrow " >OpenVAS</a></li></ul><li class="category-listitem tier-2 has-children"><a href="../finding-interesting-files.html#" title="Category: Web Proxies And Web Scanners" id="category-link-26" class="category-linkitem tier-2 has-arrow " >Web Proxies And Web Scanners</a><ul class="level_3"><li class="category-listitem tier-3 no-children"><a href="../../category/tools/web-proxies-and-web-scanners/burpsuite-pro.html" title="Category: BurpSuite Pro" id="category-link-43" class="category-linkitem tier-3 no-arrow " >BurpSuite Pro</a><li class="category-listitem tier-3 no-children"><a href="../../category/tools/web-proxies-and-web-scanners/owasp-zap-zed-attack-proxy.html" title="Category: OWASP ZAP Zed Attack Proxy" id="category-link-44" class="category-linkitem tier-3 no-arrow " >OWASP ZAP Zed Attack Proxy</a><li class="category-listitem tier-3 no-children"><a href="../../category/tools/web-proxies-and-web-scanners/wfuzz.html" title="Category: Wfuzz" id="category-link-188" class="category-linkitem tier-3 no-arrow " >Wfuzz</a></li></ul></li></ul><li class="category-listitem tier-1 has-children"><a href="../finding-interesting-files.html#" title="Category: Tradecraft" id="category-link-84" class="category-linkitem tier-1 has-arrow " >Tradecraft</a><ul class="level_2"><li class="category-listitem tier-2 no-children"><a href="../../category/tradecraft/automation.html" title="Category: Automation" id="category-link-122" class="category-linkitem tier-2 no-arrow " >Automation</a><li class="category-listitem tier-2 no-children"><a href="../../category/tradecraft/remote-code-execution.html" title="Category: Remote Code Execution" id="category-link-180" class="category-linkitem tier-2 no-arrow " >Remote Code Execution</a><li class="category-listitem tier-2 has-children"><a href="../finding-interesting-files.html#" title="Category: Transfer Files" id="category-link-85" class="category-linkitem tier-2 has-arrow " >Transfer Files</a><ul class="level_3"><li class="category-listitem tier-3 no-children"><a href="../../category/tradecraft/transfer-files/netcat.html" title="Category: Netcat" id="category-link-86" class="category-linkitem tier-3 no-arrow " >Netcat</a></li></ul><li class="category-listitem tier-2 no-children"><a href="../../category/tradecraft/windows-credential-dumping.html" title="Category: Windows Credential Dumping" id="category-link-124" class="category-linkitem tier-2 no-arrow " >Windows Credential Dumping</a></li></ul><li class="category-listitem tier-1 no-children"><a href="../../category/tutorial/index.html" title="Category: Tutorial" id="category-link-127" class="category-linkitem tier-1 no-arrow " >Tutorial</a><li class="category-listitem tier-1 has-children"><a href="../finding-interesting-files.html#" title="Category: Web Applications" id="category-link-129" class="category-linkitem tier-1 has-arrow " >Web Applications</a><ul class="level_2"><li class="category-listitem tier-2 no-children"><a href="../../category/web-applications/sql-injection.html" title="Category: SQL Injection" id="category-link-185" class="category-linkitem tier-2 no-arrow " >SQL Injection</a></li></ul><li class="category-listitem tier-1 has-children"><a href="../finding-interesting-files.html#" title="Category: Web Servers" id="category-link-181" class="category-linkitem tier-1 has-arrow " >Web Servers</a><ul class="level_2"><li class="category-listitem tier-2 no-children"><a href="../../category/web-servers/internet-information-services-iis.html" title="Category: Internet Information Services (IIS)" id="category-link-187" class="category-linkitem tier-2 no-arrow " >Internet Information Services (IIS)</a></li></ul></li></ul></nav>
+    </div>
+</section>
+<script type="text/javascript" src="../../static/menu/metismenu-3.0.5/dist/metisMenu.js"></script>
+<script language="JavaScript">  
+    $(document).ready(function() {
+
+        $( "ul.level_1" ).metisMenu({
+            // enabled/disable the auto collapse.
+            toggle:false,
+            // prevent default event
+            preventDefault:true,
+            // default classes
+            activeClass:'current_page',
+            collapseClass:'collapse',
+            collapseInClass:'in',
+            collapsingClass:'collapsing',
+            // .nav-link for Bootstrap 4
+            triggerElement:'a',
+            // .nav-item for Bootstrap 4
+            parentTrigger:'li',
+            // .nav.flex-column for Bootstrap 4
+            subMenu:'ul'
+        });
+
+        // Expands menu tree up to current_page
+        $('.metismenu').find('a.current_page').parents('ul').siblings('a').attr('aria-expanded', 'true');
+        $('.metismenu').find('a.current_page').parents('li').addClass( 'mm-active');
+        $('.metismenu').find('a.current_page').parents('ul').removeAttr('style').addClass('mm-show');
+
+        $( window ).resize(function() {
+            if( $( window ).width() >= 760 ){
+                $('#navbarSupportedContent').attr('style','');
+                $('#navbarSupportedContent').addClass('in');
+                $('#navbarSupportedContent').attr('aria-expanded','true');
+            }
+        });
+
+        if( $( window ).width() <= 760 ){
+            $('#navbarSupportedContent').removeClass('in');
+        }
+
+    });
+</script>
+<!-- CATEGORY SECTION END -->
+
+					
+<!----TAG SECTION START------->
+<section class="tag-section">
+<h2 class="sidebar-heading tag-heading">Tag<span class="line"></span></h2>
+	<ul>
+		
+			<li><a href="../../tag/ssl.html"  title="SSL">SSL</a></li>
+		
+			<li><a href="../../tag/tls.html"  title="TLS">TLS</a></li>
+		
+			<li><a href="../../tag/powershell.html"  title="PowerShell">PowerShell</a></li>
+		
+			<li><a href="../../tag/linux.html"  title="Linux">Linux</a></li>
+		
+			<li><a href="../../tag/windows.html"  title="windows">windows</a></li>
+		
+			<li><a href="../../tag/enumeration.html"  title="Enumeration">Enumeration</a></li>
+		
+			<li><a href="../../tag/cloud.html"  title="cloud">cloud</a></li>
+		
+			<li><a href="../../tag/kali-linux.html"  title="kali linux">kali linux</a></li>
+		
+			<li><a href="../../tag/error-message.html"  title="error message">error message</a></li>
+		
+			<li><a href="../../tag/docker.html"  title="Docker">Docker</a></li>
+		
+			<li><a href="../../tag/smb.html"  title="SMB">SMB</a></li>
+		
+			<li><a href="../../tag/active-directory.html"  title="Active Directory">Active Directory</a></li>
+		
+			<li><a href="../../tag/wsl2.html"  title="wsl2">wsl2</a></li>
+		
+			<li><a href="../../tag/openssl.html"  title="OpenSSL">OpenSSL</a></li>
+		
+			<li><a href="../../tag/ike.html"  title="IKE">IKE</a></li>
+		
+			<li><a href="../../tag/vms.html"  title="VMs">VMs</a></li>
+		
+			<li><a href="../../tag/red-teaming.html"  title="Red Teaming">Red Teaming</a></li>
+		
+			<li><a href="../../tag/database.html"  title="Database">Database</a></li>
+		
+			<li><a href="../../tag/ssh.html"  title="SSH">SSH</a></li>
+		
+			<li><a href="../../tag/aws.html"  title="aws">aws</a></li>
+		
+			<li><a href="../../tag/isakmp.html"  title="ISAKMP">ISAKMP</a></li>
+		
+			<li><a href="../../tag/rtf.html"  title="rtf">rtf</a></li>
+		
+			<li><a href="../../tag/winrm.html"  title="WinRM">WinRM</a></li>
+		
+			<li><a href="../../tag/ffmpeg.html"  title="ffmpeg">ffmpeg</a></li>
+		
+			<li><a href="../../tag/crime.html"  title="CRIME">CRIME</a></li>
+		
+	</ul>
+</section>
+<!----TAG SECTION END------->
+
+					
+
+<!----ABOUT SECTION START------->
+<section class="about-section">
+	<h3 class="sidebar-heading">About Me<span class="line"></span></h3>
+	<div class="content">
+		<img src="../../static/images/evilsaint-high_res.png" alt="EvilSaint" title="EvilSaint">
+		<p>
+			Cyber security researcher, ethical hacker, Capture the Flag enthusiast, developer and, automater of repetative tasks.
+			I spend my time consuming four to six books a month on security, technololgy, psychology, learning and productivity.  
+			Not to mention I am always doing a course or certificate! This website covers all these topics; some in greater depth than others!
+		</p>
+		<a href="../../about/index.html">Read more</a>
+	</div>
+</section>
+<!----ABOUT SECTION END------->
+
+					
+<!---- NEWSLETTER START ---->
+<section class="newsletter-section">
+	<h2 class="heading">let's get connected!</h2>
+	<p class="lead">Every fortnight, I send out a single email with exciting reads, videos and tools I have discovered. It is free! No spam! Unsubscribe whenever you want. Simply sign-up and ring the door bell.</p>
+	<div class="form-group has-feedback" id="newsletter">
+		<div id="signup-status-message" class="alert alert-success" role="alert" style="display:none;">
+			Thank You For Joining!
+		</div>
+        <ul id="error-message" class="errorlist" style="display:none;"><li>Sorry, problems with our email servers. Please try again later.</li></ul>
+
+        <form method="POST" action="http://evilsaint.com/subscribe/" id="newsletter-form" >
+            <input type="hidden" name="csrfmiddlewaretoken" value="HmazfYqcntISmYCEEOpg343ZlKn2S9nhoeiyWT296XZ5N1dAdAwzF3BvpfuHfeVO">
+            <input type="text" name="name" maxlength="25" class="form-control mb-3" placeholder="Enter Your Name" id="id_name">
+            <input type="email" name="email" maxlength="70" class="form-control mb-3" placeholder="Enter Your Email Address" required id="id_email">
+            <div id="captchacontrols" style="display:none">
+                <p>Enter the <em><bold>default</bold></em> port number for the following service using your number keypad.</p>
+                <ul id="wrong-captcha-message" class="errorlist" style="display:none;"><li>Sorry, wrong capcha. Please try again.</li></ul>
+                <img class="captcha me-2" src="../../captcha/image/b99f121ba1f9b205929a22a11cc5530c383e074d/index.html" alt="captcha"><input type="hidden" name="captcha_0" value="b99f121ba1f9b205929a22a11cc5530c383e074d" class="form-control mb-3 mt-3" placeholder="Captcha Answer" required id="id_captcha_0"><input type="text" name="captcha_1" class="form-control mb-3 mt-3" placeholder="Captcha Answer" required id="id_captcha_1" autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false">
+	    </div>
+            <input id="signup-bell" type="image" src="../../static/images/doorbell.png" value="signup" height=64 width=64>
+        </form>
+	</div>
+    <script src="../../static/js/newsletter.js"></script>
+</section>
+<!----NEWSLETTER END------->
+
+				</div>
+                <!----  SIDEBAR CONTENT END  ---->
+			</aside>
+            <!----  SIDEBAR MAIN END  ---->
+		</div>
+        <!----  LEFT SIDEBAR GRID END  ---->
+        <!---- RIGHT CONTENT START ---->
+		<div class="col-12 col-sm-9 col-md-9 col-lg-9 right-section">
+			<div class="content-main-section">
+				<!---- HEADER START ---->
+                <header>
+					<div class="row">
+						
+
+	<!---- SEARCH BAR START ---->
+	<div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+		<div class="row">
+			<div class="form-group has-feedback search-box-header col-sm-6 col-md-6 col-lg-6 col-xs-6 pt-1">
+				
+<form method="POST" action="http://evilsaint.com/search/" id="search-form" > 
+	<div class="search-wrapper">
+		<input type="hidden" name="csrfmiddlewaretoken" value="HmazfYqcntISmYCEEOpg343ZlKn2S9nhoeiyWT296XZ5N1dAdAwzF3BvpfuHfeVO">
+		<span class="glyphicon glyphicon glyphicon-search form-control-feedback"></span>
+		<span id="search-box-wrapper">
+			<input type="text" class="form-control" name="search" id="search-box" placeholder="Search..." autocomplete="off"> 
+		</span>
+		<div id='search_results' style="display:none;">
+
+		</div>
+	</div>
+</form>
+
+<script language="JavaScript">
+	$(document).ready(function() {
+
+		$('#search-box').focus(function(e){
+			$(this).val("")
+		});
+
+		$(document).keyup(function(e) {
+  			if (e.keyCode === 27) $('#search_results').hide()  // esc
+		});
+
+
+		$('#search-box').keyup(function(e) { // catch the form's submit event
+			e.preventDefault()
+			$.ajax({ // create an AJAX call...
+				data: $('#search-form').serialize(), // get the form data
+				type: 'POST', // GET or POST
+				url: '/search/', // the file to call
+				success: function(response) { // on success..
+
+					if($('#search-box').val().length > 2){
+					
+						$("#search_results").show();
+						html = "<div>"
+
+						html += '<div><h3>Articles</h3></div>'
+						articles = response['results']['articles']
+						if( articles.length > 0 ){
+							for (const [key, value] of Object.entries(articles)) {
+								console.log(value)
+								html += '<div>'
+								html += '<h4><a href="http://evilsaint.com/article/finding-interesting-files/'&#32;+&#32;value.url&#32;+&#32;'">' + value.title + '</a></h4>'
+								html += '<p>' + value.content + '</p>'
+								html += '</div>'
+							}
+						}else{
+							html += '<p>No articles for this search term</p>'
+						}
+
+
+						html += '<div><h3>Posts</h3></div>'
+						posts = response['results']['posts']
+						if( posts.length > 0 ){
+							for (const [key, value] of Object.entries(posts)) {
+								html += '<div>'
+								html += '<h4><a href="http://evilsaint.com/article/finding-interesting-files/'&#32;+&#32;value.url&#32;+&#32;'">' + value.title + '</a></h4>'
+								html += '<p>' + value.content + '</p>'
+								html += '</div>'
+							}
+						}else{
+							html += '<p>No posts for this search term</p>'
+						}
+
+
+						html += '<div><h3>Tutorials</h3></div>'
+						tutorials = response['results']['tutorials']
+						if( tutorials.length > 0 ){
+							for (const [key, value] of Object.entries(tutorials)) {
+								html += '<div>'
+								html += '<h4><a href="http://evilsaint.com/article/finding-interesting-files/'&#32;+&#32;value.url&#32;+&#32;'">' + value.title + '</a></h4>'
+								html += '<p>' + value.content + '</p>'
+								html += '</div>'
+							}
+						}else{
+							html += '<p>No tutorials for this search term</p>'
+						}
+
+						html += '<div><h3>Capture The Flags</h3></div>'
+						ctfs = response['results']['ctfs']
+						if( ctfs.length > 0 ){
+							for (const [key, value] of Object.entries(ctfs)) {
+								html += '<div>'
+								html += '<h4><a href="http://evilsaint.com/article/finding-interesting-files/'&#32;+&#32;value.url&#32;+&#32;'">' + value.title + '</a></h4>'
+								html += '<p>' + value.content + '</p>'
+								html += '</div>'
+							}
+						}else{
+							html += '<p>No Caputure The Flags for this search term</p>'
+						}
+
+
+						html += '</div>'
+						$('#search_results').html(html).delay(1000)
+
+						$('#search_results').mouseenter(function(){
+							$('#search_results').mouseleave(function(e){
+								$('#search_results').hide()
+							});
+						});
+
+						$('div.search-wrapper').mouseleave(function(){
+							$('#search_results').hide()
+						});
+
+					}else{
+						$("#search_results").hide();
+					}
+
+				}
+			});
+			return false;
+		});
+	});
+</script>
+
+			</div>
+			<!----  SEARCH BAR END  ---->
+			<!----  MOBILE SEARCH START  ---->
+							
+			<nav class="navbar navbar-expand-lg navbar-light mobile-mnu">
+				<div class="row">
+					<div class="col-sm-6 col-md-6 col-lg-6 col-xs-6">
+						<a href="../../index.html">
+							<img src="../../static/images/ES-Wordmark.png" alt="EvilSaint Wordmark" class="img-responsive">
+						</a>
+					</div>
+					<div class="search-mob col-sm-2 col-md-2 col-lg-2 col-xs-2">
+						<!--<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-search" id="search-btn" viewBox="0 0 16 16">
+						  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+						</svg>--><img id="search-btn" src="../../static/images/search_icon.png">
+						
+					</div>
+					<div class="col-sm-2 col-md-2 col-lg-2 col-xs-2">
+						<a id="avatar-profile-login" href="../../accounts/login/index.html">
+							<button class="btn esbtn_blue">Log In</button>
+						</a>
+					</div>
+					<div class="col-sm-2 col-md-2 col-lg-2 col-xs-2">
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+					</div>
+				</div>
+				
+			</nav>
+			<div class="header-search-from-mob">
+				<form action="http://evilsaint.com/search/">
+					<input type="text" placeholder="Search.." name="search">
+					<button type="submit"><img src="../../static/images/search_icon.png"></button>
+				</form>
+			</div>
+			<script>
+				jQuery(document).ready(function(){
+					jQuery('#search-btn').click(function() {
+						jQuery('.header-search-from-mob').toggle();
+						jQuery(this).toggleClass('show');
+						return false;
+					})
+				});		
+			</script>			
+			<!----  MOBILE SEARCH END  ---->
+			<!---- SOCIAL MEDIA AND RIGHT LOGO START ---->
+			<div class="social-icon col-sm-2 col-md-2 col-lg-2 col-xs-2">
+				
+<a href="https://www.youtube.com/c/EvilSaintEthicalHacking">
+    <i class="fab fa-youtube"></i>
+</a>
+<a href="https://www.facebook.com/TheEvilSaint/">
+    <i class="fab fa-facebook"></i>
+</a>
+<a href="https://www.twitter.com/_evilsaint_/">
+    <i class="fab fa-twitter"></i>
+</a>
+<a href="https://www.instagram.com/therealevilsaint/">
+    <i class="fab fa-instagram"></i>
+</a>
+
+			</div>
+			<div class="col-sm-2 col-md-2 col-lg-2 col-xs-2">
+				
+
+
+<a id="avatar-profile-login" href="../../accounts/login/index.html">
+  <button class="btn esbtn_blue">Log In</button>
+</a>
+
+			</div>
+			<div class="right-header-image col-sm-2 col-md-2 col-lg-2 col-xs-2 pt-1">
+				<a href="../../index.html">
+					<img src="../../static/images/ES-Wordmark.png" alt="EvilSaint Wordmark" class="img-responsive">
+				</a>
+			</div>
+		</div>
+	</div>
+	<!----  SOCIAL MEDIA AND RIGHT LOGO END  ---->
+
+					</div>
+				</header>
+                <!----  HEADER END  ---->
+				<div class="row">
+                    <!---- MIDDLE CONTENT GRID START ---->
+                    
+<div class="col-11">
+    
+<!---- ARTICLE START ---->
+<div class="content-section content-section-light">
+    <div class="row">
+    <div class="col-sm-12 text-end">
+        <a id="theme-switcheroo" title="Theme switcheroo">
+            <input type="checkbox">
+        </a>
+        <script>
+            var theme,
+                def_theme_class = "content-section-light",
+                alt_theme_class = "content-section-dark";
+            $( document ).ready(
+                function() {
+                    if ( $( ".content-section" ).hasClass( alt_theme_class )) {
+                        $( "#theme-switcheroo > input" ).prop( "checked", true );
+                    }
+                        
+                    $( "#theme-switcheroo" ).click(
+                        function(e) {
+                            if ( $( "#theme-switcheroo > :checked" ).length == 1 ) {
+                                $( ".content-section" ).addClass( alt_theme_class ).removeClass( def_theme_class );
+                                theme = "dark";
+                            } else {
+                                $( ".content-section" ).addClass( def_theme_class ).removeClass( alt_theme_class );
+                                theme = "light";
+                            }
+
+                            $.ajax({
+                                data: {
+                                    "csrfmiddlewaretoken": "HmazfYqcntISmYCEEOpg343ZlKn2S9nhoeiyWT296XZ5N1dAdAwzF3BvpfuHfeVO",
+                                    "theme": theme
+                            },
+                                method: "POST"
+                            });
+                        }
+                    );
+                }
+            );
+        </script>
+    </div>
+</div>
+
+    <div class="row">
+		<div class="col-sm-2 col-xs-3">
+			
+				<img src="../../media/articles/images/finding-interesting-files/icon_image/Finding_Interesting_Files_icon.png" class="content_icon img-responsive" >
+			
+		</div>
+		<div class="col-sm-10 col-xs-9">
+            
+
+
+
+
+
+
+<h1 class="title-main" title="Post Title">Finding Interesting Files</h1>
+
+
+
+
+
+<div class="post-publish"><span title="Published On" class="date publish"><i class="fas fa-calendar-alt"></i>  29 Jun 2022, 9:06 p.m.</span></div>
+
+
+
+<div class="post-date"><span title="Updated On" class="date updated"><i class="fas fa-calendar-plus"></i>  20 Apr 2022, 11:13 a.m.</span></div>
+
+
+
+<div class="post-time">
+    <span title="Reading Time" class="date reading-time">
+        <i class="fas fa-stopwatch"></i>  02:41 minutes
+    </span>
+</div>
+<div class="clear"></div>
+
+
+
+<div><span title="Tags" class="tags tags"><i class="fas fa-tags"></i> 
+    
+        <a href="../../tag/enumeration.html" class="active tagsize-" title="Enumeration">Enumeration</a>
+    
+        <a href="../../tag/linux.html" class="active tagsize-" title="Linux">Linux</a>
+    
+</span></div>
+
+
+
+
+		</div>
+	</div>
+    <hr>
+    
+        <img class="content_banner_image img-responsive" src="../../media/articles/images/finding-interesting-files/cover_image/Finding_Interesting_Files.jpg" />
+    
+    <div class="row gx-1 overflow-hidden">
+        <div class="col-xs-11 col-sm-11 col-lg-12 p-1">
+    		
+                <div class="accordion my-4" id="tldr">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="tldr-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tldr-content" aria-expanded="false" aria-controls="tldr-content">TL;DR</buttton>
+        </h2>
+        <div id="tldr-content" class="accordion-collapse collapse" aria-labelledby="tldr-header" data-bs-parent="#tldr">
+            <div class="accordion-body mx-3">A significant part of our job when searching around a target system is to look for interesting files.  Whether we have a need to look for SSH keys, Bash History files or database backups the commands typically all follow the same syntax. This article will look at using basic Linux commands to find and discover files.</div>
+        </div>
+    </div>
+</div>
+
+    		
+            
+<div class="accordion mb-4" id="toc">
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="toc-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#toc-content" aria-expanded="false" aria-controls="toc-content"><i class="fa fa-list-ul"></i></buttton>
+        </h2>
+        <div id="toc-content" class="accordion-collapse collapse" aria-labelledby="toc-header" data-bs-parent="#toc">
+            <div class="accordion-body">
+                <ul data-toc="#content" data-toc-headings="h2,h3,h4,h5,h6"></ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../static/js/jquery.toc.min.js"></script>
+
+            <div id="content" class="content">
+                <h1>Finding Interesting Files</h1>
+<p>Find SUID files</p>
+<div class="codehilite"><pre><span></span><code>find / -perm -4000 -type f <span class="m">2</span>&gt;/dev/null
+</code></pre></div>
+
+<p>Find SUID files owned by root</p>
+<div class="codehilite"><pre><span></span><code>find / -uid <span class="m">0</span> -perm -4000 -type f <span class="m">2</span>&gt;/dev/null
+</code></pre></div>
+
+<p>Find GUID files</p>
+<div class="codehilite"><pre><span></span><code>find / -perm -2000 -type f <span class="m">2</span>&gt;/dev/null
+</code></pre></div>
+
+<p>Find world-writeable files</p>
+<div class="codehilite"><pre><span></span><code>find / -perm -2 -type f <span class="m">2</span>&gt;/dev/null
+</code></pre></div>
+
+<p>Find world-writeable files excluding those in /proc</p>
+<div class="codehilite"><pre><span></span><code>find / ! -path <span class="s2">&quot;*/proc/*&quot;</span> -perm -2 -type f -print <span class="m">2</span>&gt;/dev/null
+</code></pre></div>
+
+<p>Find word-writeable directories</p>
+<div class="codehilite"><pre><span></span><code>find / -perm -2 -type d <span class="m">2</span>&gt;/dev/null
+</code></pre></div>
+
+<p>Find rhost config files</p>
+<div class="codehilite"><pre><span></span><code>find /home –name *.rhosts -print <span class="m">2</span>&gt;/dev/null
+</code></pre></div>
+
+<p>Find *.plan files, list permissions and cat the file contents</p>
+<div class="codehilite"><pre><span></span><code>find /home -iname *.plan -exec ls -la <span class="o">{}</span> <span class="p">;</span> -exec cat <span class="o">{}</span> <span class="m">2</span>&gt;/dev/null <span class="p">;</span>
+</code></pre></div>
+
+<p>Find hosts.equiv, list permissions and cat the file contents</p>
+<div class="codehilite"><pre><span></span><code>find /etc -iname hosts.equiv -exec ls -la <span class="o">{}</span> <span class="m">2</span>&gt;/dev/null <span class="p">;</span> -exec cat <span class="o">{}</span> <span class="m">2</span>&gt;/dev/null <span class="p">;</span>
+</code></pre></div>
+
+<p>See if you can access other user directories to find interesting files</p>
+<div class="codehilite"><pre><span></span><code>ls -ahlR /root/
+</code></pre></div>
+
+<p>Show the current users’ command history</p>
+<div class="codehilite"><pre><span></span><code>cat ~/.bash_history
+</code></pre></div>
+
+<p>Show the current users’ various history files</p>
+<div class="codehilite"><pre><span></span><code>ls -la ~/.*_history
+</code></pre></div>
+
+<p>Can we read root’s history files</p>
+<div class="codehilite"><pre><span></span><code>ls -la /root/.*_history
+</code></pre></div>
+
+<p>Check for interesting ssh files in the current users’ directory</p>
+<div class="codehilite"><pre><span></span><code>ls -la ~/.ssh/
+</code></pre></div>
+
+<p>Find SSH keys/host information</p>
+<div class="codehilite"><pre><span></span><code>find / -name <span class="s2">&quot;id_dsa*&quot;</span> -o -name <span class="s2">&quot;id_rsa*&quot;</span> -o -name <span class="s2">&quot;known_hosts&quot;</span> -o -name <span class="s2">&quot;authorized_hosts&quot;</span> -o -name <span class="s2">&quot;authorized_keys&quot;</span> <span class="m">2</span>&gt;/dev/null <span class="p">|</span>xargs -r ls -la
+</code></pre></div>
+
+<p>Check Configuration of inetd services</p>
+<div class="codehilite"><pre><span></span><code>ls -la /usr/sbin/in.*
+</code></pre></div>
+
+<p>Check log files for keywords (‘pass’ in this example) and show positive matches</p>
+<div class="codehilite"><pre><span></span><code>grep -l -i pass /var/log/*.log <span class="m">2</span>&gt;/dev/null
+</code></pre></div>
+
+<p>List files in specified directory (/var/log)</p>
+<div class="codehilite"><pre><span></span><code>find /var/log -type f -exec ls -la <span class="o">{}</span> <span class="p">;</span> <span class="m">2</span>&gt;/dev/null
+</code></pre></div>
+
+<p>List .log files in specified directory (/var/log)</p>
+<div class="codehilite"><pre><span></span><code>find /var/log -name *.log -type f -exec ls -la <span class="o">{}</span> <span class="p">;</span> <span class="m">2</span>&gt;/dev/null
+</code></pre></div>
+
+<p>List .conf files in /etc (recursive 1 level)</p>
+<div class="codehilite"><pre><span></span><code>find /etc/ -maxdepth <span class="m">1</span> -name *.conf -type f -exec ls -la <span class="o">{}</span> <span class="p">;</span> <span class="m">2</span>&gt;/dev/null
+</code></pre></div>
+
+<p>As above</p>
+<div class="codehilite"><pre><span></span><code>ls -la /etc/*.conf
+</code></pre></div>
+
+<p>Find .conf files (recursive 4 levels) and output line number where the word ‘password’ is located</p>
+<div class="codehilite"><pre><span></span><code>find / -maxdepth <span class="m">4</span> -name *.conf -type f -exec grep -Hn password <span class="o">{}</span> <span class="p">;</span> <span class="m">2</span>&gt;/dev/null
+</code></pre></div>
+
+<p>List open files (output will depend on account privileges)</p>
+<div class="codehilite"><pre><span></span><code>lsof -i -n
+</code></pre></div>
+
+<p>Can we read roots mail</p>
+<div class="codehilite"><pre><span></span><code>head /var/mail/root
+</code></pre></div>
+            </div>
+        </div>
+	</div>
+	
+
+	<!---- CONTENT FOOTER START ---->
+<footer class="content-footer">
+     <div class="row navigation">
+        <div class="col-sm-1 d-flex align-items-center">
+            
+                <a href="../querying-active-directory-with-powershell.html" class="fooarrow-left me-4"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+            
+	</div>
+        <div class="col-sm-4">
+            
+            <div class="text-end d-flex align-items-center">
+                <a class="h5" href="../querying-active-directory-with-powershell.html">Querying Active Directory With PowerShell</a>
+            </div>
+            
+        </div>
+        <div class="col-sm-2">
+        </div>
+	<div class="col-sm-4">
+            
+            <div class="text-start d-flex align-items-center">
+                <a class="h5" href="../windows-registry.html">Windows Registry</a>
+            </div>
+            
+        </div>
+        <div class="col-sm-1 d-flex align-items-center">
+            
+                <a href="../windows-registry.html" class="fooarrow-right ms-4"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
+            
+	</div>
+    </div>
+    <script>
+        var keymap = {};
+        keymap[ 37 ] = ".fooarrow-left";
+        keymap[ 39 ] = ".fooarrow-right";
+
+        $( document ).on( "keyup", function( event ) {
+            var selector = keymap[ event.which ];
+            if ( selector ) {
+                href = $( selector ).attr( "href" );
+                window.location = href;
+             }
+         });
+    </script>
+</footer>
+<!----  CONTENT FOOTER END  ---->
+
+
+</div>
+<!----  ARTICLE END  ---->
+
+
+
+
+
+<!---- COMMENT FORM START ---->
+<div class="my-5 row">
+    <div class="col-sm-4 social-login">
+        <img id="my-avatar" class="mb-3" src="../../static/images/anonymous_avatar.png" alt="" title="" height=96 width=96>
+        
+        <h3>Anonymous</h3>
+        <hr>
+        <p>You're not logged in; your comment will be anonymous.</p>
+        <p>Log in <a href="../../accounts/login/index.html">here</a> to post from your account, or via your social media account:</p>
+	    <div class="social-icon">
+<a href="https://www.youtube.com/c/EvilSaintEthicalHacking">
+    <i class="fab fa-youtube"></i>
+</a>
+<a href="https://www.facebook.com/TheEvilSaint/">
+    <i class="fab fa-facebook"></i>
+</a>
+<a href="https://www.twitter.com/_evilsaint_/">
+    <i class="fab fa-twitter"></i>
+</a>
+<a href="https://www.instagram.com/therealevilsaint/">
+    <i class="fab fa-instagram"></i>
+</a>
+</div>
+        
+    </div>
+    <div class="col-sm-8">
+        
+
+
+<form class="comments-form" method="POST" action="http://evilsaint.com/comments/post/" onsubmit="post.disabled = true; return true;">
+    <input type="hidden" name="csrfmiddlewaretoken" value="HmazfYqcntISmYCEEOpg343ZlKn2S9nhoeiyWT296XZ5N1dAdAwzF3BvpfuHfeVO">
+    
+    <fieldset>
+        <input type="hidden" name="next" value="/comments/sent/" />
+        <div class="alert alert-danger" data-comment-element="errors" hidden></div>
+        
+            
+        <div><input type="hidden" name="content_type" value="article.article" id="id_content_type"></div>
+            
+        
+            
+        <div><input type="hidden" name="object_pk" value="69" id="id_object_pk"></div>
+            
+        
+            
+        <div><input type="hidden" name="timestamp" value="1672014874" id="id_timestamp"></div>
+            
+        
+            
+        <div><input type="hidden" name="security_hash" value="3d07938208cb8a2d1091e381c1a0e2f39e24f45e" id="id_security_hash"></div>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        <div><input type="hidden" name="reply_to" value="0" id="id_reply_to"></div>
+            
+        
+            
+        
+        
+            <input type="text" name="name" value="Anonymous" placeholder="Name" class="commentinp form-control" required id="id_name">
+            <input type="email" name="email" class="commentinp form-control" placeholder="E-mail" type="email" id="id_email">
+        
+        <div style="display:none"><input type="text" name="honeypot" id="id_honeypot"></div>
+        <textarea name="comment" placeholder="Comment" class="form-control mb-2" col="40" rows="6" style="width:98%;" required id="id_comment">
+</textarea>
+        <div class="d-flex flex-wrap">
+            <p class="mb-1 mt-2"><b>Captcha:</b> What's the standard TCP port of the following service?</p>
+            <img class="captcha me-2" src="../../captcha/image/3975708cd80643e7e1e2d6ce530f13aa537fbc68/index.html" alt="captcha"><input type="hidden" name="captcha_0" value="3975708cd80643e7e1e2d6ce530f13aa537fbc68" required id="id_captcha_0"><input type="text" name="captcha_1" required id="id_captcha_1" autocapitalize="off" autocomplete="off" autocorrect="off" spellcheck="false">
+        </div>
+    </fieldset>
+    <div class="mt-4">
+        <input class="btn btn-outline-light" type="submit" name="post" value="Send"/>
+        <input class="btn btn-outline-light" type="submit" name="preview" value="Preview"/>
+    </div>
+    
+</form>
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        
+        <h2 class="mb-4">0 comments</h2>
+    </div>
+    <div class="col-sm-12 mb-5">
+        
+
+
+
+
+
+
+    </div>
+</div>
+<script src="../../static/js/avatar_choice.js"></script>
+<!----  COMMENT FORM END  ---->
+
+
+</div>
+
+                    <!----  MIDDLE CONTENT GRID END  ---->
+                    
+<div class="col-1">
+    
+
+<a href="../finding-interesting-files.html#" class="back-to-top">
+    <img src="../../static/images/backtotop.png" title="Back to top">
+</a>
+<script>
+(function(factory){if(typeof define==="function"&&define.amd){define(["jquery"],function($){return factory($)})}else if(typeof module==="object"&&typeof module.exports==="object"){exports=factory(require("jquery"))}else{factory(jQuery)}})(function($){$.easing.jswing=$.easing.swing;var pow=Math.pow,sqrt=Math.sqrt,sin=Math.sin,cos=Math.cos,PI=Math.PI,c1=1.70158,c2=c1*1.525,c3=c1+1,c4=2*PI/3,c5=2*PI/4.5;function bounceOut(x){var n1=7.5625,d1=2.75;if(x<1/d1){return n1*x*x}else if(x<2/d1){return n1*(x-=1.5/d1)*x+.75}else if(x<2.5/d1){return n1*(x-=2.25/d1)*x+.9375}else{return n1*(x-=2.625/d1)*x+.984375}}$.extend($.easing,{def:"easeOutQuad",swing:function(x){return $.easing[$.easing.def](x)},easeInQuad:function(x){return x*x},easeOutQuad:function(x){return 1-(1-x)*(1-x)},easeInOutQuad:function(x){return x<.5?2*x*x:1-pow(-2*x+2,2)/2},easeInCubic:function(x){return x*x*x},easeOutCubic:function(x){return 1-pow(1-x,3)},easeInOutCubic:function(x){return x<.5?4*x*x*x:1-pow(-2*x+2,3)/2},easeInQuart:function(x){return x*x*x*x},easeOutQuart:function(x){return 1-pow(1-x,4)},easeInOutQuart:function(x){return x<.5?8*x*x*x*x:1-pow(-2*x+2,4)/2},easeInQuint:function(x){return x*x*x*x*x},easeOutQuint:function(x){return 1-pow(1-x,5)},easeInOutQuint:function(x){return x<.5?16*x*x*x*x*x:1-pow(-2*x+2,5)/2},easeInSine:function(x){return 1-cos(x*PI/2)},easeOutSine:function(x){return sin(x*PI/2)},easeInOutSine:function(x){return-(cos(PI*x)-1)/2},easeInExpo:function(x){return x===0?0:pow(2,10*x-10)},easeOutExpo:function(x){return x===1?1:1-pow(2,-10*x)},easeInOutExpo:function(x){return x===0?0:x===1?1:x<.5?pow(2,20*x-10)/2:(2-pow(2,-20*x+10))/2},easeInCirc:function(x){return 1-sqrt(1-pow(x,2))},easeOutCirc:function(x){return sqrt(1-pow(x-1,2))},easeInOutCirc:function(x){return x<.5?(1-sqrt(1-pow(2*x,2)))/2:(sqrt(1-pow(-2*x+2,2))+1)/2},easeInElastic:function(x){return x===0?0:x===1?1:-pow(2,10*x-10)*sin((x*10-10.75)*c4)},easeOutElastic:function(x){return x===0?0:x===1?1:pow(2,-10*x)*sin((x*10-.75)*c4)+1},easeInOutElastic:function(x){return x===0?0:x===1?1:x<.5?-(pow(2,20*x-10)*sin((20*x-11.125)*c5))/2:pow(2,-20*x+10)*sin((20*x-11.125)*c5)/2+1},easeInBack:function(x){return c3*x*x*x-c1*x*x},easeOutBack:function(x){return 1+c3*pow(x-1,3)+c1*pow(x-1,2)},easeInOutBack:function(x){return x<.5?pow(2*x,2)*((c2+1)*2*x-c2)/2:(pow(2*x-2,2)*((c2+1)*(x*2-2)+c2)+2)/2},easeInBounce:function(x){return 1-bounceOut(1-x)},easeOutBounce:bounceOut,easeInOutBounce:function(x){return x<.5?(1-bounceOut(1-2*x))/2:(1+bounceOut(2*x-1))/2}})});
+
+    $( document ).ready(
+        function() {
+            $( window ).scroll(
+                function() {
+                    if ( $( this ).scrollTop() > 100 ) {
+                        $( ".back-to-top" ).fadeIn( "slow" );
+                    } else {
+                        $( ".back-to-top" ).fadeOut( "slow" );
+                    }
+                }
+            );
+
+            $( ".back-to-top" ).click(
+                function() {
+                    $( "html, body" ).animate(
+                        { scrollTop: 0 },
+                        1500,
+                        "easeInOutExpo"
+                    );
+
+                    return false;
+                }
+            );
+        }
+    );
+</script>
+
+</div>
+
+				</div>
+			</div>
+		</div>
+        <!----  RIGHT CONTENT END  ---->
+	</div>
+</div>
+<script src="../../static/js/bootstrap.bundle.min.js"></script>
+<script src="../../static/js/bootstrap.min.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KK5XXRT4LD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KK5XXRT4LD');
+</script>
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '375149543983139');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=375149543983139&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+</body>
+</html>

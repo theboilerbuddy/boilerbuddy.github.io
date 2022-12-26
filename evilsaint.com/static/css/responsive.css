@@ -1,0 +1,10 @@
+@media only screen and (max-width: 600px) {
+   .right-section .content-main-section {
+    padding: 0;
+}
+
+.card-content .button-grp button { 
+    margin-bottom: 14px;
+}
+  
+}
